@@ -1,11 +1,5 @@
 { config, pkgs, inputs, ... }:
 {
-  programs.git = {
-    enable = true;
-    userName = "";
-    userEmail = "";
-  };
-
   programs.alacritty.enable = true;
   programs.fuzzel.enable = true;
 
