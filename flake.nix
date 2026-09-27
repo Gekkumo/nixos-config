@@ -15,6 +15,11 @@
       url = "github:nix-community/disko/latest";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    noctalia = {
+    url = "github:noctalia-dev/noctalia";
+    inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, disko, ... }@inputs:

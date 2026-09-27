@@ -10,7 +10,15 @@
     imports = [
       ../home/default.nix
       ../home/packages-common.nix
+      inputs.noctalia.homeModules.default
     ];
+
+  programs.noctalia = {
+    enable = true;
+    settings = {
+      # change
+    };
+  };
 
     home.stateVersion = "26.05";
   };
