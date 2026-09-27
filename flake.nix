@@ -33,10 +33,9 @@
         home-manager.useUserPackages = true;
         home-manager.extraSpecialArgs = { inherit inputs; };
         }
-        
+
         ./hosts/desktop/default.nix
         ./modules/core/default.nix
-        ./modules/disks/btrfs-layout.nix
         ./modules/users/gekkumo.nix
       ];
     };
