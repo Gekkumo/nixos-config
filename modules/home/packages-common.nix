@@ -5,7 +5,6 @@
     git
     tmux
     xwayland-satellite
-    yazi
     mpv
     imv
   ];
