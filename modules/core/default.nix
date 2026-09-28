@@ -41,5 +41,10 @@
     libva-utils
   ];
 
+  # User configuration
+  imports = [
+    ../users/gekkumo.nix
+  ];
+
   system.stateVersion = "26.05";
 }
