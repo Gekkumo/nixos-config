@@ -41,7 +41,6 @@
 
         ./hosts/desktop/default.nix
         ./modules/core/default.nix
-        ./modules/users/gekkumo.nix
       ];
     };
   };

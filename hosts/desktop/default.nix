@@ -1,8 +1,7 @@
 { config, pkgs, inputs, ... }:
 {
   imports = [
-    # ./hardware.nix
-    ../../modules/users/gekkumo.nix
+    ./hardware.nix
     ../../modules/disks/btrfs-layout.nix
   ];
 

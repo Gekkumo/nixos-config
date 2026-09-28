@@ -20,6 +20,11 @@
     size = 8192;
   }];
 
+  imports = [
+    ../users/gekkumo.nix
+  ];
+
+
   environment.systemPackages = with pkgs; [
     vim
     nano
