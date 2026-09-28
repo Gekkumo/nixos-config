@@ -40,6 +40,7 @@
   programs.niri.enable = true;
 
   environment.systemPackages = with pkgs; [
+    nautilus
     vim
     nano
     btop
