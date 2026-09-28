@@ -9,6 +9,10 @@
   time.timeZone = "Europe/Moscow";
   i18n.defaultLocale = "ru_RU.UTF-8";
 
+  hardware.graphics.enable = true;
+
+  system.stateVersion = "26.05";
+
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   nixpkgs.config.allowUnfree = true;
@@ -24,7 +28,16 @@
     ../users/gekkumo.nix
   ];
 
-  hardware.graphics.enable = true;
+  nix.settings = {
+    extra-substituters = [
+      "https://noctalia.cachix.org"
+    ];
+    extra-trusted-public-keys = [
+      "noctalia.cachix.org-1:pCOR47nnMEo5thcxNDtzWpOxNFQsBRglJzxWPp3dkU4="
+    ];
+  };
+
+  programs.niri.enable = true;
 
   environment.systemPackages = with pkgs; [
     vim
@@ -42,8 +55,4 @@
     gst_all_1.gst-vaapi
     libva-utils # change
   ];
-
-  programs.niri.enable = true;
-
-  system.stateVersion = "26.05";
 }
