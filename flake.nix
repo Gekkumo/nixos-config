@@ -3,43 +3,49 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
+    nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     home-manager = {
       url = "github:nix-community/home-manager/release-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
+    stylix = {
+      url = "github:nix-community/stylix/release-26.05";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     disko = {
       url = "github:nix-community/disko/latest";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    noctalia = {
-      url = "github:noctalia-dev/noctalia/cachix";
+    dms = {
+      url = "github:AvengeMedia/DankMaterialShell/stable";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    dgop = {
+      url = "github:AvengeMedia/dgop";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    sops-nix = {
+      url = "github:Mic92/sops-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
   };
 
-  outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, disko, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, disko, stylix, dms, ... }@inputs:
   let
-    system = "x86_64-linux";
+    mkHost = import ./lib/mkHost.nix { inherit inputs; };
   in
   {
-    nixosConfigurations.desktop = nixpkgs.lib.nixosSystem {
-      inherit system;
-      specialArgs = { inherit inputs; };
-      modules = [
-        disko.nixosModules.disko
-        home-manager.nixosModules.home-manager
-        {
-        home-manager.useGlobalPkgs = true;
-        home-manager.useUserPackages = true;
-        home-manager.extraSpecialArgs = { inherit inputs; };
-        }
-
-        ./hosts/desktop/default.nix
-        ./modules/core/default.nix
-      ];
+    nixosConfigurations = {
+      desktop = mkHost "desktop";
+      # laptop = mkHost "laptop";
     };
   };
 }

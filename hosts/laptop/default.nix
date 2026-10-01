@@ -11,12 +11,15 @@
   # -- System modules
   # -- Enable system-level features here:
 
+  # logind
+  my.system.logind.enable = true;
+
   # PipeWire
   my.system.audio = {
     enable = true;
-    quantum = 256;
-    minQuantum = 64;
-    maxQuantum = 512;
+    quantum = 512;
+    minQuantum = 128;
+    maxQuantum = 2048;
   };
 
   # -- User modules (Home Manager)
