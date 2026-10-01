@@ -2,12 +2,23 @@
 {
   imports = [
     ./hardware.nix
-    ../../modules/disks/btrfs-layout.nix
+    ../../modules/disko/btrfs-layout.nix
   ];
 
+  # Disk configuration for this host
   disko.devices.disk.main.device = "/dev/vda";
 
-  # home-manager.users.gekkumo.imports = [
-  #   ../../modules/home/packages-desktop.nix
-  # ];
+  # -- System modules
+  # -- Enable system-level features here:
+
+  # PipeWire
+  my.system.audio = {
+    enable = true;
+    quantum = 256;
+    minQuantum = 64;
+    maxQuantum = 512;
+  };
+
+  # -- User modules (Home Manager)
+  # -- Enable user-level features here:
 }

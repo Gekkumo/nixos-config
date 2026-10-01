@@ -1,6 +1,59 @@
-{ config, pkgs, inputs, ... }:
+{ ... }:
 {
-  programs.alacritty.enable = true;
+  imports = [
+    # WM/DE
+    ./niri
+    ./gnome
+    ./dms
+    ./gtk
+    ./qt
+    ./stylix
+    ./xwayland
+    ./nemo
+    ./xdg-dirs
+    ./xdg-mimes
 
-  # xdg.configFile."niri/config.kdl".source = ./niri/config.kdl;
+    # Shell
+    ./kitty
+    ./zsh
+    ./starship
+    ./tmux
+    ./zoxide
+    ./direnv
+    ./fzf
+
+    # CLI
+    ./fastfetch
+    ./btop
+    ./yazi
+    ./fend
+    ./neovim
+
+    # Git
+    ./git
+    ./lazygit
+
+    # Security
+    ./gnupg
+    ./keepassxc
+
+    # Media
+    ./mpv
+    ./mpd
+    ./rmpc
+    ./imv
+    ./miro
+
+    # Browsers & Communication
+    ./firefox
+    ./obsidian
+    ./webcord
+    ./telegram
+
+    # Gaming & Torrents
+    ./qbittorrent
+    ./mangohub
+
+    # ./sops
+  ];
 }
