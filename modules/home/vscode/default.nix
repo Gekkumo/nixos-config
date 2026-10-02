@@ -19,8 +19,8 @@
       redhat.ansible
       redhat.vscode-yaml
       timonwong.shellcheck
-      vscode-extension-cweijan-dbclient-jdbc
-      vscode-database-client2
+      cweijan.dbclient-jdbc
+      cweijan.vscode-database-client2
     ];
   };
 }
