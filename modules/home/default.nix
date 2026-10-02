@@ -1,9 +1,8 @@
 { ... }:
 {
   imports = [
-    # WM/DE
+    # WM
     ./niri
-    ./gnome
     ./dms
     ./gtk
     ./qt
@@ -12,7 +11,7 @@
     ./xdg-dirs
     ./xdg-mimes
 
-    # Shell
+    # Shell & Terminal
     ./kitty
     ./zsh
     ./starship
@@ -21,16 +20,20 @@
     ./direnv
     ./fzf
 
-    # CLI
+    # CLI & TUI
     ./fastfetch
     ./btop
     ./yazi
     ./fend
     ./neovim
 
-    # Git
+    # DevOps
     ./git
     ./lazygit
+    ./ansible
+    ./terraform
+    ./kubernetes
+    ./vscode
 
     # Security
     ./gnupg
@@ -53,6 +56,7 @@
     ./qbittorrent
     ./mangohud
 
+    # Secrets
     # ./sops
   ];
 }

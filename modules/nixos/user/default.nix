@@ -1,5 +1,10 @@
 { pkgs, inputs, username, pkgsUnstable, ... }:
 {
+
+  users.groups.plugdev = {
+    gid = 899;
+  };
+
   users.users.${username} = {
     isNormalUser = true;
     description = "Gekkumo";
