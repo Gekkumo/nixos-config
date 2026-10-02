@@ -8,10 +8,14 @@
       "172.16.0.0/12"
       "192.168.0.0/16"
     ];
-    maxretry = 5;
     bantime = "1h";
-    findtime = "10m";
+
+    jails.sshd.settings = {
+      findtime = 600;
+      maxretry = 5;
+    };
   };
+
 
   environment.shellAliases = {
     f2b-status = "sudo fail2ban-client status";

@@ -1,4 +1,4 @@
-{ pkgs, inputs, username, ... }:
+{ pkgs, inputs, username, pkgsUnstable, ... }:
 {
   users.users.${username} = {
     isNormalUser = true;
@@ -14,18 +14,16 @@
       "realtime"
       "video"
     ];
-
-    # sudo passwd gekkumo
   };
 
   home-manager = {
     useGlobalPkgs = true;
     useUserPackages = true;
     backupFileExtension = "bak";
-    extraSpecialArgs = { inherit inputs username; };
+    extraSpecialArgs = { inherit inputs username pkgsUnstable; };
 
     users.${username} = {
-      imports = [ ../../modules/home ];
+      imports = [ ../../home ];
 
       home = {
         username = username;

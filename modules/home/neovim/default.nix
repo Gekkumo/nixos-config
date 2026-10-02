@@ -14,7 +14,7 @@
       mini-nvim
     ];
 
-    extraLuaConfig = ''
+    initLua = ''
       require('lualine').setup({
         options = { theme = 'base16' }
       })

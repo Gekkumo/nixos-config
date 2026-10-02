@@ -5,7 +5,7 @@
     caffeine
     cronomix
     dash-to-dock
-    prapor
+    prapor-keyboard-layout-indicator
     quick-lang-switch
     status-tray
     vitals
@@ -20,7 +20,7 @@
         caffeine.extensionUuid
         cronomix.extensionUuid
         dash-to-dock.extensionUuid
-        prapor.extensionUuid
+        prapor-keyboard-layout-indicator.extensionUuid
         quick-lang-switch.extensionUuid
         status-tray.extensionUuid
         vitals.extensionUuid

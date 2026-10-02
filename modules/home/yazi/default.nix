@@ -16,7 +16,7 @@
     };
 
     plugins = {
-      "full-border.yazi" = pkgs.yaziPlugins.full-border;
+      "full-border" = pkgs.yaziPlugins.full-border;
     };
 
     initLua = ''

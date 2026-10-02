@@ -21,6 +21,4 @@
       line-numbers = true;
     };
   };
-
-  stylix.targets.delta.enable = true;
 }

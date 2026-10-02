@@ -5,6 +5,6 @@
     enableCompletion = true;
     autosuggestions.enable = true;
     syntaxHighlighting.enable = true;
-    history.size = 10000;
+    histSize = 10000;
   };
 }

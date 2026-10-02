@@ -37,6 +37,4 @@
       ];
     };
   };
-
-  stylix.targets.fastfetch.enable = true;
 }

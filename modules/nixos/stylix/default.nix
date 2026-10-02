@@ -10,7 +10,7 @@
     polarity = "dark";
     base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
 
-    homeManagerIntegration.autoImport = false;
+    homeManagerIntegration.autoImport = true;
     homeManagerIntegration.followSystem = true;
   };
 }
