@@ -5,6 +5,10 @@ inputs.nixpkgs.lib.nixosSystem {
   specialArgs = {
     inherit inputs;
     username = "gekkumo";
+    pkgsUnstable = import inputs.nixpkgs-unstable {
+      system = "x86_64-linux";
+      config.allowUnfree = true;
+    };
   };
   modules = [
     inputs.disko.nixosModules.disko

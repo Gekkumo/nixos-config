@@ -3,8 +3,14 @@
   programs.zsh = {
     enable = true;
     enableCompletion = true;
-    autosuggestions.enable = true;
+    autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
-    history.size = 10000;
+
+    history = {
+      size = 10000;
+      path = "$HOME/.zsh_history";
+      ignoreDups = true;
+      share = true;
+    };
   };
 }

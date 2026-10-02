@@ -7,7 +7,6 @@
     ./dms
     ./gtk
     ./qt
-    ./stylix
     ./xwayland
     ./nemo
     ./xdg-dirs
@@ -52,7 +51,7 @@
 
     # Gaming & Torrents
     ./qbittorrent
-    ./mangohub
+    ./mangohud
 
     # ./sops
   ];

@@ -4,11 +4,9 @@
     hostName = "nixos";
     networkmanager = {
       enable = true;
-      dns = "none";
     };
 
     useDHCP = lib.mkDefault true;
-    wireless.enable = false;
     nameservers = [ "1.1.1.1" "1.0.0.1" ];
 
     firewall.checkReversePath = "loose";
@@ -16,10 +14,12 @@
 
   services.resolved = {
     enable = true;
-    dnssec = "true";
-    domains = [ "~." ];
-    fallbackDns = [ "1.1.1.1" "9.9.9.9" ];
-    dnsovertls = "true";
+    settings.Resolve = {
+      DNSSEC = "true";
+      Domains = [ "~." ];
+      DNSOverTLS = "true";
+      FallbackDNS = [ "1.1.1.1" "9.9.9.9" ];
+    };
   };
 
   programs.ssh = {

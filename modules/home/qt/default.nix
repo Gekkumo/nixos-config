@@ -1,8 +1,8 @@
-{ ... }:
+{ lib, ... }:
 {
   qt = {
     enable = true;
-    platformTheme.name = "qtct";
+    platformTheme.name = lib.mkForce "qtct";
   };
 
   stylix.targets.qt.enable = true;
