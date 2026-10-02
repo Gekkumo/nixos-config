@@ -30,10 +30,10 @@
     # DevOps
     ./git
     ./lazygit
-    ./ansible
-    ./terraform
-    ./kubernetes
-    ./vscode
+    # ./ansible
+    # ./terraform
+    # ./kubernetes
+    # ./vscode
 
     # Security
     ./gnupg
