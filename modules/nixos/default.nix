@@ -27,7 +27,6 @@
     ./stylix
     ./dms-greeter
     ./niri
-    ./gnome
     ./fonts
     ./bluetooth
     ./audio
