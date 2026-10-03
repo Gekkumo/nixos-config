@@ -82,6 +82,7 @@
       xorg.libXxf86vm
       xorg.libXcursor
       xorg.libXi
+      libxkbcommon
 
       # Wayland
       wayland
@@ -90,16 +91,7 @@
       tk
       tcl
 
-      # GDK & GTK
-      gtk3
-      gdk-pixbuf
-      pango
-      cairo
-      atk
-      at-spi2-atk
-
       # Other
-      glib
       stdenv.cc.cc.lib
       zlib
       openssl
