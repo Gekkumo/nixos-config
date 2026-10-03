@@ -70,18 +70,18 @@
     libraries = with pkgs; [
       # X11
       libxcb
-      xorg.libX11
-      xorg.libXext
-      xorg.libXrender
-      xorg.libXcomposite
-      xorg.libXtst
-      xorg.libXrandr
-      xorg.libXfixes
-      xorg.libXdamage
-      xorg.libxshmfence
-      xorg.libXxf86vm
-      xorg.libXcursor
-      xorg.libXi
+      libx11
+      libxext
+      libxrender
+      libxcomposite
+      libxtst
+      libxrandr
+      libxfixes
+      libxdamage
+      libxshmfence
+      libxxf86vm
+      libxcursor
+      libxi
       libxkbcommon
 
       # Wayland
