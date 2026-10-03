@@ -68,6 +68,7 @@
   programs.nix-ld = {
     enable = true;
     libraries = with pkgs; [
+      # X11
       libxcb
       xorg.libX11
       xorg.libXext
@@ -81,16 +82,23 @@
       xorg.libXxf86vm
       xorg.libXcursor
       xorg.libXi
-      libwayland-cursor
+
+      # Wayland
+      wayland
+
+      # Tkinter
+      tk
+      tcl
+
+      # GDK & GTK
       gtk3
       gdk-pixbuf
       pango
       cairo
       atk
       at-spi2-atk
-      libappindicator-gtk3
-      tk
-      tcl
+
+      # Other
       glib
       stdenv.cc.cc.lib
       zlib
