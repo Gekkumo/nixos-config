@@ -38,6 +38,7 @@
     ./virt-manager
     ./docker
     ./gnupg
+    ./tg-ws-proxy
     ./sops
   ];
 }
