@@ -69,18 +69,26 @@
     enable = true;
     libraries = with pkgs; [
       libxcb
-      xorg.libX11
-      xorg.libXext
-      xorg.libXrender
-      xorg.libXcomposite
-      xorg.libXtst
-      xorg.libXrandr
-      xorg.libXfixes
-      xorg.libXdamage
-      xorg.libxshmfence
-      xorg.libXxf86vm
-      xorg.libXcursor
-      xorg.libXi
+      libX11
+      libXext
+      libXrender
+      libXcomposite
+      libXtst
+      libXrandr
+      libXfixes
+      libXdamage
+      libxshmfence
+      libXxf86vm
+      libXcursor
+      libXi
+      libwayland-cursor
+      gtk3
+      gdk-pixbuf
+      pango
+      cairo
+      atk
+      at-spi2-atk
+      libappindicator-gtk3
       tk
       tcl
       glib
