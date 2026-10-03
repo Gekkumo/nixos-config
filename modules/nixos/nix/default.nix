@@ -69,18 +69,18 @@
     enable = true;
     libraries = with pkgs; [
       libxcb
-      libX11
-      libXext
-      libXrender
-      libXcomposite
-      libXtst
-      libXrandr
-      libXfixes
-      libXdamage
-      libxshmfence
-      libXxf86vm
-      libXcursor
-      libXi
+      xorg.libX11
+      xorg.libXext
+      xorg.libXrender
+      xorg.libXcomposite
+      xorg.libXtst
+      xorg.libXrandr
+      xorg.libXfixes
+      xorg.libXdamage
+      xorg.libxshmfence
+      xorg.libXxf86vm
+      xorg.libXcursor
+      xorg.libXi
       libwayland-cursor
       gtk3
       gdk-pixbuf
