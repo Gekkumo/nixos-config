@@ -65,6 +65,8 @@
     nix-tree
   ];
 
+  programs.nix-ld.enable = true;
+
   nixpkgs.config.allowUnfree = true;
 
   system.stateVersion = "26.05";
