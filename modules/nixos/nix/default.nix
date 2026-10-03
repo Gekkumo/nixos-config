@@ -83,6 +83,7 @@
       libxcursor
       libxi
       libxkbcommon
+      xkeyboard-config
 
       # Wayland
       wayland
