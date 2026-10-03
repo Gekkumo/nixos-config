@@ -17,8 +17,6 @@
   systemd.services.lactd.wantedBy = [ "multi-user.target" ];
 
   services.udev.extraRules = ''
-    # Даём группе wheel доступ к чтению RAPL energy_uj
-    SUBSYSTEM=="powercap", ACTION=="add|change", KERNEL=="intel-rapl:*", \
-      RUN+="${pkgs.coreutils}/bin/chmod", "g+r", "/sys/class/powercap/intel-rapl:0/energy_uj"
+    SUBSYSTEM=="powercap", ACTION=="add|change", KERNEL=="intel-rapl:*", RUN+="${pkgs.coreutils}/bin/chmod g+r /sys/class/powercap/intel-rapl:0/energy_uj"
   '';
 }

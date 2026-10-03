@@ -41,13 +41,4 @@
   # Trim & BIOS
   services.fstrim.enable = true;
   services.fwupd.enable = true;
-
-  # Bag systemd 260 (remove)
-  nixpkgs.overlays = [
-    (final: prev: {
-      libfido2 = prev.libfido2.overrideAttrs (old: {
-        dontUdevCheck = true;
-      });
-    })
-  ];
 }
