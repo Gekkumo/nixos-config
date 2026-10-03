@@ -65,7 +65,30 @@
     nix-tree
   ];
 
-  programs.nix-ld.enable = true;
+  programs.nix-ld = {
+    enable = true;
+    libraries = with pkgs; [
+      libxcb
+      xorg.libX11
+      xorg.libXext
+      xorg.libXrender
+      xorg.libXcomposite
+      xorg.libXtst
+      xorg.libXrandr
+      xorg.libXfixes
+      xorg.libXdamage
+      xorg.libxshmfence
+      xorg.libXxf86vm
+      xorg.libXcursor
+      xorg.libXi
+      tk
+      tcl
+      glib
+      stdenv.cc.cc.lib
+      zlib
+      openssl
+    ];
+  };
 
   nixpkgs.config.allowUnfree = true;
 
