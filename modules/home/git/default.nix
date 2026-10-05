@@ -5,7 +5,7 @@
     settings = {
       user = {
         name = "Gekkumo";
-        email = "777@gmail.com";
+        email = "Gekkumo@users.noreply.github.com";
       };
       init.defaultBranch = "main";
       pull.rebase = true;
