@@ -41,7 +41,7 @@ in
         {
           monitor = "";
           path = "${avatar}";
-          size = 180;
+          size = 170;
           rounding = -1;
           border_size = 0;
           position = "0, 80";
