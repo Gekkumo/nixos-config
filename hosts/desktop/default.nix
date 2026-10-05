@@ -13,14 +13,6 @@
   # -- System modules
   # -- Enable system-level features here:
 
-  # Greeter monitor
-  my.greetd = {
-    monitor = "Virtual-1"; # HDMI-A-1 or DP-1 (niri msg outputs)
-    resolution = "1920x1080"; # 2560x1440 (niri msg outputs)
-    refreshRate = "60.000"; # "143.912" or "?" (niri msg outputs)
-    cageOrder = "first";
-  };
-
   # PipeWire
   my.system.audio = {
     enable = true;

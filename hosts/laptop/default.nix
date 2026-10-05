@@ -13,17 +13,6 @@
   # -- System modules
   # -- Enable system-level features here:
 
-  # logind
-  my.system.logind.enable = true;
-
-  # Greeter monitor
-  my.greetd = {
-    monitor = "eDP-1"; # or DP-1 (niri msg outputs)
-    resolution = "1920x1080"; # 2560x1440 (niri msg outputs)
-    # refreshRate = "60.000"; # "?" (niri msg outputs)
-    cageOrder = "first";
-  };
-
   # PipeWire
   my.system.audio = {
     enable = true;
@@ -31,6 +20,9 @@
     minQuantum = 128;
     maxQuantum = 2048;
   };
+
+  # logind
+  my.system.logind.enable = true;
 
   # -- User modules (Home Manager)
   # -- Enable user-level features here:
