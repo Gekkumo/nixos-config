@@ -20,16 +20,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    dms = {
-      url = "github:AvengeMedia/DankMaterialShell/stable";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    dgop = {
-      url = "github:AvengeMedia/dgop";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     sops-nix = {
       url = "github:Mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -41,7 +31,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, disko, stylix, dms, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, disko, stylix, ... }@inputs:
   let
     mkHost = import ./lib/mkHost.nix { inherit inputs; };
   in
