@@ -93,7 +93,7 @@ in
         "tray" = { "icon-size" = 14; spacing = 10; cursor = true; };
 
         "custom/power" = {
-          format = "\uf313";
+          format = "";
           tooltip = false;
           "on-click" = "wlogout";
         };
@@ -107,7 +107,7 @@ in
 
     style = lib.mkAfter ''
       * {
-        font-family: "Fira Sans", "FiraCode Nerd Font";
+        font-family: "FiraCode Nerd Font", "Symbols Nerd Font", "Fira Sans";
         font-size: 13px;
         font-weight: bold;
         min-height: 0;

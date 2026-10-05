@@ -4,11 +4,11 @@
     enable = true;
     settings = {
       main = {
-        lines = 12;
-        width = 35;
-        prompt = "> ";
+        lines = 15;
+        width = 25;
+        prompt = "# ";
         terminal = "kitty -e";
-        icons-enabled = true;
+        icons-enabled = false;
         dpi-aware = "auto";
       };
 
