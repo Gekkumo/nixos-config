@@ -25,7 +25,7 @@
     # Desktop
     ./desktop
     ./stylix
-    ./greetd
+    ./getty
     ./niri
     ./hyprlock-pam
     ./fonts
