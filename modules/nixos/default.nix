@@ -26,6 +26,7 @@
     ./desktop
     ./stylix
     ./getty
+    ./uwsm
     ./niri
     ./hyprlock-pam
     ./fonts
