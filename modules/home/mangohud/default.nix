@@ -9,7 +9,7 @@
     settings = {
       fps_limit = "60,120,144,200,0";
       fps_limit_method = "late";
-      
+
       arch = true;
       cpu_mhz = true;
       cpu_power = true;

@@ -1,0 +1,60 @@
+{ config, pkgs, ... }:
+let
+  colors = config.lib.stylix.colors.withHashtag;
+  wallpaper = ./assets/wallpaper.png;
+  avatar = ./assets/avatar.png;
+in
+{
+  programs.hyprlock = {
+    enable = true;
+    settings = {
+      general = {
+        hide_cursor = true;
+        grace = 0;
+        no_fade_in = false;
+      };
+
+      background = [
+        {
+          monitor = "";
+          path = "${wallpaper}";
+          blur_passes = 2;
+          blur_size = 8;
+          contrast = 0.8916;
+          brightness = 0.9500;
+          vibrancy = 0.1696;
+        }
+      ];
+
+      image = [
+        {
+          monitor = "";
+          path = "${avatar}";
+          size = 130;
+          rounding = -1;
+          border_size = 2;
+          border_color = "rgb(${colors.base03})";
+          position = "0, 80";
+          halign = "center";
+          valign = "center";
+        }
+      ];
+
+      input-field = [
+        {
+          size = "250, 50";
+          position = "0, -80";
+          monitor = "";
+          dots_center = true;
+          fade_on_empty = false;
+          font_color = "rgb(${colors.base05})";
+          inner_color = "rgba(${colors.base01}, 0.5)";
+          outer_color = "rgb(${colors.base03})";
+          outline_thickness = 2;
+          placeholder_text = "Enter password...";
+          shadow_passes = 2;
+        }
+      ];
+    };
+  };
+}

@@ -25,8 +25,9 @@
     # Desktop
     ./desktop
     ./stylix
-    ./dms-greeter
+    ./greetd
     ./niri
+    ./hyprlock-pam
     ./fonts
     ./bluetooth
     ./audio
@@ -38,7 +39,10 @@
     ./virt-manager
     ./docker
     ./gnupg
-    ./tg-ws-proxy
     ./sops
+
+    # Scripts
+    ./tg-ws-proxy
+    ./wireplumber-disable-hdmi-dp
   ];
 }

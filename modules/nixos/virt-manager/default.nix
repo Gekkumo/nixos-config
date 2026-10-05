@@ -11,7 +11,6 @@
   networking.firewall.trustedInterfaces = [ "virbr0" ];
 
   systemd.services.libvirt-default-network = {
-    description = "Start libvirt default network";
     after = [ "libvirtd.service" ];
     wantedBy = [ "multi-user.target" ];
     serviceConfig = {

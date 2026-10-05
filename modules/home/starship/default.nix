@@ -10,11 +10,6 @@
       command_timeout = 300;
       scan_timeout = 300;
 
-      character = {
-        success_symbol = "➜";
-        error_symbol = "✗";
-      };
-
       python = {
         detect_files = [ "requirements.txt" "pyproject.toml" "Pipfile" ".python-version" ];
         detect_extensions = [ ];

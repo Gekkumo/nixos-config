@@ -7,13 +7,13 @@
       keyFile = "/home/${username}/.config/sops/age/keys.txt";
       sshKeyPaths = [ ];
     };
-    
+
     gnupg.sshKeyPaths = [ ];
-    
+
     # defaultSopsFile = ./secrets/secrets.yaml;
-    
+
     validateSopsFiles = false;
-    
+
     # Secrets Definition
     # secrets = { ... };
   };

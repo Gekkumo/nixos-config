@@ -1,8 +1,8 @@
 { lib, config, ... }:
 with lib;
-let 
+let
   cfg = config.my.system.logind;
-in 
+in
 {
   options.my.system.logind.enable = mkEnableOption "logind power management";
 
