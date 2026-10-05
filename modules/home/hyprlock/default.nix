@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, ... }:
 let
   colors = config.lib.stylix.colors.withHashtag;
   wallpaper = ./assets/wallpaper.png;
@@ -11,15 +11,26 @@ in
       general = {
         hide_cursor = true;
         grace = 0;
-        no_fade_in = false;
+      };
+
+      animations = {
+        enabled = true;
+        fade_in = {
+          duration = 300;
+          bezier = "easeOutQuint";
+        };
+        fade_out = {
+          duration = 300;
+          bezier = "easeOutQuint";
+        };
       };
 
       background = [
         {
           monitor = "";
           path = "${wallpaper}";
-          blur_passes = 2;
-          blur_size = 8;
+          blur_passes = 1;
+          blur_size = 1;
           contrast = 0.8916;
           brightness = 0.9500;
           vibrancy = 0.1696;
@@ -33,7 +44,7 @@ in
           size = 130;
           rounding = -1;
           border_size = 2;
-          border_color = "rgb(${colors.base03})";
+          border_color = "rgb(${colors.base0D})";
           position = "0, 80";
           halign = "center";
           valign = "center";

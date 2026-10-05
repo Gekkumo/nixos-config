@@ -4,7 +4,7 @@
     enable = true;
     settings = {
       main = {
-        lines = 8;
+        lines = 12;
         width = 35;
         prompt = "> ";
         terminal = "kitty -e";
