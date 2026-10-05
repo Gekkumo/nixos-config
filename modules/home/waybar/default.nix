@@ -34,7 +34,7 @@ in
       mainBar = {
         layer = "top";
         position = "top";
-        height = 30;
+        height = 20;
         spacing = 5;
 
         modules-left = [ "custom/power" "niri/workspaces" ];
@@ -74,8 +74,8 @@ in
           "format-muted" = " {volume}%";
           "format-icons" = ["" "" ""];
           "on-click" = "${toggleAudioScript}";
-          "on-scroll-up" = "wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%+";
-          "on-scroll-down" = "wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%-";
+          "on-scroll-up" = "wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 2%+";
+          "on-scroll-down" = "wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 2%-";
           "scroll-step" = 2.0;
         };
 
@@ -85,15 +85,15 @@ in
           "format-muted" = " {volume}%";
           "format-icons" = ["" ""];
           "on-click" = "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle";
-          "on-scroll-up" = "wpctl set-volume @DEFAULT_AUDIO_SOURCE@ 2%+";
-          "on-scroll-down" = "wpctl set-volume @DEFAULT_AUDIO_SOURCE@ 2%-";
+          "on-scroll-up" = "wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SOURCE@ 2%+";
+          "on-scroll-down" = "wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SOURCE@ 2%-";
           "scroll-step" = 2.0;
         };
 
         "tray" = { "icon-size" = 14; spacing = 10; cursor = true; };
 
         "custom/power" = {
-          format = " ";
+          format = "\uf313";
           tooltip = false;
           "on-click" = "wlogout";
         };
