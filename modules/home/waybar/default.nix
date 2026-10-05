@@ -1,26 +1,28 @@
 { pkgs, lib, ... }:
 let
   toggleAudioScript = pkgs.writeShellScript "toggle-audio" ''
-    SINKS=($(${pkgs.wireplumber}/bin/wpctl status | sed -n '/Sinks:/,/Sources:/p' | grep -oP '^\s*│\s+\d+' | grep -oP '\d+' | while read id; do
-        name=$(${pkgs.wireplumber}/bin/wpctl inspect "$id" 2>/dev/null | grep 'node.name' | head -1)
+    WPCTL="${pkgs.wireplumber}/bin/wpctl"
+
+    SINKS=($($WPCTL status | sed -n '/Sinks:/,/Sources:/p' | grep -oP '^\s*│\s+\d+' | grep -oP '\d+' | while read id; do
+        name=$($WPCTL inspect "$id" 2>/dev/null | grep 'node.name' | head -1)
         if [[ "$name" != *".monitor"* ]]; then
             echo "$id"
         fi
     done))
 
-    [ ${#SINKS[@]} -le 1 ] && exit 0
+    [ ''${#SINKS[@]} -le 1 ] && exit 0
 
-    CURRENT=$(${pkgs.wireplumber}/bin/wpctl status | grep '\*' | grep -oP '^\s*│\s+\K\d+')
+    CURRENT=$($WPCTL status | grep '\*' | grep -oP '^\s*│\s+\K\d+')
 
     NEXT=""
-    for i in "${!SINKS[@]}"; do
-        if [ "${SINKS[$i]}" = "$CURRENT" ]; then
-            NEXT=${SINKS[$(((i + 1) % ${#SINKS[@]}))]}
+    for i in "''${!SINKS[@]}"; do
+        if [ "''${SINKS[$i]}" = "$CURRENT" ]; then
+            NEXT=''${SINKS[$(((i + 1) % ''${#SINKS[@]}))]}
             break
         fi
     done
 
-    [ -n "$NEXT" ] && ${pkgs.wireplumber}/bin/wpctl set-default "$NEXT"
+    [ -n "$NEXT" ] && $WPCTL set-default "$NEXT"
   '';
 in
 {
