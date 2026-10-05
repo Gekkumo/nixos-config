@@ -34,7 +34,7 @@ in
       mainBar = {
         layer = "top";
         position = "top";
-        height = 20;
+        height = 30;
         spacing = 5;
 
         modules-left = [ "custom/power" "niri/workspaces" ];
