@@ -9,6 +9,7 @@
     ./mako
     ./hyprlock
     ./hypridle
+    ./swaybg
     ./gtk
     ./qt
     ./xwayland
