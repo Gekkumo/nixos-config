@@ -5,7 +5,7 @@
     settings = {
       user = {
         name = "Gekkumo";
-        email = "777@gmail.com"; #change
+        email = "777@gmail.com";
       };
       init.defaultBranch = "main";
       pull.rebase = true;

@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
   environment.pathsToLink = [ "share/thumbnailers" ];
-  
+
   # File manager support
   services.gvfs.enable = true;
   services.tumbler.enable = true;

@@ -3,7 +3,12 @@
   imports = [
     # WM
     ./niri
-    ./dms
+    ./wlogout
+    ./waybar
+    ./fuzzel
+    ./mako
+    ./hyprlock
+    ./hypridle
     ./gtk
     ./qt
     ./xwayland

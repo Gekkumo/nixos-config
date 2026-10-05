@@ -9,9 +9,8 @@
     music = "$HOME/Music";
     pictures = "$HOME/Pictures";
     videos = "$HOME/Videos";
-
-    desktop = null;
-    publicShare = null;
-    templates = null;
+    desktop = "$HOME/Desktop";
+    publicShare = "$HOME/Public";
+    templates = "$HOME/Templates";
   };
 }

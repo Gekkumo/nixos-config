@@ -8,7 +8,7 @@
     prefix = "C-a";
     escapeTime = 0;
     keyMode = "vi";
-    
+
     extraConfig = ''
       set -ga terminal-overrides ",xterm-256color:Tc"
       set -g history-limit 10000

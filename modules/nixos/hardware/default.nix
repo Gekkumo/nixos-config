@@ -17,6 +17,6 @@
   systemd.services.lactd.wantedBy = [ "multi-user.target" ];
 
   services.udev.extraRules = ''
-    SUBSYSTEM=="powercap", ACTION=="add|change", KERNEL=="intel-rapl:*", RUN+="${pkgs.coreutils}/bin/chmod g+r /sys/class/powercap/intel-rapl:0/energy_uj"
+    SUBSYSTEM=="powercap", ACTION=="add|change", KERNEL=="intel-rapl:*", RUN+="${pkgs.coreutils}/bin/chgrp wheel /sys/%p/energy_uj", RUN+="${pkgs.coreutils}/bin/chmod g+r /sys/%p/energy_uj"
   '';
 }
