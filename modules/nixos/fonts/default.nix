@@ -2,6 +2,7 @@
 {
   fonts = {
     packages = with pkgs; [
+      nerd-fonts.symbols-only
       noto-fonts-color-emoji
       liberation_ttf
       dejavu_fonts
