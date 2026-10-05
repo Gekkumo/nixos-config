@@ -41,10 +41,9 @@ in
         {
           monitor = "";
           path = "${avatar}";
-          size = 130;
+          size = 180;
           rounding = -1;
-          border_size = 2;
-          border_color = "rgb(${colors.base0D})";
+          border_size = 0;
           position = "0, 80";
           halign = "center";
           valign = "center";
@@ -61,6 +60,8 @@ in
           font_color = "rgb(${colors.base05})";
           inner_color = "rgba(${colors.base01}, 0.5)";
           outer_color = "rgb(${colors.base03})";
+          check_color = "rgb(${colors.base03})";
+          fail_color = "rgb(${colors.base03})";
           outline_thickness = 2;
           placeholder_text = "Enter password...";
           shadow_passes = 2;
