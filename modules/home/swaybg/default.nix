@@ -10,7 +10,7 @@
       After = [ "graphical-session.target" ];
     };
     Service = {
-      ExecStart = "${pkgs.swaybg}/bin/swaybg -m fill -i ${./assets/wallpaper.png}";
+      ExecStart = "${pkgs.swaybg}/bin/swaybg -m fill -i ${./wallpaper/wallpaper.jpg}";
       Restart = "on-failure";
       RestartSec = 3;
     };
