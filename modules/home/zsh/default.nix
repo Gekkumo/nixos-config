@@ -12,11 +12,5 @@
       ignoreDups = true;
       share = true;
     };
-
-    profileExtra = ''
-      if [ -z "$WAYLAND_DISPLAY" ] && [ "$(tty)" = "/dev/tty1" ]; then
-        exec niri-session
-      fi
-    '';
   };
 }
