@@ -39,7 +39,6 @@ in
   config = {
     services.greetd = {
       enable = true;
-      vt = 6;
       settings = {
         default_session = {
           command = "${pkgs.cage}/bin/cage -s -m ${cfg.cageOrder} -- ${pkgs.writeShellScript "regreet-wrapper" ''
