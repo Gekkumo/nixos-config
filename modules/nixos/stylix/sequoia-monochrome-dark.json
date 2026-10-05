@@ -1,9 +1,0 @@
-{
-  "blendFactor": 0.9,
-  "ditherAmount": 0.1,
-  "spatialRadius": 10,
-  "interpolateColors": true,
-  "interpolationThreshold": 2.5,
-  "colorschemeName": "sequoia-monochrome-dark",
-  "colorschemeText": "#0f1014\n#111216\n#111216\n#43444d\n#575861\n#868690\n#868690\n#0f1014\n#999eb2\n#999eb2\n#d3d5de\n#626983\n#b6bac8\n#7c829d\n#d3d5de\n#626983"
-}
