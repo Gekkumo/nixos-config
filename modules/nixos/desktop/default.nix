@@ -6,6 +6,10 @@
   services.gvfs.enable = true;
   services.tumbler.enable = true;
   services.usbmuxd.enable = true;
+  services.udisks2 = {
+    enable = true;
+    mountOnMedia = true;
+  };
 
   # Security & Secrets
   security.polkit.enable = true;
@@ -22,7 +26,6 @@
     SSH_AUTH_SOCK = "\${XDG_RUNTIME_DIR}/keyring/ssh";
     GTK_A11Y = "none";
     NO_AT_BRIDGE = "1";
-    TDESKTOP_USE_GTK_FILE_DIALOG = "1";
 
     # Wayland variables
     NIXOS_OZONE_WL = "1";

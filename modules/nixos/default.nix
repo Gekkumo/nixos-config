@@ -18,7 +18,6 @@
     ./user
     ./hardware
     ./power
-    ./udisks
     ./packages
     ./codecs
 
@@ -28,6 +27,7 @@
     ./getty
     ./uwsm
     ./niri
+    ./nautilus
     ./hyprlock-pam
     ./fonts
     ./bluetooth
