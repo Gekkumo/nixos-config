@@ -16,11 +16,11 @@ in
       animations = {
         enabled = true;
         fade_in = {
-          duration = 300;
+          duration = 400;
           bezier = "easeOutQuint";
         };
         fade_out = {
-          duration = 300;
+          duration = 400;
           bezier = "easeOutQuint";
         };
       };
