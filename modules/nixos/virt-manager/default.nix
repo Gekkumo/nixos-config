@@ -1,12 +1,23 @@
 { pkgs, ... }:
 {
-  virtualisation.libvirtd.enable = true;
+  virtualisation.libvirtd = {
+    enable = true;
+    qemu = {
+      swtpm.enable = true;
+      ovmf.packages = [ pkgs.OVMFFull.fd ];
+    };
+  };
+
   virtualisation.spiceUSBRedirection.enable = true;
   programs.virt-manager.enable = true;
 
   environment.systemPackages = with pkgs; [
     dnsmasq
+    spice_gtk
   ];
+
+  security.wrappers.spice-client-glib-usb-acl-helper.source =
+    "${pkgs.spice_gtk}/bin/spice-client-glib-usb-acl-helper";
 
   networking.firewall.trustedInterfaces = [ "virbr0" ];
 
