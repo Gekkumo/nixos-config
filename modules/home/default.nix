@@ -13,7 +13,6 @@
     ./gtk
     ./qt
     ./xwayland
-    ./nemo
     ./xdg-dirs
     ./xdg-mimes
 
