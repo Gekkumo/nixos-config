@@ -12,11 +12,11 @@
 
   environment.systemPackages = with pkgs; [
     dnsmasq
-    spice_gtk
+    spice-gtk
   ];
 
   security.wrappers.spice-client-glib-usb-acl-helper.source =
-    "${pkgs.spice_gtk}/bin/spice-client-glib-usb-acl-helper";
+    "${pkgs.spice-gtk}/bin/spice-client-glib-usb-acl-helper";
 
   networking.firewall.trustedInterfaces = [ "virbr0" ];
 
