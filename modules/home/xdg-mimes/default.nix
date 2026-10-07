@@ -25,7 +25,7 @@
       "application/pdf" = [ "miro.desktop" ];
 
       # Directory
-      "inode/directory" = [ "nemo.desktop" ];
+      "inode/directory" = [ "org.gnome.Nautilus.desktop" ];
     };
   };
 
