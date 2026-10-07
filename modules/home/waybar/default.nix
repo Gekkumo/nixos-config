@@ -99,7 +99,7 @@ in
         };
 
         "clock" = {
-          format = "{:%a %d/%m/%Y ~ %H:%M}";
+          format = "{:%a %d.%m.%Y ~ %H:%M}";
           tooltip = false;
         };
       };
@@ -118,6 +118,12 @@ in
       #clock { margin-right: 5px; }
       #custom-power { padding: 0px 0px 0px 10px; }
       #tray { padding-right: 1px; }
+
+      #custom-power {
+        padding: 0px 0px 0px 10px;
+        margin-right: 12px;
+        font-size: 16px;
+      }
 
       #temperature {
         padding: 0 10px;
