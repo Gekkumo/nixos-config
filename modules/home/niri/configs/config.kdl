@@ -4,6 +4,10 @@ gestures {
     }
 }
 
+hotkey-overlay {
+    skip-at-startup
+}
+
 input {
     keyboard {
         xkb {
@@ -63,7 +67,7 @@ hotkey-overlay { }
 
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
-animations { 
+animations {
     window-open {
         duration-ms 150
         curve "ease-out-expo"
