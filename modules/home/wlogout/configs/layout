@@ -1,0 +1,38 @@
+[
+    {
+        "label": "shutdown",
+        "action": "systemctl poweroff",
+        "text": "󰐥",
+        "keybind": "s"
+    },
+    {
+        "label": "reboot",
+        "action": "systemctl reboot",
+        "text": "󰜉",
+        "keybind": "r"
+    },
+    {
+        "label": "suspend",
+        "action": "systemctl suspend",
+        "text": "󰒲",
+        "keybind": "u"
+    },
+    {
+        "label": "decor1",
+        "action": "true",
+        "text": "",
+        "keybind": ""
+    },
+    {
+        "label": "lock",
+        "action": "hyprlock",
+        "text": "󰌾",
+        "keybind": "l"
+    },
+    {
+        "label": "decor2",
+        "action": "true",
+        "text": "",
+        "keybind": ""
+    }
+]
