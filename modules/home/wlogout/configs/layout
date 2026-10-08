@@ -2,19 +2,19 @@
     {
         "label": "shutdown",
         "action": "systemctl poweroff",
-        "text": "󰐥",
+        "text": "\uDB80\uDC25",
         "keybind": "s"
     },
     {
         "label": "reboot",
         "action": "systemctl reboot",
-        "text": "󰜉",
+        "text": "\uDB81\uDF09",
         "keybind": "r"
     },
     {
         "label": "suspend",
         "action": "systemctl suspend",
-        "text": "󰒲",
+        "text": "\uDB80\uDCB2",
         "keybind": "u"
     },
     {
@@ -26,7 +26,7 @@
     {
         "label": "lock",
         "action": "hyprlock",
-        "text": "󰌾",
+        "text": "\uDB80\uDF3E",
         "keybind": "l"
     },
     {
