@@ -5,28 +5,28 @@
     "keybind": "s"
 }
 {
-    "label": "reboot",
-    "action": "systemctl reboot",
-    "text": "󰜉",
-    "keybind": "r"
-}
-{
-    "label": "suspend",
-    "action": "systemctl suspend",
-    "text": "󰒲",
-    "keybind": "u"
-}
-{
     "label": "decor1",
     "action": "true",
     "text": "",
     "keybind": ""
 }
 {
+    "label": "reboot",
+    "action": "systemctl reboot",
+    "text": "󰜉",
+    "keybind": "r"
+}
+{
     "label": "lock",
     "action": "hyprlock",
     "text": "󰌾",
     "keybind": "l"
+}
+{
+    "label": "suspend",
+    "action": "systemctl suspend",
+    "text": "󰒲",
+    "keybind": "u"
 }
 {
     "label": "decor2",
