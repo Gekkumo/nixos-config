@@ -1,0 +1,50 @@
+@define-color bg rgba(15, 16, 20, 0.85);
+@define-color button-bg rgba(67, 68, 77, 0.6);
+@define-color button-hover rgba(87, 88, 97, 0.9);
+@define-color text #d3d5de;
+@define-color text-hover #f0f2f8;
+
+* {
+    font-family: "FiraCode Nerd Font";
+    font-size: 60px;
+    background-image: none;
+    box-shadow: none;
+}
+
+window {
+    background: @bg;
+}
+
+button {
+    color: @text;
+    background: @button-bg;
+    border-radius: 2px;
+    margin: 10px;
+    padding: 20px;
+    transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+    background: @button-hover;
+    color: @text-hover;
+}
+
+button:focus {
+    outline: none;
+}
+
+#decor1 {
+    background-image: url("assets/image1.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: transparent;
+}
+
+#decor2 {
+    background-image: url("assets/image2.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: transparent;
+}
