@@ -12,7 +12,7 @@
     }
 
     window {
-      background-color: alpha(@base00, 0.85);
+      background: alpha(@base00, 0.85);
     }
 
     button {
