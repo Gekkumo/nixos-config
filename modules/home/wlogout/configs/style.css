@@ -6,20 +6,20 @@
 }
 
 window {
-    background: rgba(15, 16, 20, 0.65);
+    background: rgba(15, 16, 20, 0.75);
 }
 
 button {
     color: #d3d5de;
-    background: rgba(67, 68, 77, 0.55);
+    background: rgba(67, 68, 77, 0.65);
     border-radius: 0;
     margin: 10px;
     transition: all 0.2s ease-in-out;
 }
 
 button label {
-    font-size: 140px;
-    padding: 0px 0px 40px 0px;
+    font-size: 160px;
+    padding: 0px 0px 50px 0px;
 }
 
 button:hover {
