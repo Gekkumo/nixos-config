@@ -17,7 +17,4 @@
   services.desktopManager.gnome.extraGSettingsOverridePackages = [
     pkgs.nautilus-open-any-terminal
   ];
-
-  environment.sessionVariables.NAUTILUS_4_EXTENSION_DIR =
-    "${config.system.path}/lib/nautilus/extensions-4";
 }
