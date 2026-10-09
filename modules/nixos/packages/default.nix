@@ -31,6 +31,9 @@
     libimobiledevice
     ifuse
 
+    # Applications
+    pomodoro-gtk
+
     # Network
     bind
     rsync
