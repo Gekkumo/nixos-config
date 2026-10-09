@@ -32,6 +32,7 @@
     ./fonts
     ./bluetooth
     ./audio
+    ./carla-yabridge
     ./logind
     ./zsh
 
