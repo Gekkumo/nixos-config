@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, ... }:
+{ ... }:
 {
   imports = [
     ./hardware.nix
@@ -13,7 +13,6 @@
   # -- System modules
   # -- Enable system-level features here:
 
-  # PipeWire
   my.system.audio = {
     enable = true;
     quantum = 512;
@@ -21,7 +20,6 @@
     maxQuantum = 2048;
   };
 
-  # logind
   my.system.logind.enable = true;
 
   # -- User modules (Home Manager)
