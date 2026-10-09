@@ -4,7 +4,12 @@
     enable = true;
     settings = {
       logo = {
-        source = "nixos_small";
+        source = "nixos";
+        padding = {
+          top = 2;
+          left = 2;
+          right = 4;
+        };
       };
       display = {
         separator = "  ";
@@ -18,6 +23,7 @@
         "uptime"
         "packages"
         "shell"
+        "locale"
         "display"
         "de"
         "wm"
@@ -31,7 +37,6 @@
         "memory"
         "swap"
         "disk"
-        "locale"
         "break"
         "colors"
       ];
