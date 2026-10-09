@@ -1,6 +1,5 @@
 * {
     font-family: "FiraCode Nerd Font";
-    font-size: 100px;
     background-image: none;
     box-shadow: none;
     border: none;
@@ -13,9 +12,14 @@ window {
 button {
     color: #d3d5de;
     background: rgba(67, 68, 77, 0.55);
+    border-radius: 0;
     margin: 10px;
-    padding: 0px 20px 40px 20px;
     transition: all 0.2s ease-in-out;
+}
+
+button label {
+    font-size: 140px;
+    padding: 0px 0px 40px 0px;
 }
 
 button:hover {
