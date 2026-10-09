@@ -4,6 +4,7 @@
     nautilus
     nautilus-python
     nautilus-open-any-terminal
+    file-roller
   ];
 
   services.gnome.sushi.enable = true;
