@@ -2,19 +2,19 @@
     {
         "label": "shutdown",
         "action": "systemctl poweroff",
-        "text": "󰐥",
+        "text": "",
         "keybind": "s"
     },
     {
         "label": "reboot",
         "action": "systemctl reboot",
-        "text": "󰜉",
+        "text": "",
         "keybind": "r"
     },
     {
         "label": "suspend",
         "action": "systemctl suspend",
-        "text": "󰒲",
+        "text": "",
         "keybind": "u"
     },
     {
@@ -26,7 +26,7 @@
     {
         "label": "lock",
         "action": "hyprlock",
-        "text": "󰌾",
+        "text": "",
         "keybind": "l"
     },
     {
