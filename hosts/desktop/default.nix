@@ -13,7 +13,10 @@
   # -- System modules
   # -- Enable system-level features here:
 
-  # PipeWire
+  boot.kernelParams = [
+    "amdgpu.dcdebugmask=0x410"
+  ];
+
   my.system.audio = {
     enable = true;
     quantum = 256;
