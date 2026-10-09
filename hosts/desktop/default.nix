@@ -21,6 +21,10 @@
     maxQuantum = 512;
   };
 
+  my.system.carla-yabridge = {
+    enable = true;
+  };
+
   my.system.wireplumber.disableHdmiDp = {
     enable = true;
     devices = [ "alsa_card.pci-0000_03_00.1" ];  # (wpctl status)
