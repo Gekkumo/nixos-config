@@ -3,6 +3,7 @@
   imports = [
     ./hardware.nix
     ../../modules/disko/btrfs-layout.nix
+    # ../../modules/disko/ext4-layout.nix
   ];
 
   # Disk configuration for this host
