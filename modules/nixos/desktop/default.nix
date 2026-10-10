@@ -10,6 +10,14 @@
     enable = true;
     mountOnMedia = true;
   };
+  xdg.terminal-exec = {
+    enable = true;
+    settings = {
+      default = [
+        "kitty.desktop"
+      ];
+    };
+  };
 
   # Security & Secrets
   security.polkit.enable = true;
