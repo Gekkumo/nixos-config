@@ -32,7 +32,7 @@
     ifuse
 
     # Applications
-    pomodoro-gtk
+    openpomodoro-cli
 
     # Network
     bind
