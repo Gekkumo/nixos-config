@@ -41,6 +41,12 @@
       light = "Papirus-Light";
     };
 
+    stylix.cursor = {
+      package = pkgs.adwaita-icon-theme;
+      name = "Adwaita";
+      size = 24;
+    };
+
     homeManagerIntegration.autoImport = true;
     homeManagerIntegration.followSystem = true;
   };
