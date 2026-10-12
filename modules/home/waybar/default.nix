@@ -14,7 +14,7 @@
         layer = "top";
         position = "top";
         height = 30;
-        spacing = 5;
+        spacing = 2;
 
         modules-left = [ "custom/power" "niri/workspaces" ];
         modules-center = [ "clock" ];
@@ -49,9 +49,8 @@
         };
 
         "wireplumber#sink" = {
-          format = "{icon} {volume}%";
-          "format-muted" = "  {volume}%";
-          "format-icons" = ["" "" " "];
+          format = "{volume}%";
+          "format-muted" = "";
           "on-click" = "~/.config/waybar/scripts/toggle-audio.sh";
           "on-click-middle" = "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
           "on-scroll-up" = "wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 2%+";
@@ -62,8 +61,8 @@
         "wireplumber#source" = {
           "node-type" = "Audio/Source";
           format = "{icon} {volume}%";
-          "format-muted" = " {volume}%";
-          "format-icons" = ["" ""];
+          "format-muted" = " {volume}%";
+          "format-icons" = "";
           "on-click" = "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle";
           "on-scroll-up" = "wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SOURCE@ 2%+";
           "on-scroll-down" = "wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SOURCE@ 2%-";
@@ -109,11 +108,11 @@
       }
 
       #custom-power, #clock, #wireplumber, #temperature, #custom-tomat, #tray, #niri-language {
-        padding: 0 3px;
+        padding: 0 2px;
       }
 
       #workspaces button {
-        padding: 0 3px;
+        padding: 0 2px;
         color: @base03;
         border: none;
         border-radius: 0;
