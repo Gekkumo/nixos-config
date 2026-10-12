@@ -41,7 +41,7 @@
       light = "Papirus-Light";
     };
 
-    stylix.cursor = {
+    cursor = {
       package = pkgs.adwaita-icon-theme;
       name = "Adwaita";
       size = 24;
