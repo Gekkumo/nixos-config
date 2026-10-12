@@ -16,11 +16,11 @@ in
       animations = {
         enabled = true;
         fade_in = {
-          duration = 400;
+          duration = 800;
           bezier = "easeOutQuint";
         };
         fade_out = {
-          duration = 400;
+          duration = 600;
           bezier = "easeOutQuint";
         };
       };
@@ -43,7 +43,8 @@ in
           path = "${avatar}";
           size = 170;
           rounding = -1;
-          border_size = 0;
+          border_size = 2;
+          border_color = "rgb(${colors.base03})";
           position = "0, 80";
           halign = "center";
           valign = "center";
