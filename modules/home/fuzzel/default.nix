@@ -6,7 +6,7 @@
       main = {
         lines = 15;
         width = 25;
-        prompt = "$ ";
+        prompt = "$";
         terminal = "kitty -e";
         icons-enabled = false;
         dpi-aware = "auto";
