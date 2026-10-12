@@ -14,7 +14,7 @@
         layer = "top";
         position = "top";
         height = 30;
-        spacing = 10;
+        spacing = 5;
 
         modules-left = [ "custom/power" "niri/workspaces" ];
         modules-center = [ "clock" ];
@@ -49,9 +49,9 @@
         };
 
         "wireplumber#sink" = {
-          format = "{volume}% {icon}";
-          "format-muted" = " {volume}%";
-          "format-icons" = ["" "" "" ""];
+          format = "{icon} {volume}%";
+          "format-muted" = "  {volume}%";
+          "format-icons" = ["" "" " "];
           "on-click" = "~/.config/waybar/scripts/toggle-audio.sh";
           "on-click-middle" = "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
           "on-scroll-up" = "wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 2%+";
@@ -61,7 +61,7 @@
 
         "wireplumber#source" = {
           "node-type" = "Audio/Source";
-          format = "{volume}% {icon}";
+          format = "{icon} {volume}%";
           "format-muted" = " {volume}%";
           "format-icons" = ["" ""];
           "on-click" = "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle";
@@ -104,6 +104,10 @@
         min-height: 0;
       }
 
+      #waybar {
+        padding: 0 2px;
+      }
+
       #custom-power, #clock, #wireplumber, #temperature, #custom-tomat, #tray, #niri-language {
         padding: 0 3px;
       }
@@ -125,7 +129,7 @@
       }
 
       #custom-power {
-        font-size: 22px;
+        font-size: 25px;
       }
     '';
   };
