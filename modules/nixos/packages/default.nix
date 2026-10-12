@@ -15,6 +15,8 @@
     sops
     age
     pv
+    nixd
+    nixfmt
 
     # System Utilities
     coreutils
