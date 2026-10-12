@@ -12,6 +12,10 @@
       };
       notification.enabled = true;
       sound.enabled = true;
+      display = {
+        text_format = "{time} {state}";
+        text_format_idle = "{icon}";
+      };
     };
   };
 }
