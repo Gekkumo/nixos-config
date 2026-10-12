@@ -14,7 +14,7 @@
         layer = "top";
         position = "top";
         height = 30;
-        spacing = 4;
+        spacing = 2;
 
         modules-left = [ "custom/power" "niri/workspaces" ];
         modules-center = [ "clock" ];
@@ -102,16 +102,16 @@
         min-height: 0;
       }
 
-      #waybar {
-        padding: 0 7px;
-      }
-
       #workspaces button {
         padding: 0 2px;
         color: @base03;
         border: none;
         border-radius: 0;
         background: transparent;
+      }
+
+      #tray {
+        margin-right: 2px;
       }
 
       #workspaces button.active {
@@ -123,7 +123,8 @@
       }
 
       #custom-power {
-        margin-right: 2px;
+        margin-left: 5px;
+        margin-right: 5px;
         font-size: 25px;
       }
     '';
