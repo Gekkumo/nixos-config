@@ -32,9 +32,6 @@
     libimobiledevice
     ifuse
 
-    # Applications
-    openpomodoro-cli
-
     # Network
     bind
     rsync

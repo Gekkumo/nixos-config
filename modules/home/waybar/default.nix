@@ -1,23 +1,8 @@
-{ pkgs, lib, ... }:
+{ lib, ... }:
 {
   xdg.configFile."waybar/scripts/toggle-audio.sh" = {
     source = ./scripts/toggle-audio.sh;
     executable = true;
-  };
-  xdg.configFile."waybar/scripts/pomodoro-status.sh" = {
-    source = ./scripts/pomodoro-status.sh;
-    executable = true;
-  };
-  xdg.configFile."waybar/scripts/pomodoro-cancel.sh" = {
-    source = ./scripts/pomodoro-cancel.sh;
-    executable = true;
-  };
-  xdg.configFile."waybar/scripts/pomodoro-toggle.sh" = {
-    source = ./scripts/pomodoro-toggle.sh;
-    executable = true;
-  };
-  xdg.configFile."waybar/scripts/notification.wav" = {
-    source = ./scripts/notification.wav;
   };
 
   programs.waybar = {
@@ -32,7 +17,7 @@
         spacing = 5;
 
         modules-left = [ "custom/power" "niri/workspaces" ];
-        modules-center = [ "clock" "custom/pomodoro" ];
+        modules-center = [ "clock" "custom/tomat" ];
         modules-right = [ "tray" "temperature#gpu" "temperature#cpu" "niri/language" "wireplumber#source" "wireplumber#sink" ];
 
         "niri/workspaces" = {
@@ -92,17 +77,19 @@
           "on-click" = "wlogout";
         };
 
+        "custom/tomat" = {
+          exec = "tomat status";
+          interval = 1;
+          return-type = "json";
+          format = "{text}";
+          tooltip = true;
+          on-click = "tomat toggle";
+          on-click-right = "tomat skip";
+        };
+
         "clock" = {
           format = "{:%a %d.%m.%Y ~ %H:%M}";
           tooltip = false;
-        };
-
-        "custom/pomodoro" = {
-          exec = "~/.config/waybar/scripts/pomodoro-status.sh";
-          interval = "once";
-          signal = 8;
-          on-click = "~/.config/waybar/scripts/pomodoro-toggle.sh";
-          on-click-right = "~/.config/waybar/scripts/pomodoro-cancel.sh";
         };
       };
     };
@@ -118,7 +105,6 @@
       #custom-power, #clock, #wireplumber { padding: 0 1px; }
       #wireplumber { margin-left: 3px; margin-right: 6px; }
       #clock { margin-right: 5px; }
-      #custom-pomodoro { padding: 0 8px; margin-left: 4px; }
       #custom-power { padding: 0px 0px 0px 10px; }
       #tray { padding-right: 1px; }
 
