@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-WPCTL="wpctl"
+WPCTL="/run/current-system/sw/bin/wpctl"
 
 SINKS=($($WPCTL status | sed -n '/Sinks:/,/Sources:/p' | grep -oP '^\s*│\s+\d+' | grep -oP '\d+' | while read id; do
     name=$($WPCTL inspect "$id" 2>/dev/null | grep 'node.name' | head -1)

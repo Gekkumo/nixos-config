@@ -16,6 +16,9 @@
     source = ./scripts/pomodoro-toggle.sh;
     executable = true;
   };
+  xdg.configFile."waybar/scripts/notification.wav" = {
+    source = ./scripts/notification.wav;
+  };
 
   programs.waybar = {
     enable = true;
