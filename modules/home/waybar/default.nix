@@ -123,7 +123,7 @@
       }
 
       #custom-power {
-        magrin-right: 2px;
+        margin-right: 2px;
         font-size: 25px;
       }
     '';
