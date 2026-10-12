@@ -64,5 +64,7 @@
     };
   };
 
-  stylix.targets.vscode.userSettings.enable = false;
+  stylix.targets.vscode.fonts.enable = false;
+  stylix.targets.vscode.colors.enable = false;
+  stylix.targets.vscode.enable = true;
 }
