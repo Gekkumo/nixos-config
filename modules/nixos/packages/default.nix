@@ -49,5 +49,8 @@
     # Monitoring
     lm_sensors
     powertop
+
+    # Applications
+    qalculate-gtk
   ];
 }

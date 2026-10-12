@@ -30,7 +30,6 @@
     ./fastfetch
     ./btop
     ./yazi
-    ./fend
     ./neovim
 
     # DevOps
