@@ -14,11 +14,11 @@
         layer = "top";
         position = "top";
         height = 30;
-        spacing = 5;
+        spacing = 3;
 
         modules-left = [ "custom/power" "niri/workspaces" ];
         modules-center = [ "clock" ];
-        modules-right = [ "tray" "temperature#gpu" "temperature#cpu" "niri/language" "custom/tomat" "wireplumber#source" "wireplumber#sink" ];
+        modules-right = [ "tray" "custom/tomat" "niri/language" "temperature#gpu" "temperature#cpu" "wireplumber#source" "wireplumber#sink" ];
 
         "niri/workspaces" = {
           disable-scroll = true;
@@ -103,12 +103,8 @@
         min-height: 0;
       }
 
-      #custom-power, #clock, #wireplumber, #temperature, #custom-tomat, #tray, #niri-language {
-        padding: 0 5px;
-      }
-
       #workspaces button {
-        padding: 0 5px;
+        padding: 0 3px;
         color: @base03;
         border: none;
         border-radius: 0;
@@ -124,7 +120,7 @@
       }
 
       #custom-power {
-        font-size: 20px;
+        font-size: 22px;
       }
     '';
   };
