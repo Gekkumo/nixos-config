@@ -50,7 +50,7 @@
 
         "wireplumber#sink" = {
           format = "{volume}%";
-          "format-muted" = "%";
+          "format-muted" = " ";
           "on-click" = "~/.config/waybar/scripts/toggle-audio.sh";
           "on-click-middle" = "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
           "on-scroll-up" = "wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 2%+";
