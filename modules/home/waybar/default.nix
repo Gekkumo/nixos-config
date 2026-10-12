@@ -14,7 +14,7 @@
         layer = "top";
         position = "top";
         height = 30;
-        spacing = 3;
+        spacing = 5;
 
         modules-left = [ "custom/power" "niri/workspaces" ];
         modules-center = [ "clock" ];
@@ -104,7 +104,7 @@
       }
 
       #workspaces button {
-        padding: 0 3px;
+        padding: 0 5px;
         color: @base03;
         border: none;
         border-radius: 0;
