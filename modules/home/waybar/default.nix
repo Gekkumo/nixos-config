@@ -1,31 +1,9 @@
 { pkgs, lib, ... }:
-let
-  toggleAudioScript = pkgs.writeShellScript "toggle-audio" ''
-    WPCTL="${pkgs.wireplumber}/bin/wpctl"
-
-    SINKS=($($WPCTL status | sed -n '/Sinks:/,/Sources:/p' | grep -oP '^\s*│\s+\d+' | grep -oP '\d+' | while read id; do
-        name=$($WPCTL inspect "$id" 2>/dev/null | grep 'node.name' | head -1)
-        if [[ "$name" != *".monitor"* ]]; then
-            echo "$id"
-        fi
-    done))
-
-    [ ''${#SINKS[@]} -le 1 ] && exit 0
-
-    CURRENT=$($WPCTL status | grep '\*' | grep -oP '^\s*│\s+\K\d+')
-
-    NEXT=""
-    for i in "''${!SINKS[@]}"; do
-        if [ "''${SINKS[$i]}" = "$CURRENT" ]; then
-            NEXT=''${SINKS[$(((i + 1) % ''${#SINKS[@]}))]}
-            break
-        fi
-    done
-
-    [ -n "$NEXT" ] && $WPCTL set-default "$NEXT"
-  '';
-in
 {
+  xdg.configFile."waybar/scripts/toggle-audio.sh" = {
+    source = ./scripts/toggle-audio.sh;
+    executable = true;
+  };
   xdg.configFile."waybar/scripts/pomodoro-status.sh" = {
     source = ./scripts/pomodoro-status.sh;
     executable = true;
@@ -86,7 +64,7 @@ in
           format = "{volume}% {icon}";
           "format-muted" = " {volume}%";
           "format-icons" = ["" "" ""];
-          "on-click" = "${toggleAudioScript}";
+          "on-click" = "~/.config/waybar/scripts/toggle-audio.sh";
           "on-scroll-up" = "wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 2%+";
           "on-scroll-down" = "wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 2%-";
           "scroll-step" = 2.0;
@@ -137,6 +115,7 @@ in
       #custom-power, #clock, #wireplumber { padding: 0 1px; }
       #wireplumber { margin-left: 3px; margin-right: 6px; }
       #clock { margin-right: 5px; }
+      #custom-pomodoro { padding: 0 8px; margin-left: 4px; }
       #custom-power { padding: 0px 0px 0px 10px; }
       #tray { padding-right: 1px; }
 
