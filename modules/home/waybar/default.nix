@@ -103,7 +103,7 @@
       }
 
       #waybar {
-        padding: 0 20px;
+        padding: 0 7px;
       }
 
       #workspaces button {
