@@ -22,9 +22,13 @@
       cweijan.dbclient-jdbc
       cweijan.vscode-database-client2
     ];
+
+    profiles.default.userSettings = { };
   };
 
-  home.file.".config/Code/User/settings.json".source =
-    config.lib.file.mkOutOfStoreSymlink
+  home.file.".config/Code/User/settings.json" = {
+    source = config.lib.file.mkOutOfStoreSymlink
       "${config.home.homeDirectory}/nixos-config/modules/home/vscode/configs/vscode-settings.json";
+    force = true;
+  };
 }
