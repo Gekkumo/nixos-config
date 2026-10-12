@@ -102,7 +102,10 @@
         min-height: 0;
       }
 
-      #workspaces button {
+      .modules-left #workspaces button,
+      .modules-center #workspaces button,
+      .modules-right #workspaces button {
+        border-bottom: none;
         padding: 0 2px;
         color: @base03;
         border: none;
@@ -110,8 +113,25 @@
         background: transparent;
       }
 
+      .modules-left #workspaces button.focused,
+      .modules-left #workspaces button.active,
+      .modules-center #workspaces button.focused,
+      .modules-center #workspaces button.active,
+      .modules-right #workspaces button.focused,
+      .modules-right #workspaces button.active {
+        border-bottom: none;
+        color: @base05;
+      }
+
+      .modules-left #workspaces button:hover,
+      .modules-center #workspaces button:hover,
+      .modules-right #workspaces button:hover {
+        border-bottom: none;
+        color: @base0D;
+      }
+
       #tray {
-        margin-right: 2px;
+        margin-right: 5px;
       }
 
       #workspaces button.active {
