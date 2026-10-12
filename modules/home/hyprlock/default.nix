@@ -1,6 +1,6 @@
 { config, ... }:
 let
-  colors = config.lib.stylix.colors.withHashtag;
+  colors = config.lib.stylix.colors;
   wallpaper = ./assets/wallpaper.png;
   avatar = ./assets/avatar.png;
 in
@@ -10,7 +10,6 @@ in
     settings = {
       general = {
         hide_cursor = true;
-        grace = 0;
       };
 
       background = [
@@ -20,7 +19,7 @@ in
           blur_passes = 1;
           blur_size = 1;
           contrast = 0.8916;
-          brightness = 0.95;
+          brightness = 0.9500;
           vibrancy = 0.1696;
         }
       ];
@@ -32,7 +31,7 @@ in
           size = 170;
           rounding = -1;
           border_size = 2;
-          border_color = "${colors.base03}";
+          border_color = "rgb(${colors.base03})";
           position = "0, 80";
           halign = "center";
           valign = "center";
@@ -46,11 +45,11 @@ in
           monitor = "";
           dots_center = true;
           fade_on_empty = false;
-          font_color = "${colors.base05}";
-          inner_color = "${colors.base01}";
-          outer_color = "${colors.base03}";
-          check_color = "${colors.base03}";
-          fail_color = "${colors.base03}";
+          font_color = "rgb(${colors.base05})";
+          inner_color = "rgb(${colors.base01}, 0.5)";
+          outer_color = "rgb(${colors.base03})";
+          check_color = "rgb(${colors.base03})";
+          fail_color = "rgb(${colors.base03})";
           outline_thickness = 2;
           placeholder_text = "Enter password...";
           shadow_passes = 2;
