@@ -17,8 +17,8 @@
         spacing = 5;
 
         modules-left = [ "custom/power" "niri/workspaces" ];
-        modules-center = [ "clock" "custom/tomat" ];
-        modules-right = [ "tray" "temperature#gpu" "temperature#cpu" "niri/language" "wireplumber#source" "wireplumber#sink" ];
+        modules-center = [ "clock" ];
+        modules-right = [ "tray" "temperature#gpu" "temperature#cpu" "niri/language" "custom/tomat" "wireplumber#source" "wireplumber#sink" ];
 
         "niri/workspaces" = {
           disable-scroll = true;
@@ -85,6 +85,7 @@
           tooltip = true;
           on-click = "tomat toggle";
           on-click-right = "tomat skip";
+          on-click-middle = "tomat stop";
         };
 
         "clock" = {
