@@ -10,6 +10,7 @@
     ./hyprlock
     ./hypridle
     ./swaybg
+    ./tomat
     ./gtk
     ./qt
     ./xwayland
