@@ -26,6 +26,19 @@ let
   '';
 in
 {
+  xdg.configFile."waybar/scripts/pomodoro-status.sh" = {
+    source = ./scripts/pomodoro-status.sh;
+    executable = true;
+  };
+  xdg.configFile."waybar/scripts/pomodoro-cancel.sh" = {
+    source = ./scripts/pomodoro-cancel.sh;
+    executable = true;
+  };
+  xdg.configFile."waybar/scripts/pomodoro-toggle.sh" = {
+    source = ./scripts/pomodoro-toggle.sh;
+    executable = true;
+  };
+
   programs.waybar = {
     enable = true;
     systemd.enable = true;
@@ -38,7 +51,7 @@ in
         spacing = 5;
 
         modules-left = [ "custom/power" "niri/workspaces" ];
-        modules-center = [ "clock" ];
+        modules-center = [ "clock" "custom/pomodoro" ];
         modules-right = [ "tray" "temperature#gpu" "temperature#cpu" "niri/language" "wireplumber#source" "wireplumber#sink" ];
 
         "niri/workspaces" = {
@@ -101,6 +114,14 @@ in
         "clock" = {
           format = "{:%a %d.%m.%Y ~ %H:%M}";
           tooltip = false;
+        };
+
+        "custom/pomodoro" = {
+          exec = "~/.config/waybar/scripts/pomodoro-status.sh";
+          interval = "once";
+          signal = 8;
+          on-click = "~/.config/waybar/scripts/pomodoro-toggle.sh";
+          on-click-right = "~/.config/waybar/scripts/pomodoro-cancel.sh";
         };
       };
     };

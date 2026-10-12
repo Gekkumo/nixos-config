@@ -28,6 +28,7 @@
     dmidecode
     smartmontools
     nvme-cli
+    libnotify
     libimobiledevice
     ifuse
 
