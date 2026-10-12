@@ -98,26 +98,33 @@
     style = lib.mkAfter ''
       * {
         font-family: "FiraCode Nerd Font", "Symbols Nerd Font", "Fira Sans";
-        font-size: 13px;
+        font-size: 14px;
         font-weight: bold;
         min-height: 0;
       }
 
-      #custom-power, #clock, #wireplumber { padding: 0 1px; }
-      #wireplumber { margin-left: 3px; margin-right: 6px; }
-      #clock { margin-right: 5px; }
-      #custom-power { padding: 0px 0px 0px 10px; }
-      #tray { padding-right: 1px; }
-
-      #custom-power {
-        padding: 0px 0px 0px 10px;
-        margin-right: 12px;
-        font-size: 16px;
+      #custom-power, #clock, #wireplumber, #temperature, #custom-tomat, #tray, #niri-language {
+        padding: 0 5px;
       }
 
-      #temperature {
-        padding: 0 10px;
-        margin-left: 4px;
+      #workspaces button {
+        padding: 0 5px;
+        color: @base03;
+        border: none;
+        border-radius: 0;
+        background: transparent;
+      }
+
+      #workspaces button.active {
+        color: @base05;
+      }
+
+      #workspaces button:hover {
+        color: @base0D;
+      }
+
+      #custom-power {
+        font-size: 20px;
       }
     '';
   };
