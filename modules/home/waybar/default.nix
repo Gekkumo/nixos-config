@@ -68,7 +68,7 @@
           "scroll-step" = 2.0;
         };
 
-        "tray" = { "icon-size" = 14; spacing = 10; cursor = true; };
+        "tray" = { "icon-size" = 14; spacing = 8; cursor = true; };
 
         "custom/power" = {
           format = "";
