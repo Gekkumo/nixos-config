@@ -1,7 +1,4 @@
 { ... }:
 {
-  virtualisation.docker = {
-    enable = true;
-    # storageDriver = "btrfs";
-  };
+  virtualisation.docker.enable = true;
 }

@@ -8,6 +8,4 @@
   };
 
   boot.kernel.sysctl."vm.swappiness" = 100;
-  swapDevices = [{ device = "/swap/swapfile"; size = 8192; }];
-  # swapDevices = [{ device = "/swapfile"; size = 8192; }];
 }

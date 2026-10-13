@@ -20,6 +20,11 @@
 
   networking.firewall.trustedInterfaces = [ "virbr0" ];
 
+  systemd.services.libvirtd = {
+    unitConfig.RequiresMountsFor = [ "/.vm" ];
+    after = [ "systemd-tmpfiles-setup.service" ];
+  };
+
   systemd.services.libvirt-default-network = {
     after = [ "libvirtd.service" ];
     wantedBy = [ "multi-user.target" ];
