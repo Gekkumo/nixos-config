@@ -17,7 +17,7 @@
           };
         };
         root = {
-          size = "25G";
+          size = "20G";
           content = {
             type = "filesystem";
             format = "ext4";
@@ -26,7 +26,7 @@
           };
         };
         nix = {
-          size = "50G";
+          size = "40G";
           content = {
             type = "filesystem";
             format = "ext4";
