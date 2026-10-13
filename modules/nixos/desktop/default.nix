@@ -28,6 +28,12 @@
     packages = with pkgs; [ gcr gnome-keyring ];
   };
 
+  # Journal
+  services.journald.extraConfig = ''
+    SystemMaxUse=500M
+    MaxRetentionSec=1month
+  '';
+
   # Variables
   environment.sessionVariables = {
     # Session variables
