@@ -12,6 +12,9 @@
   };
 
   console = {
-    keyMap = "us,ru";
+    keyMap = "us";
+    earlySetup = true;
   };
+
+  systemd.services.systemd-vconsole-setup.unitConfig.After = [ "local-fs.target" ];
 }
