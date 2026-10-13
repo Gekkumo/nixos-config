@@ -51,6 +51,9 @@
     ./imv
     ./foliate
 
+    # Windows
+    ./wine
+
     # Documents
     ./zathura
     ./libreoffice

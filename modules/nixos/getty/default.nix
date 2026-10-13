@@ -1,6 +1,6 @@
-{ ... }:
+{ username, ... }:
 {
-  services.getty.autologinUser = "gekkumo";
+  services.getty.autologinUser = username;
 
   environment.loginShellInit = ''
     if uwsm check may-start; then
