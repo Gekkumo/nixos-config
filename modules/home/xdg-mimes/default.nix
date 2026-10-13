@@ -39,7 +39,7 @@
       "audio/wav" = [ "mpv.desktop" ];
 
       # PDF
-      "application/pdf" = [ "miro.desktop" ];
+      "application/pdf" = [ "miro-pdf.desktop" ];
 
       # Directory
       "inode/directory" = [ "org.gnome.Nautilus.desktop" ];
