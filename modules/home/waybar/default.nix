@@ -153,11 +153,11 @@
       }
 
       #idle_inhibitor {
-        margin-right: 5px;
+        margin-right: 2px;
       }
 
       #custom-power {
-        margin-left: 5px;
+        margin-left: 50px;
         margin-right: 5px;
         font-size: 25px;
       }
