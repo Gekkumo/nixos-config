@@ -49,7 +49,11 @@
     ./mpd
     ./rmpc
     ./imv
-    ./miro
+    ./foliate
+
+    # Documents
+    ./zathura
+    ./libreoffice
 
     # Browsers & Communication
     ./firefox
