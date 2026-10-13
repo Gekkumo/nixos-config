@@ -18,7 +18,7 @@
 
         modules-left = [ "custom/power" "niri/workspaces" ];
         modules-center = [ "clock" ];
-        modules-right = [ "tray" "custom/tomat" "niri/language" "temperature#gpu" "temperature#cpu" "wireplumber#source" "wireplumber#sink" ];
+        modules-right = [ "tray" "custom/tomat" "idle_inhibitor" "niri/language" "temperature#gpu" "temperature#cpu" "wireplumber#source" "wireplumber#sink" ];
 
         "niri/workspaces" = {
           disable-scroll = true;
@@ -69,6 +69,16 @@
         };
 
         "tray" = { "icon-size" = 14; spacing = 8; cursor = true; };
+
+        "idle_inhibitor" = {
+          format = "{icon}";
+          format-icons = {
+            activated = "";
+            deactivated = "";
+          };
+          tooltip-format-activated = "Idle inhibitor: ON";
+          tooltip-format-deactivated = "Idle inhibitor: OFF";
+        };
 
         "custom/power" = {
           format = "";
@@ -139,6 +149,14 @@
       }
 
       #workspaces button:hover {
+        color: @base0D;
+      }
+
+      #idle_inhibitor.activated {
+        color: @base05;
+      }
+
+      #idle_inhibitor.deactivated {
         color: @base0D;
       }
 
