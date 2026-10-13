@@ -157,7 +157,7 @@
       }
 
       #custom-power {
-        margin-left: 50px;
+        margin-left: 6px;
         margin-right: 5px;
         font-size: 25px;
       }
