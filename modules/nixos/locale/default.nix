@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ ... }:
 {
   time.timeZone = "Europe/Moscow";
 
@@ -13,7 +13,5 @@
 
   console = {
     keyMap = "us,ru";
-    font = "ter-v20b";
-    packages = [ pkgs.terminus_font ];
   };
 }
