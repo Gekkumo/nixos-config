@@ -1,14 +1,21 @@
-{ ... }:
+{ username, ... }:
 {
   imports = [
     ./hardware.nix
     ../../modules/disko/btrfs-layout.nix
-    # ../../modules/disko/ext4-layout.nix
   ];
 
-  # Disk configuration for this host
-  _module.args.disks = {
-    main = "/dev/nvme0n1"; # /dev/nvme1n1 (lsblk)
+  # Data
+  fileSystems."/mnt/data" = {
+    device = "/dev/disk/by-label/data";
+    fsType = "xfs";
+    options = [ "noatime" "nofail" ];
+  };
+
+  # Steam
+  fileSystems."/home/${username}/.local/share/Steam" = {
+    device = "/.steam";
+    options = [ "bind" "X-systemd.requires=/.steam" ];
   };
 
   # -- System modules
