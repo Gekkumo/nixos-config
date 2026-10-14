@@ -18,6 +18,15 @@
     nixd
     nixfmt
 
+    # CLI
+    bat
+    trash-cli
+    dust
+    nix-output-monitor
+    killall
+    restic
+    eza
+
     # System Utilities
     coreutils
     procps
