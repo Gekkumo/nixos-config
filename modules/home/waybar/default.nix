@@ -16,7 +16,7 @@
         height = 30;
         spacing = 2;
 
-        modules-left = [ "custom/power" "niri/workspaces" ];
+        modules-left = [ "custom/power" "niri/workspaces" "mpris" ];
         modules-center = [ "clock" ];
         modules-right = [ "tray" "custom/tomat" "niri/language" "temperature#gpu" "temperature#cpu" "wireplumber#source" "wireplumber#sink" "idle_inhibitor" ];
 
@@ -34,11 +34,33 @@
           tooltip = false;
         };
 
+        # Change
+        "mpris" = {
+          "player-order" = [ "mpdris2-rs" "firefox" ];
+          "format" = "{player_icon} {dynamic}";
+          "format-paused" = "{status_icon} <i>{dynamic}</i>";
+          "player-icons" = {
+            "default" = "";
+            "mpdris2-rs" = "";
+            "firefox" = "";
+          };
+          "status-icons" = {
+            "paused" = "";
+          };
+          "dynamic-order" = [ "title" "artist" ];
+          "dynamic-separator" = " - ";
+          "on-click" = "playerctl play-pause";
+          "on-click-right" = "playerctl next";
+          "on-scroll-up" = "playerctl previous";
+          "on-scroll-down" = "playerctl next";
+        };
+
         "temperature#cpu" = {
           "hwmon-name" = "coretemp";
           "input-filename" = "temp1_input";
           "format" = "{temperatureC}°C ";
           "interval" = 2;
+          "on-click" = "kitty -e btop";
         };
 
         "temperature#gpu" = {
@@ -46,12 +68,13 @@
           "input-filename" = "temp1_input";
           "format" = "{temperatureC}°C";
           "interval" = 2;
+          "on-click" = "kitty -e lact";
         };
 
         "wireplumber#sink" = {
           format = "{volume}%";
           "format-muted" = " ";
-          "on-click" = "~/.config/waybar/scripts/toggle-audio.sh";
+          "on-click" = "${config.home.homeDirectory}/.config/waybar/scripts/toggle-audio.sh";
           "on-click-middle" = "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
           "on-scroll-up" = "wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 2%+";
           "on-scroll-down" = "wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 2%-";
@@ -63,6 +86,7 @@
           format = "{volume}%";
           "format-muted" = " {volume}%";
           "on-click" = "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle";
+          "on-click-middle" = "kitty -e wiremix";
           "on-scroll-up" = "wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SOURCE@ 2%+";
           "on-scroll-down" = "wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SOURCE@ 2%-";
           "scroll-step" = 2.0;

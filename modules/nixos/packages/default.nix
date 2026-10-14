@@ -1,68 +1,76 @@
 { pkgs, ... }:
 {
   environment.systemPackages = with pkgs; [
-    # Core
-    git
-    tmux
-    vim
-    wget
-    curl
-    ripgrep
-    zoxide
-    starship
-    fd
-    file
-    sops
-    age
-    pv
-    nixd
-    nixfmt
-
-    # CLI
-    bat
-    trash-cli
-    dust
-    nix-output-monitor
-    killall
-    restic
-    eza
-
-    # System Utilities
+    # Core system & Base utilities
+    qalculate-gtk
     coreutils
+    man-pages
     procps
+    killall
+    file
+    pv
+
+    # Archives & File systems
+    trash-cli
     gnutar
     gzip
     unzip
-    man-pages
-    pciutils
-    usbutils
-    dmidecode
-    smartmontools
-    nvme-cli
-    libnotify
-    libimobiledevice
-    ifuse
     fuse
 
-    # Network
-    bind
+    # Networking
+    openssh
     rsync
     socat
-    openssh
+    wget
+    curl
+    bind
 
-    # Security & Secrets
-    gnupg
-    pinentry-gnome3
+    # CLI
+    ripgrep
+    zoxide
+    dust
+    bat
+    eza
+    fd
 
-    # GPU
-    mesa-demos
-    ddcutil
+    # Terminal
+    starship
+    tmux
+    git
+    vim
 
-    # Monitoring
+    # NixOs
+    nix-output-monitor
+    nixfmt
+    nixd
+
+    # Audio & Media managment
+    playerctl
+    wiremix
+
+    # Hadrware, Diagnostics & Monitoring
+    smartmontools
+    dmidecode
     lm_sensors
     powertop
+    pciutils
+    usbutils
+    nvme-cli
 
-    # Applications
-    qalculate-gtk
+    # Grafics & Notifications
+    mesa-demos
+    libnotify
+    ddcutil
+
+    # IOs
+    libimobiledevice
+    ifuse
+
+    # Cryptography, Secrets & Recovery
+    pinentry-gnome3
+    restic
+    gnupg
+    sops
+    age
   ];
 }
