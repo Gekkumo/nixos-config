@@ -27,17 +27,10 @@
 
     # CLI
     ripgrep
-    zoxide
     dust
     bat
     eza
     fd
-
-    # Terminal
-    starship
-    tmux
-    git
-    vim
 
     # NixOs
     nix-output-monitor
