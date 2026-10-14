@@ -9,7 +9,6 @@
         eamodio.gitlens
         hashicorp.terraform
         jnoortheen.nix-ide
-        ms-azuretools.vscode-docker
         ms-azuretools.vscode-containers
         ms-kubernetes-tools.vscode-kubernetes-tools
         ms-python.python
@@ -45,6 +44,4 @@
       };
     };
   };
-
-  stylix.targets.vscode.enable = true;
 }

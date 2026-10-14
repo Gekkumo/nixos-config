@@ -8,6 +8,4 @@
       window_padding_width = 10;
     };
   };
-
-  stylix.targets.kitty.enable = true;
 }

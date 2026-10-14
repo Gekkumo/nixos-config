@@ -1,9 +1,5 @@
 { pkgs, ... }:
 {
-  home.packages = with pkgs; [
-    mangohud
-  ];
-
   programs.mangohud = {
     enable = true;
     settings = {
@@ -35,6 +31,4 @@
       winesync = true;
     };
   };
-
-  stylix.targets.mangohud.enable = true;
 }

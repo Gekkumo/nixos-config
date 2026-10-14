@@ -13,6 +13,4 @@
       "--border=rounded"
     ];
   };
-
-  stylix.targets.fzf.enable = true;
 }

@@ -18,6 +18,4 @@
       bind -T copy-mode-vi y send-keys -X copy-pipe-and-cancel 'wl-copy'
     '';
   };
-
-  stylix.targets.tmux.enable = true;
 }

@@ -6,6 +6,4 @@
       update_ms = 2000;
     };
   };
-
-  stylix.targets.btop.enable = true;
 }
