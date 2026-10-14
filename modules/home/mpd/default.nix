@@ -18,4 +18,9 @@
   systemd.user.tmpfiles.rules = [
     "d ${config.home.homeDirectory}/Music/playlists 0755 - - -"
   ];
+
+  services.mpdris2-rs = {
+    enable = true;
+    notifications.enable = false;
+  };
 }

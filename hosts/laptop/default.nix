@@ -9,13 +9,13 @@
   fileSystems."/mnt/data" = {
     device = "/dev/disk/by-label/data";
     fsType = "xfs";
-    options = [ "noatime" "nofail" ];
+    options = [ "noatime" "nofail" "x-systemd.device-timeout=5s" ];
   };
 
   # Steam
   fileSystems."/home/${username}/.local/share/Steam" = {
     device = "/.steam";
-    options = [ "bind" "X-systemd.requires=/.steam" ];
+    options = [ "bind" "x-systemd.requires=/.steam" ];
   };
 
   # -- System modules
