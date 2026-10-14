@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 {
   programs.git = {
     enable = true;
@@ -22,4 +22,8 @@
       line-numbers = true;
     };
   };
+
+  home.packages = with pkgs; [
+    difftastic
+  ];
 }
