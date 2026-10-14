@@ -45,6 +45,7 @@
     ./keepassxc
 
     # Media
+    ./mpdris2
     ./mpv
     ./mpd
     ./rmpc
