@@ -18,6 +18,4 @@
       };
     };
   };
-
-  stylix.targets.fuzzel.enable = true;
 }

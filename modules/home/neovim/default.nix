@@ -19,6 +19,4 @@
       })
     '';
   };
-
-  stylix.targets.neovim.enable = true;
 }

@@ -8,6 +8,4 @@
       };
     };
   };
-
-  stylix.targets.foliate.enable = true;
 }

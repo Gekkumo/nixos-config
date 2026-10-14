@@ -18,6 +18,4 @@
       group-by = "app-name";
     };
   };
-
-  stylix.targets.mako.enable = true;
 }

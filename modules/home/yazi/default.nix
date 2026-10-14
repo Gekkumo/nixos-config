@@ -23,6 +23,4 @@
       require("full-border"):setup()
     '';
   };
-
-  stylix.targets.yazi.enable = true;
 }
