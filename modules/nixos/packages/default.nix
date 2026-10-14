@@ -18,12 +18,12 @@
     fuse
 
     # Networking
+    dnsutils
     openssh
     rsync
     socat
     wget
     curl
-    bind
 
     # CLI
     ripgrep
