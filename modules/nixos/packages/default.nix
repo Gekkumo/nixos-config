@@ -33,6 +33,7 @@
     libnotify
     libimobiledevice
     ifuse
+    fuse
 
     # Network
     bind
