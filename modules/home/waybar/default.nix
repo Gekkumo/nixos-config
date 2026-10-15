@@ -1,4 +1,4 @@
-{ lib, ... }:
+{ lib, config, ... }:
 {
   xdg.configFile."waybar/scripts/toggle-audio.sh" = {
     source = ./scripts/toggle-audio.sh;
