@@ -39,6 +39,7 @@
     "z /.wine 0770 ${username} users - -"
     "z /.steam 0770 ${username} users - -"
     "z /.vm 0770 root libvirtd - -"
+    "z /home/${username}/.local 0755 ${username} users - -"
 
     "d /home/${username}/.local/share/Steam 0770 ${username} users - -"
     "d /var/lib/libvirt 0755 root root - -"
