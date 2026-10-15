@@ -25,13 +25,13 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nixos-hardware = {
-      url = "github:NixOS/nixos-hardware/master";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # nixos-hardware = {
+    #   url = "github:NixOS/nixos-hardware/master";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
   };
 
-  outputs = { self, nixpkgs, home-manager, disko, stylix, ... }@inputs:
+  outputs = { self, nixpkgs, ... }@inputs:
   let
     mkHost = import ./lib/mkHost.nix { inherit inputs; };
   in
