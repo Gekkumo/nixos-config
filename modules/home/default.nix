@@ -13,6 +13,7 @@
     ./tomat
     ./gtk
     ./qt
+    ./packages
     ./xwayland
     ./xdg-dirs
     ./xdg-mimes

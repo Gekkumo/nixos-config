@@ -19,6 +19,9 @@
     };
   };
 
+  # Monitor support
+  hardware.i2c.enable = true;
+
   # Security & Secrets
   security.polkit.enable = true;
   services.gnome.gnome-keyring.enable = true;
