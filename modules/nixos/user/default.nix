@@ -9,6 +9,7 @@
       "docker"
       "libvirtd"
       "kvm"
+      "i2c"
       "audio"
       "realtime"
       "video"

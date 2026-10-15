@@ -2,7 +2,6 @@
 {
   environment.systemPackages = with pkgs; [
     # Core system & Base utilities
-    qalculate-gtk
     coreutils
     man-pages
     procps
@@ -15,7 +14,6 @@
     gnutar
     gzip
     unzip
-    fuse
 
     # Networking
     dnsutils
@@ -49,20 +47,12 @@
     pciutils
     usbutils
     nvme-cli
-
-    # Grafics & Notifications
-    mesa-demos
-    libnotify
     ddcutil
 
-    # IOs
-    libimobiledevice
-    ifuse
+    # Grafics & Notifications
+    libnotify
 
     # Cryptography, Secrets & Recovery
-    restic
     gnupg
-    sops
-    age
   ];
 }
