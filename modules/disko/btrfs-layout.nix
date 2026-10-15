@@ -56,7 +56,7 @@
               "@swap" = {
                 mountpoint = "/.swap";
                 mountOptions = [ "nodatacow" "ssd" "noatime" ];
-                swap.swapfiles."swapfile" = {
+                swap.swapfile = {
                   size = "8G";
                 };
               };
