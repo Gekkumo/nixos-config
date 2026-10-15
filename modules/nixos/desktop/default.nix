@@ -30,8 +30,8 @@
 
   # Journal
   services.journald.extraConfig = ''
-    SystemMaxUse=500M
-    MaxRetentionSec=1month
+    SystemMaxUse=1G
+    MaxRetentionSec=14day
   '';
 
   # Variables
