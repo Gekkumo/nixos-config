@@ -60,7 +60,6 @@
     ifuse
 
     # Cryptography, Secrets & Recovery
-    pinentry-gnome3
     restic
     gnupg
     sops

@@ -41,7 +41,6 @@
     ./steam
     ./virt-manager
     ./docker
-    ./gnupg
     ./sops
 
     # Scripts
