@@ -1,6 +1,6 @@
-{ config, lib, ... }:
+{ ... }:
 {
-  home.sessionVariables = lib.mkIf config.my.system.wine.enable {
+  home.sessionVariables = {
     WINEPREFIX = "/.wine/default";
   };
 }
