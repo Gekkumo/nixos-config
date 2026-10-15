@@ -48,6 +48,7 @@
     ./mpv
     ./mpd
     ./rmpc
+    ./kid3
     ./imv
     ./foliate
 
