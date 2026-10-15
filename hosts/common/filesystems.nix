@@ -13,4 +13,11 @@
     fsType = "none";
     options = [ "bind" "x-systemd.requires-mounts-for=/.steam" ];
   };
+
+  # VM
+  fileSystems."/var/lib/libvirt/images" = {
+    device = "/.vm";
+    fsType = "none";
+    options = [ "bind" "x-systemd.requires-mounts-for=/.vm" ];
+  };
 }
