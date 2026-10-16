@@ -78,8 +78,5 @@
 
     # Windows Compatibility
     ./wine
-
-    # Secrets
-    # ./sops
   ];
 }
