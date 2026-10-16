@@ -48,6 +48,7 @@
     usbutils
     nvme-cli
     ddcutil
+    nftables
 
     # Grafics & Notifications
     libnotify
