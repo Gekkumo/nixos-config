@@ -46,7 +46,6 @@
     ./keepassxc
     ./gnupg
 
-
     # Media
     ./foliate
     ./mpv
