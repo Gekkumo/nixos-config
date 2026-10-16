@@ -47,7 +47,7 @@ in
           dots_center = true;
           fade_on_empty = false;
           font_color = "rgb(${colors.base05})";
-          inner_color = "rgb(${colors.base01}";
+          inner_color = "rgb(${colors.base01})";
           outer_color = "rgb(${colors.base03})";
           check_color = "rgb(${colors.base03})";
           fail_color = "rgb(${colors.base03})";
