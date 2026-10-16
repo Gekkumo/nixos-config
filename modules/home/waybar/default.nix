@@ -26,6 +26,7 @@
           "tray"
           "custom/tomat"
           "niri/language"
+          "power-profiles-daemon"
           "temperature#gpu"
           "temperature#cpu"
           "wireplumber#source"
@@ -103,6 +104,16 @@
           format-en = "🇺🇸";
           format-ru = "🇷🇺";
           tooltip = false;
+        };
+
+        "power-profiles-daemon" = {
+          format = "{icon}";
+          tooltip-format = "Profile: {profile}\nDriver: {driver}";
+          format-icons = {
+            "performance" = "";
+            "balanced" = "";
+            "power-saver" = "";
+          };
         };
 
         "temperature#gpu" = {
