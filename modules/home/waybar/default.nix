@@ -50,14 +50,13 @@
 
         "mpris" = {
           "player-order" = [
-            "mpdris2-rs"
+            "mpd"
             "firefox"
           ];
           "format" = "{player_icon} {dynamic}";
           "format-paused" = "{status_icon} {dynamic}";
           "player-icons" = {
-            "default" = "";
-            "mpdris2-rs" = "";
+            "mpd" = "";
             "firefox" = "";
           };
           "status-icons" = {
@@ -70,7 +69,7 @@
           "dynamic-separator" = " - ";
           "on-click" = "playerctl play-pause";
           "on-click-right" = "playerctl next";
-          "on-scroll-up" = "playerctl -a pause; playerctl -p mpdris2-rs play";
+          "on-scroll-up" = "playerctl -a pause; playerctl -p mpd play";
           "on-scroll-down" = "playerctl -a pause; playerctl -p firefox play";
           "artist-len" = 25;
           "title-len" = 25;
