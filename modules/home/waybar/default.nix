@@ -20,6 +20,12 @@
         modules-center = [ "clock" ];
         modules-right = [ "tray" "custom/tomat" "niri/language" "temperature#gpu" "temperature#cpu" "wireplumber#source" "wireplumber#sink" "idle_inhibitor" ];
 
+        "custom/power" = {
+          format = "";
+          tooltip = false;
+          "on-click" = "wlogout";
+        };
+
         "niri/workspaces" = {
           disable-scroll = true;
           all-outputs = true;
@@ -27,18 +33,10 @@
           format-icons = { active = "●"; };
         };
 
-        "niri/language" = {
-          format = "{}";
-          format-en = "🇺🇸";
-          format-ru = "🇷🇺";
-          tooltip = false;
-        };
-
-        # Change
         "mpris" = {
           "player-order" = [ "mpdris2-rs" "firefox" ];
           "format" = "{player_icon} {dynamic}";
-          "format-paused" = "{status_icon} <i>{dynamic}</i>";
+          "format-paused" = "{status_icon} {dynamic}";
           "player-icons" = {
             "default" = "";
             "mpdris2-rs" = "";
@@ -47,67 +45,26 @@
           "status-icons" = {
             "paused" = "";
           };
-          "dynamic-order" = [ "title" "artist" ];
+          "dynamic-order" = [ "artist" "title" ];
           "dynamic-separator" = " - ";
           "on-click" = "playerctl play-pause";
           "on-click-right" = "playerctl next";
-          "on-scroll-up" = "playerctl previous";
-          "on-scroll-down" = "playerctl next";
+          "on-scroll-up" = "playerctl -a pause; playerctl -p mpdris2-rs play";
+          "on-scroll-down" = "playerctl -a pause; playerctl -p firefox play";
+          "artist-len" = 25;
+          "title-len" = 25;
+          "dynamic-len" = 50;
         };
 
-        "temperature#cpu" = {
-          "hwmon-name" = "coretemp";
-          "input-filename" = "temp1_input";
-          "format" = "{temperatureC}°C ";
-          "interval" = 2;
-          "on-click" = "kitty -e btop";
-        };
-
-        "temperature#gpu" = {
-          "hwmon-name" = "amdgpu";
-          "input-filename" = "temp1_input";
-          "format" = "{temperatureC}°C";
-          "interval" = 2;
-          "on-click" = "kitty -e lact";
-        };
-
-        "wireplumber#sink" = {
-          format = "{volume}%";
-          "format-muted" = " ";
-          "on-click" = "${config.home.homeDirectory}/.config/waybar/scripts/toggle-audio.sh";
-          "on-click-middle" = "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
-          "on-scroll-up" = "wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 2%+";
-          "on-scroll-down" = "wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 2%-";
-          "scroll-step" = 2.0;
-        };
-
-        "wireplumber#source" = {
-          "node-type" = "Audio/Source";
-          format = "{volume}%";
-          "format-muted" = " {volume}%";
-          "on-click" = "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle";
-          "on-click-middle" = "kitty -e wiremix";
-          "on-scroll-up" = "wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SOURCE@ 2%+";
-          "on-scroll-down" = "wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SOURCE@ 2%-";
-          "scroll-step" = 2.0;
-        };
-
-        "tray" = { "icon-size" = 14; spacing = 8; cursor = true; };
-
-        "idle_inhibitor" = {
-          format = "{icon}";
-          format-icons = {
-            activated = "ON";
-            deactivated = "OFF";
-          };
-          tooltip-format-activated = "Idle inhibitor: ON";
-          tooltip-format-deactivated = "Idle inhibitor: OFF";
-        };
-
-        "custom/power" = {
-          format = "";
+        "clock" = {
+          format = "{:%a %d.%m.%Y ~ %H:%M}";
           tooltip = false;
-          "on-click" = "wlogout";
+        };
+
+        "tray" = {
+          "icon-size" = 14;
+          spacing = 8;
+          cursor = true;
         };
 
         "custom/tomat" = {
@@ -121,9 +78,58 @@
           on-click-middle = "tomat stop";
         };
 
-        "clock" = {
-          format = "{:%a %d.%m.%Y ~ %H:%M}";
+        "niri/language" = {
+          format = "{}";
+          format-en = "🇺🇸";
+          format-ru = "🇷🇺";
           tooltip = false;
+        };
+
+        "temperature#gpu" = {
+          "hwmon-name" = "amdgpu";
+          "input-filename" = "temp1_input";
+          "format" = "{temperatureC}°C";
+          "interval" = 2;
+          "on-click" = "kitty -e lact";
+        };
+
+        "temperature#cpu" = {
+          "hwmon-name" = "coretemp";
+          "input-filename" = "temp1_input";
+          "format" = "{temperatureC}°C ";
+          "interval" = 2;
+          "on-click" = "kitty -e btop";
+        };
+
+        "wireplumber#source" = {
+          "node-type" = "Audio/Source";
+          format = "{volume}%";
+          "format-muted" = " {volume}%";
+          "on-click" = "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle";
+          "on-click-middle" = "kitty -e wiremix";
+          "on-scroll-up" = "wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SOURCE@ 2%+";
+          "on-scroll-down" = "wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SOURCE@ 2%-";
+          "scroll-step" = 2.0;
+        };
+
+        "wireplumber#sink" = {
+          format = "{volume}%";
+          "format-muted" = " ";
+          "on-click" = "${config.home.homeDirectory}/.config/waybar/scripts/toggle-audio.sh";
+          "on-click-middle" = "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
+          "on-scroll-up" = "wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 2%+";
+          "on-scroll-down" = "wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 2%-";
+          "scroll-step" = 2.0;
+        };
+
+        "idle_inhibitor" = {
+          format = "{icon}";
+          format-icons = {
+            activated = "ON";
+            deactivated = "OFF";
+          };
+          tooltip-format-activated = "Idle inhibitor: ON";
+          tooltip-format-deactivated = "Idle inhibitor: OFF";
         };
       };
     };
@@ -134,6 +140,12 @@
         font-size: 14px;
         font-weight: bold;
         min-height: 0;
+      }
+
+      #custom-power {
+        margin-left: 6px;
+        margin-right: 5px;
+        font-size: 25px;
       }
 
       .modules-left #workspaces button,
@@ -164,10 +176,6 @@
         color: @base0D;
       }
 
-      #tray {
-        margin-right: 5px;
-      }
-
       #workspaces button.active {
         color: @base05;
       }
@@ -176,18 +184,16 @@
         color: @base0D;
       }
 
-      #idle_inhibitor {
-        margin-right: 2px;
-      }
-
       #mpris {
         margin-left: 5px;
       }
 
-      #custom-power {
-        margin-left: 6px;
+      #tray {
         margin-right: 5px;
-        font-size: 25px;
+      }
+
+      #idle_inhibitor {
+        margin-right: 2px;
       }
     '';
   };
