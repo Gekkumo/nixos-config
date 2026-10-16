@@ -11,8 +11,10 @@
 
     # Network & Security
     ./network
+    ./sops
     ./ssh
     ./fail2ban
+    ./zapret2
 
     # User & Hardware
     ./user
@@ -41,7 +43,6 @@
     ./steam
     ./virt-manager
     ./docker
-    ./sops
 
     # Scripts
     ./tg-ws-proxy
