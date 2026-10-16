@@ -14,7 +14,7 @@
     ./sops
     ./ssh
     ./fail2ban
-    ./zapret2
+    ./zapret
 
     # User & Hardware
     ./user
