@@ -24,6 +24,7 @@
     ./starship
     ./tmux
     ./zoxide
+    ./restic
     ./direnv
     ./fzf
 
@@ -32,6 +33,9 @@
     ./btop
     ./yazi
     ./neovim
+
+    # Devices
+    ./ios
 
     # DevOps
     ./git
@@ -59,6 +63,7 @@
     # Documents
     ./zathura
     ./libreoffice
+    ./calculator
 
     # Browsers & Communication
     ./firefox
@@ -69,6 +74,7 @@
     # Gaming & Torrents
     ./qbittorrent
     ./mangohud
+    ./mesa
 
     # Secrets
     # ./sops
