@@ -10,9 +10,9 @@
   # -- Enable system-level features here:
 
   boot.kernelParams = [
-  # "amdgpu.dcdebugmask=0x410"
-  # "amdgpu.no_vpe_idle_pg=1"
-  # "amdgpu.runpm=0"
+    # "amdgpu.dcdebugmask=0x410"
+    # "amdgpu.no_vpe_idle_pg=1"
+    # "amdgpu.runpm=0"
     "amdgpu.gpu_recovery=1"
   ];
 
@@ -33,7 +33,7 @@
 
   my.system.wireplumber.disableHdmiDp = {
     enable = true;
-    devices = [ "alsa_card.pci-0000_03_00.1" ];  # (wpctl status)
+    devices = [ "alsa_card.pci-0000_03_00.1" ]; # (wpctl status)
   };
 
   # -- User modules (Home Manager)
