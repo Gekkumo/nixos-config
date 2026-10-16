@@ -2,6 +2,7 @@
 {
   programs.gpg = {
     enable = true;
+
     settings = {
       use-agent = true;
       keyid-format = "LONG";
@@ -16,6 +17,7 @@
       no-comments = true;
       keyserver = "hkps://keys.openpgp.org";
     };
+
     scdaemonSettings = {
       disable-ccid = true;
       reader-port = "Disabled";

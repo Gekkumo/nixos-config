@@ -2,6 +2,7 @@
 {
   programs.git = {
     enable = true;
+
     settings = {
       user = {
         name = "Gekkumo";
@@ -12,6 +13,7 @@
       push.autoSetupRemote = true;
       rebase.autoStash = true;
       merge.conflictstyle = "diff3";
+      url."git@github.com:".insteadOf = "https://github.com/";
     };
   };
 

@@ -7,6 +7,7 @@ in
 {
   programs.hyprlock = {
     enable = true;
+
     settings = {
       general = {
         hide_cursor = true;
@@ -46,7 +47,7 @@ in
           dots_center = true;
           fade_on_empty = false;
           font_color = "rgb(${colors.base05})";
-          inner_color = "rgb(${colors.base01})";
+          inner_color = "rgba(${colors.base01}, 0.5)";
           outer_color = "rgb(${colors.base03})";
           check_color = "rgb(${colors.base03})";
           fail_color = "rgb(${colors.base03})";

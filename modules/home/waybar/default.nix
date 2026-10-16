@@ -180,6 +180,10 @@
         margin-right: 2px;
       }
 
+      #mpris {
+        margin-left: 5px;
+      }
+
       #custom-power {
         margin-left: 6px;
         margin-right: 5px;

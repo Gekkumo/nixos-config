@@ -2,6 +2,7 @@
 {
   programs.fastfetch = {
     enable = true;
+
     settings = {
       logo = {
         source = "nixos";
@@ -11,9 +12,11 @@
           right = 4;
         };
       };
+
       display = {
         separator = "  ";
       };
+
       modules = [
         "title"
         "separator"
