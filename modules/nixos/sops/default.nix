@@ -1,4 +1,10 @@
-{ pkgs, inputs, username, ... }:
+{
+  pkgs,
+  inputs,
+  config,
+  username,
+  ...
+}:
 {
   imports = [ inputs.sops-nix.nixosModules.sops ];
 
@@ -10,12 +16,21 @@
 
     gnupg.sshKeyPaths = [ ];
 
-    # defaultSopsFile = ./secrets/secrets.yaml;
-
+    defaultSopsFile = ../../secrets/secrets.yaml;
+    defaultSopsFormat = "yaml";
     validateSopsFiles = false;
 
-    # Secrets Definition
-    # secrets = { ... };
+    secrets = {
+      "tg_ws_proxy_secret" = {
+        owner = "root";
+        mode = "0400";
+      };
+    };
+
+    # Templates
+    templates."tg-ws-proxy.env".content = ''
+      TG_WS_PROXY_SECRET=${config.sops.placeholder."tg_ws_proxy_secret"}
+    '';
   };
 
   environment.systemPackages = with pkgs; [
