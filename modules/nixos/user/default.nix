@@ -42,12 +42,20 @@
   };
 
   systemd.tmpfiles.rules = [
+    # Fix after Disko
     "z /.wine 0770 ${username} users - -"
     "z /.steam 0770 ${username} users - -"
     "z /.vm 0770 root libvirtd - -"
+
+    # Home Manager & Steam
     "d /home/${username}/.local 0755 ${username} users - -"
+    "d /home/${username}/.local/share 0755 ${username} users - -"
     "d /home/${username}/.local/share/Steam 0770 ${username} users - -"
     "z /home/${username}/.local 0755 ${username} users - -"
+    "z /home/${username}/.local/share 0755 ${username} users - -"
+    "z /home/${username}/.local/share/Steam 0770 ${username} users - -"
+
+    # Libvirt
     "d /var/lib/libvirt 0755 root root - -"
     "d /var/lib/libvirt/images 0711 root root - -"
   ];
