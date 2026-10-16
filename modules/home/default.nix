@@ -1,7 +1,12 @@
 { ... }:
 {
   imports = [
-    # WM
+    # System & Core
+    ./xwayland
+    ./xdg-dirs
+    ./xdg-mimes
+
+    # WM & Desktop
     ./niri
     ./wlogout
     ./waybar
@@ -13,10 +18,6 @@
     ./tomat
     ./gtk
     ./qt
-    ./packages
-    ./xwayland
-    ./xdg-dirs
-    ./xdg-mimes
 
     # Shell & Terminal
     ./kitty
@@ -24,7 +25,6 @@
     ./starship
     ./tmux
     ./zoxide
-    ./restic
     ./direnv
     ./fzf
 
@@ -33,9 +33,6 @@
     ./btop
     ./yazi
     ./neovim
-
-    # Devices
-    ./ios
 
     # DevOps
     ./git
@@ -46,19 +43,17 @@
     ./vscode
 
     # Security
-    ./gnupg
     ./keepassxc
+    ./gnupg
+
 
     # Media
+    ./foliate
     ./mpv
     ./mpd
     ./rmpc
     ./kid3
     ./imv
-    ./foliate
-
-    # Windows
-    ./wine
 
     # Documents
     ./zathura
@@ -75,6 +70,15 @@
     ./qbittorrent
     ./mangohud
     ./mesa
+
+    # Backup
+    ./restic
+
+    # Devices
+    ./ios
+
+    # Windows Compatibility
+    ./wine
 
     # Secrets
     # ./sops
