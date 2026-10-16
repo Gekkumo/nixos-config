@@ -5,6 +5,7 @@
     nautilus-python
     nautilus-open-any-terminal
     file-roller
+    wsdd
   ];
 
   services.gnome.sushi.enable = true;
