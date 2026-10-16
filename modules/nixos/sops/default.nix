@@ -2,7 +2,6 @@
   pkgs,
   inputs,
   config,
-  username,
   ...
 }:
 {
@@ -10,7 +9,7 @@
 
   sops = {
     age = {
-      keyFile = "/home/${username}/.config/sops/age/keys.txt";
+      keyFile = "/var/lib/sops-nix/key.txt";
       sshKeyPaths = [ ];
     };
 
