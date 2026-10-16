@@ -1,9 +1,21 @@
-{ config, pkgs, inputs, username, ... }:
+{
+  config,
+  pkgs,
+  inputs,
+  username,
+  ...
+}:
 {
   nix = {
     settings = {
-      allowed-users = [ username "root" ];
-      trusted-users = [ username "root" ];
+      allowed-users = [
+        username
+        "root"
+      ];
+      trusted-users = [
+        username
+        "root"
+      ];
       max-jobs = "auto";
       cores = 0;
 
@@ -37,7 +49,10 @@
       log-lines = 25;
       show-trace = true;
 
-      experimental-features = [ "nix-command" "flakes" ];
+      experimental-features = [
+        "nix-command"
+        "flakes"
+      ];
     };
 
     gc = {

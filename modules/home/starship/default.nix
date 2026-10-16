@@ -11,19 +11,34 @@
       scan_timeout = 300;
 
       python = {
-        detect_files = [ "requirements.txt" "pyproject.toml" "Pipfile" ".python-version" ];
+        detect_files = [
+          "requirements.txt"
+          "pyproject.toml"
+          "Pipfile"
+          ".python-version"
+        ];
         detect_extensions = [ ];
       };
       rust = {
-        detect_files = [ "Cargo.toml" "Cargo.lock" ];
+        detect_files = [
+          "Cargo.toml"
+          "Cargo.lock"
+        ];
         detect_extensions = [ ];
       };
       golang = {
-        detect_files = [ "go.mod" "go.sum" "go.work" ];
+        detect_files = [
+          "go.mod"
+          "go.sum"
+          "go.work"
+        ];
         detect_extensions = [ ];
       };
       terraform = {
-        detect_files = [ "main.tf" "terraform.tfstate" ];
+        detect_files = [
+          "main.tf"
+          "terraform.tfstate"
+        ];
         detect_folders = [ ".terraform" ];
         detect_extensions = [ ];
       };
@@ -33,7 +48,11 @@
         format = "[$output]($style) ";
       };
       docker_context = {
-        detect_files = [ "Dockerfile" "docker-compose.yml" "docker-compose.yaml" ];
+        detect_files = [
+          "Dockerfile"
+          "docker-compose.yml"
+          "docker-compose.yaml"
+        ];
       };
 
       git_branch = {

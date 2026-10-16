@@ -31,14 +31,15 @@
     # };
   };
 
-  outputs = { self, nixpkgs, ... }@inputs:
-  let
-    mkHost = import ./lib/mkHost.nix { inherit inputs; };
-  in
-  {
-    nixosConfigurations = {
-      desktop = mkHost "desktop" "gekkumo" { main = "/dev/vda"; }; # /dev/nvme0n1 or /dev/nvme1n1 (lsblk)
-      laptop = mkHost "laptop" "gekkumo" { main = "/dev/nvme0n1"; }; # /dev/nvme0n1 or /dev/nvme1n1 (lsblk)
+  outputs =
+    { self, nixpkgs, ... }@inputs:
+    let
+      mkHost = import ./lib/mkHost.nix { inherit inputs; };
+    in
+    {
+      nixosConfigurations = {
+        desktop = mkHost "desktop" "gekkumo" { main = "/dev/vda"; }; # /dev/nvme0n1 or /dev/nvme1n1 (lsblk)
+        laptop = mkHost "laptop" "gekkumo" { main = "/dev/nvme0n1"; }; # /dev/nvme0n1 or /dev/nvme1n1 (lsblk)
+      };
     };
-  };
 }

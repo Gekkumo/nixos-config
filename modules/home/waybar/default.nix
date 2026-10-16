@@ -16,9 +16,22 @@
         height = 30;
         spacing = 2;
 
-        modules-left = [ "custom/power" "niri/workspaces" "mpris" ];
+        modules-left = [
+          "custom/power"
+          "niri/workspaces"
+          "mpris"
+        ];
         modules-center = [ "clock" ];
-        modules-right = [ "tray" "custom/tomat" "niri/language" "temperature#gpu" "temperature#cpu" "wireplumber#source" "wireplumber#sink" "idle_inhibitor" ];
+        modules-right = [
+          "tray"
+          "custom/tomat"
+          "niri/language"
+          "temperature#gpu"
+          "temperature#cpu"
+          "wireplumber#source"
+          "wireplumber#sink"
+          "idle_inhibitor"
+        ];
 
         "custom/power" = {
           format = "";
@@ -30,11 +43,16 @@
           disable-scroll = true;
           all-outputs = true;
           format = "●";
-          format-icons = { active = "●"; };
+          format-icons = {
+            active = "●";
+          };
         };
 
         "mpris" = {
-          "player-order" = [ "mpdris2-rs" "firefox" ];
+          "player-order" = [
+            "mpdris2-rs"
+            "firefox"
+          ];
           "format" = "{player_icon} {dynamic}";
           "format-paused" = "{status_icon} {dynamic}";
           "player-icons" = {
@@ -45,7 +63,10 @@
           "status-icons" = {
             "paused" = "";
           };
-          "dynamic-order" = [ "artist" "title" ];
+          "dynamic-order" = [
+            "artist"
+            "title"
+          ];
           "dynamic-separator" = " - ";
           "on-click" = "playerctl play-pause";
           "on-click-right" = "playerctl next";
