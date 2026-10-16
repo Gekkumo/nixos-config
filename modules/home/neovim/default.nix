@@ -10,32 +10,34 @@
       lualine-nvim
       telescope-nvim
       nvim-autopairs
-      (nvim-treesitter.withPlugins (parsers: with parsers; [
-        # Config & IaC
-        yaml
-        json
-        hcl
-        dockerfile
-        bash
-        gotmpl
-        make
-        toml
-        ini
-        regex
-        # Languages
-        python
-        rust
-        go
-        sql
-        # Docs & Git
-        markdown
-        gitignore
-        # Base
-        lua
-        vim
-        vimdoc
-        query
-      ]))
+      (nvim-treesitter.withPlugins (
+        parsers: with parsers; [
+          # Config & IaC
+          yaml
+          json
+          hcl
+          dockerfile
+          bash
+          gotmpl
+          make
+          toml
+          ini
+          regex
+          # Languages
+          python
+          rust
+          go
+          sql
+          # Docs & Git
+          markdown
+          gitignore
+          # Base
+          lua
+          vim
+          vimdoc
+          query
+        ]
+      ))
     ];
 
     initLua = ''

@@ -1,4 +1,10 @@
-{ pkgs, inputs, username, pkgsUnstable, ... }:
+{
+  pkgs,
+  inputs,
+  username,
+  pkgsUnstable,
+  ...
+}:
 {
   users.users.${username} = {
     isNormalUser = true;

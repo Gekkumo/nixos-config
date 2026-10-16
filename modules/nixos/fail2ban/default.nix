@@ -16,7 +16,6 @@
     };
   };
 
-
   environment.shellAliases = {
     f2b-status = "sudo fail2ban-client status";
     f2b-status-ssh = "sudo fail2ban-client status sshd";

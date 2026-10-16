@@ -6,5 +6,5 @@
       binPath = "${pkgs.niri}/bin/niri-session";
       prettyName = "Niri";
     };
-};
+  };
 }
