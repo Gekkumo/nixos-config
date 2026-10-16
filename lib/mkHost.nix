@@ -3,7 +3,12 @@ hostName: username: disks:
 inputs.nixpkgs.lib.nixosSystem {
   system = "x86_64-linux";
   specialArgs = {
-    inherit inputs username disks;
+    inherit
+      inputs
+      username
+      disks
+      hostName
+      ;
     pkgsUnstable = import inputs.nixpkgs-unstable {
       system = "x86_64-linux";
       config.allowUnfree = true;
