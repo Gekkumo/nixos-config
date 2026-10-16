@@ -2,6 +2,7 @@
 {
   programs.mangohud = {
     enable = true;
+
     settings = {
       fps_limit = "60,120,144,200,0";
       fps_limit_method = "late";

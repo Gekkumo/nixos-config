@@ -2,6 +2,7 @@
 {
   programs.fuzzel = {
     enable = true;
+
     settings = {
       main = {
         lines = 15;

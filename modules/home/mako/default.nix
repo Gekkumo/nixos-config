@@ -2,6 +2,7 @@
 {
   services.mako = {
     enable = true;
+
     settings = {
       actions = true;
       anchor = "top-right";

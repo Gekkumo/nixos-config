@@ -2,6 +2,7 @@
 {
   xdg.mimeApps = {
     enable = true;
+
     defaultApplications = {
       # Browser
       "text/html" = [ "firefox.desktop" ];

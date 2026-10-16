@@ -2,6 +2,7 @@
 {
   services.hypridle = {
     enable = true;
+
     settings = {
       general = {
         lock_cmd = "pidof hyprlock || ${pkgs.hyprlock}/bin/hyprlock";

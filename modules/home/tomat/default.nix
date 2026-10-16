@@ -2,6 +2,7 @@
 {
   services.tomat = {
     enable = true;
+
     settings = {
       timer = {
         work = 25;
