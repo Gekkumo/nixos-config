@@ -123,7 +123,9 @@ binds {
     Mod+O repeat=false { toggle-overview; }
     Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
     Mod+Shift+E { quit; }
-    Ctrl+Alt+Delete { quit; }
+    Ctrl+Alt+Delete { spawn "systemctl" "poweroff"; }
+    Ctrl+Alt+End { spawn "systemctl" "reboot"; }
+    Ctrl+Alt+Home { spawn "systemctl" "suspend"; }
 
     Mod+T hotkey-overlay-title="Terminal: kitty" { spawn "kitty"; }
     Mod+D hotkey-overlay-title="Launcher: fuzzel" { spawn "fuzzel"; }
