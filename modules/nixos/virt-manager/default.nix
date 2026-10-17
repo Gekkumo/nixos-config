@@ -2,6 +2,7 @@
 {
   virtualisation.libvirtd = {
     enable = true;
+
     qemu = {
       swtpm.enable = true;
     };
@@ -31,8 +32,19 @@
       Type = "oneshot";
       RemainAfterExit = true;
       User = "root";
-      ExecStart = "${pkgs.libvirt}/bin/virsh net-start default";
-      ExecStop = "${pkgs.libvirt}/bin/virsh net-destroy default";
+      ExecStart = pkgs.writeShellScript "libvirt-default-network-start" ''
+        set -euo pipefail
+        ${pkgs.libvirt}/bin/virsh net-autostart default
+        if ! ${pkgs.libvirt}/bin/virsh net-info default 2>/dev/null | grep -q "Active:.*yes"; then
+          ${pkgs.libvirt}/bin/virsh net-start default
+        fi
+      '';
+
+      ExecStop = pkgs.writeShellScript "libvirt-default-network-stop" ''
+        if ${pkgs.libvirt}/bin/virsh net-info default 2>/dev/null | grep -q "Active:.*yes"; then
+          ${pkgs.libvirt}/bin/virsh net-destroy default
+        fi
+      '';
     };
   };
 }

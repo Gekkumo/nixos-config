@@ -48,6 +48,7 @@
     usbutils
     nvme-cli
     ddcutil
+    e2fsprogs
     nftables
 
     # Grafics & Notifications
