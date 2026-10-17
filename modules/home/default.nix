@@ -12,6 +12,7 @@
     ./waybar
     ./fuzzel
     ./mako
+    ./wl-clip-persist
     ./hyprlock
     ./hypridle
     ./swaybg
