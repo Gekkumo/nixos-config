@@ -57,7 +57,7 @@
 
       git_branch = {
         format = "[$symbol$branch]($style) ";
-        symbol = " ";
+        symbol = " ";
       };
 
       nix_shell = {
