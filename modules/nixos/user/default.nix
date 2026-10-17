@@ -55,6 +55,7 @@
     "z /.steam 0770 ${username} users - -"
     "z /.vm 0770 root libvirtd - -"
 
+    # User
     "d /home/${username} 0700 ${username} users - -"
 
     # Home Manager & Steam
