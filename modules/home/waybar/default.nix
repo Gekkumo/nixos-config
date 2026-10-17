@@ -57,6 +57,7 @@
           "format" = "{player_icon} {dynamic}";
           "format-paused" = "{status_icon} {dynamic}";
           "player-icons" = {
+            "default" = "󰀘";
             "mpd" = "";
             "firefox" = "";
           };
