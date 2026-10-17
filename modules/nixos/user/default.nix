@@ -55,6 +55,8 @@
     "z /.steam 0770 ${username} users - -"
     "z /.vm 0770 root libvirtd - -"
 
+    "d /home/${username} 0700 ${username} users - -"
+
     # Home Manager & Steam
     "d /home/${username}/.local 0755 ${username} users - -"
     "d /home/${username}/.local/share 0755 ${username} users - -"
@@ -62,6 +64,12 @@
     "z /home/${username}/.local 0755 ${username} users - -"
     "z /home/${username}/.local/share 0755 ${username} users - -"
     "z /home/${username}/.local/share/Steam 0770 ${username} users - -"
+
+    # Podman (rootless)
+    "d /home/${username}/.local/share/containers 0700 ${username} users - -"
+    "d /home/${username}/.local/share/containers/storage 0700 ${username} users - -"
+    "z /home/${username}/.local/share/containers 0700 ${username} users - -"
+    "z /home/${username}/.local/share/containers/storage 0700 ${username} users - -"
 
     # Libvirt
     "d /var/lib/libvirt 0755 root root - -"
