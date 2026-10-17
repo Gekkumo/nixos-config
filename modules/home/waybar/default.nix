@@ -159,8 +159,9 @@
             activated = "ON";
             deactivated = "OFF";
           };
-          tooltip-format-activated = "Idle inhibitor: ON";
+          tooltip-format-activated = "Idle inhibitor: ON (30 min)";
           tooltip-format-deactivated = "Idle inhibitor: OFF";
+          timeout = 30;
         };
       };
     };
