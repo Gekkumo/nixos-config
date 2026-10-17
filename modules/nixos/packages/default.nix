@@ -48,8 +48,8 @@
     usbutils
     nvme-cli
     ddcutil
-    e2fsprogs
     nftables
+    e2fsprogs
 
     # Grafics & Notifications
     libnotify
