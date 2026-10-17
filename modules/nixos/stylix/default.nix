@@ -47,6 +47,21 @@
       size = 24;
     };
 
+    fonts.fontconfig.localConf = ''
+      <?xml version="1.0"?>
+      <!DOCTYPE fontconfig SYSTEM "fonts.dtd">
+      <fontconfig>
+        <alias>
+          <family>monospace</family>
+          <accept><family>Symbols Nerd Font</family></accept>
+        </alias>
+        <alias>
+          <family>sans-serif</family>
+          <accept><family>Symbols Nerd Font</family></accept>
+        </alias>
+      </fontconfig>
+    '';
+
     homeManagerIntegration.autoImport = true;
     homeManagerIntegration.followSystem = true;
   };
