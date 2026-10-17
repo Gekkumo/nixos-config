@@ -59,10 +59,10 @@
           "player-icons" = {
             "default" = "󰀘";
             "mpd" = "";
-            "firefox" = "";
+            "firefox" = "󰈹";
           };
           "status-icons" = {
-            "paused" = "";
+            "paused" = "󰏤";
           };
           "dynamic-order" = [
             "artist"
@@ -146,7 +146,7 @@
 
         "wireplumber#sink" = {
           format = "{volume}%";
-          "format-muted" = "";
+          "format-muted" = "󰖁 ";
           "on-click" = "${config.home.homeDirectory}/.config/waybar/scripts/toggle-audio.sh";
           "on-click-middle" = "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
           "on-scroll-up" = "wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 2%+";
@@ -160,9 +160,10 @@
             activated = "ON";
             deactivated = "OFF";
           };
+          timeout = 30;
           tooltip-format-activated = "Idle inhibitor: ON (30 min)";
           tooltip-format-deactivated = "Idle inhibitor: OFF";
-          timeout = 30;
+          on-update = "notify-send 'Idle Inhibitor' 'State changed'";
         };
       };
     };
