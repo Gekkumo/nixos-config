@@ -14,4 +14,9 @@
     profileNames = [ "default" ];
     firefoxGnomeTheme.enable = true;
   };
+
+  programs.firefox.profiles.default.settings = {
+    "font.name-list.sans-serif.x-western" = "Fira Sans, Symbols Nerd Font";
+    "font.name-list.monospace.x-western" = "FiraCode Nerd Font, Symbols Nerd Font";
+  };
 }
