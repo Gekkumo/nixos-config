@@ -65,8 +65,8 @@
     # Steam & Podman-rootless
     "d /home/${username}/.local 0755 ${username} users - -"
     "d /home/${username}/.local/share 0755 ${username} users - -"
-    "d /home/${username}/.local/share/containers 0700 ${username} users - -"
     "d /home/${username}/.local/share/Steam 0770 ${username} users - -"
+    "d /home/${username}/.local/share/containers 0700 ${username} users - -"
     "d /home/${username}/.local/share/containers/storage 0700 ${username} users - -"
   ];
 }
