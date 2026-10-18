@@ -24,14 +24,6 @@
           content = {
             type = "btrfs";
             extraArgs = [ "-f" ];
-            postMountHook = ''
-              chattr +C /mnt/var/lib/docker
-              chattr +C /mnt/var/lib/containers/storage
-              chattr +C /mnt/.podman
-              chattr +C /mnt/.steam
-              chattr +C /mnt/.wine
-              chattr +C /mnt/.vm
-            '';
             subvolumes = {
               "@" = {
                 mountpoint = "/";
