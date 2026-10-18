@@ -16,10 +16,7 @@
             type = "filesystem";
             format = "vfat";
             mountpoint = "/boot";
-            mountOptions = [
-              "fmask=0077"
-              "dmask=0077"
-            ];
+            mountOptions = [ "fmask=0077" "dmask=0077" ];
           };
         };
         root = {
@@ -27,70 +24,45 @@
           content = {
             type = "btrfs";
             extraArgs = [ "-f" ];
+            postMountCommands = ''
+              chattr +C /mnt/var/lib/docker
+              chattr +C /mnt/var/lib/containers/storage
+              chattr +C /mnt/.podman
+              chattr +C /mnt/.steam
+              chattr +C /mnt/.wine
+              chattr +C /mnt/.vm
+            '';
             subvolumes = {
               "@" = {
                 mountpoint = "/";
-                mountOptions = [
-                  "compress=zstd:1"
-                  "ssd"
-                  "noatime"
-                ];
+                mountOptions = [ "compress=zstd:1" "ssd" "noatime" ];
               };
               "@nix" = {
                 mountpoint = "/nix";
-                mountOptions = [
-                  "compress=zstd:1"
-                  "ssd"
-                  "noatime"
-                ];
               };
               "@home" = {
                 mountpoint = "/home";
-                mountOptions = [
-                  "compress=zstd:1"
-                  "ssd"
-                  "noatime"
-                ];
               };
               "@docker" = {
                 mountpoint = "/var/lib/docker";
-                mountOptions = [
-                  "nodatacow"
-                  "ssd"
-                  "noatime"
-                ];
+              };
+              "@podman" = {
+                mountpoint = "/var/lib/containers/storage";
+              };
+              "@podman-rootless" = {
+                mountpoint = "/.podman";
               };
               "@steam" = {
                 mountpoint = "/.steam";
-                mountOptions = [
-                  "nodatacow"
-                  "ssd"
-                  "noatime"
-                ];
               };
               "@wine" = {
                 mountpoint = "/.wine";
-                mountOptions = [
-                  "nodatacow"
-                  "ssd"
-                  "noatime"
-                ];
               };
               "@vm" = {
                 mountpoint = "/.vm";
-                mountOptions = [
-                  "nodatacow"
-                  "ssd"
-                  "noatime"
-                ];
               };
               "@swap" = {
                 mountpoint = "/.swap";
-                mountOptions = [
-                  "nodatacow"
-                  "ssd"
-                  "noatime"
-                ];
                 swap.swapfile = {
                   size = "8G";
                 };
