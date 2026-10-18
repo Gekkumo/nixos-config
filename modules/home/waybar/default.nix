@@ -163,7 +163,6 @@
           timeout = 30;
           tooltip-format-activated = "Idle inhibitor: ON (30 min)";
           tooltip-format-deactivated = "Idle inhibitor: OFF";
-          on-update = "notify-send 'Idle Inhibitor' 'State changed'";
         };
       };
     };
