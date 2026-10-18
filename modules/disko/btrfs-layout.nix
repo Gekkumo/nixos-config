@@ -16,7 +16,10 @@
             type = "filesystem";
             format = "vfat";
             mountpoint = "/boot";
-            mountOptions = [ "fmask=0077" "dmask=0077" ];
+            mountOptions = [
+              "fmask=0077"
+              "dmask=0077"
+            ];
           };
         };
         root = {
@@ -27,34 +30,46 @@
             subvolumes = {
               "@" = {
                 mountpoint = "/";
-                mountOptions = [ "compress=zstd:1" "ssd" "noatime" ];
+                mountOptions = [
+                  "compress=zstd:1"
+                  "noatime"
+                ];
               };
               "@nix" = {
                 mountpoint = "/nix";
+                mountOptions = [ "noatime" ];
               };
               "@home" = {
                 mountpoint = "/home";
+                mountOptions = [ "noatime" ];
               };
               "@docker" = {
                 mountpoint = "/var/lib/docker";
+                mountOptions = [ "noatime" ];
               };
               "@podman" = {
                 mountpoint = "/var/lib/containers/storage";
+                mountOptions = [ "noatime" ];
               };
               "@podman-rootless" = {
                 mountpoint = "/.podman";
+                mountOptions = [ "noatime" ];
               };
               "@steam" = {
                 mountpoint = "/.steam";
+                mountOptions = [ "noatime" ];
               };
               "@wine" = {
                 mountpoint = "/.wine";
+                mountOptions = [ "noatime" ];
               };
               "@vm" = {
                 mountpoint = "/.vm";
+                mountOptions = [ "noatime" ];
               };
               "@swap" = {
                 mountpoint = "/.swap";
+                mountOptions = [ "noatime" ];
                 swap.swapfile = {
                   size = "8G";
                 };
