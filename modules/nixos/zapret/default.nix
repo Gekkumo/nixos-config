@@ -1,13 +1,22 @@
 { pkgs, ... }:
 {
   services.zapret = {
-    enable = true;
+    enable = false;
     package = pkgs.zapret;
 
     whitelist = [
-      "youtube.com" "googlevideo.com" "ytimg.com" "youtu.be"
-      "twitch.tv" "discord.com" "discordapp.com" "discord.gg"
-      "discord.media" "discordapp.net" "live-video.net" "ttvnw.net"
+      "youtube.com"
+      "googlevideo.com"
+      "ytimg.com"
+      "youtu.be"
+      "twitch.tv"
+      "discord.com"
+      "discordapp.com"
+      "discord.gg"
+      "discord.media"
+      "discordapp.net"
+      "live-video.net"
+      "ttvnw.net"
     ];
 
     params = [
