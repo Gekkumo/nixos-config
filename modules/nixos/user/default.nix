@@ -49,14 +49,36 @@
     };
   };
 
+  systemd.services.chattr-nocow = {
+    description = "Set No_COW on Btrfs subvolumes";
+    wantedBy = [ "multi-user.target" ];
+    after = [ "local-fs.target" ];
+    before = [
+      "docker.service"
+      "podman.service"
+    ];
+    serviceConfig = {
+      Type = "oneshot";
+      RemainAfterExit = true;
+    };
+    path = [ pkgs.e2fsprogs ];
+    script = ''
+      for dir in /.steam /.wine /.vm /.podman /var/lib/docker /var/lib/containers/storage; do
+        if [ -d "$dir" ] && [ -z "$(ls -A "$dir" 2>/dev/null)" ]; then
+          chattr +C "$dir"
+        fi
+      done
+    '';
+  };
+
   systemd.tmpfiles.rules = [
-    # NoCoW
-    "d /var/lib/docker 0711 root root - +C"
-    "d /var/lib/containers/storage 0700 root root - +C"
-    "d /.podman 0700 ${username} users - +C"
-    "d /.steam 0770 ${username} users - +C"
-    "d /.wine 0770 ${username} users - +C"
-    "d /.vm 0755 root libvirtd - +C"
+    # Fix ruls
+    "d /var/lib/docker 0711 root root - -"
+    "d /var/lib/containers/storage 0700 root root - -"
+    "d /.podman 0700 ${username} users - -"
+    "d /.steam 0770 ${username} users - -"
+    "d /.wine 0770 ${username} users - -"
+    "d /.vm 0755 root libvirtd - -"
 
     # Libvirt
     "d /var/lib/libvirt 0755 root root - -"
