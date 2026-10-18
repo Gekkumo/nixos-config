@@ -24,7 +24,7 @@
           content = {
             type = "btrfs";
             extraArgs = [ "-f" ];
-            postMountCommands = ''
+            postMountHook = ''
               chattr +C /mnt/var/lib/docker
               chattr +C /mnt/var/lib/containers/storage
               chattr +C /mnt/.podman
