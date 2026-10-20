@@ -8,8 +8,8 @@
     wsdd
   ];
 
-  services.gnome.tracker.enable = false;
-  services.gnome.tracker-miners.enable = false;
+  services.gnome.tinysparql.enable = false;
+  services.gnome.localsearch.enable = false;
 
   programs.nautilus-open-any-terminal = {
     enable = true;
