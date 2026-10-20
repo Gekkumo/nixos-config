@@ -80,40 +80,6 @@
     nix-tree
   ];
 
-  programs.nix-ld = {
-    enable = true;
-    libraries = with pkgs; [
-      # X11
-      libxcb
-      libx11
-      libxext
-      libxrender
-      libxcomposite
-      libxtst
-      libxrandr
-      libxfixes
-      libxdamage
-      libxshmfence
-      libxxf86vm
-      libxcursor
-      libxi
-      libxkbcommon
-      xkeyboard-config
-
-      # Wayland
-      wayland
-
-      # Tkinter
-      tk
-      tcl
-
-      # Other
-      stdenv.cc.cc.lib
-      zlib
-      openssl
-    ];
-  };
-
   documentation.man.cache.enable = false;
   nixpkgs.config.allowUnfree = true;
 
