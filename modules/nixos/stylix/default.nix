@@ -8,7 +8,8 @@
     enable = true;
     polarity = "dark";
 
-    base16Scheme = ./sequoia-monochrome-dark.yaml;
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/kanagawa.yaml";
+    # base16Scheme = ./sequoia-monochrome-dark.yaml;
 
     fonts = {
       monospace = {
