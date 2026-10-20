@@ -49,6 +49,7 @@
 
     # Media
     ./foliate
+    ./obs
     ./mpv
     ./mpd
     ./rmpc
