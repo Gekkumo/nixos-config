@@ -10,6 +10,8 @@
 
   services.gnome.tinysparql.enable = false;
   services.gnome.localsearch.enable = false;
+  systemd.user.services.tracker-miner-fs-3.enable = false;
+  systemd.user.services.tracker-extract-3.enable = false;
 
   programs.nautilus-open-any-terminal = {
     enable = true;
