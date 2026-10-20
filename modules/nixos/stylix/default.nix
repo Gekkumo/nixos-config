@@ -8,8 +8,7 @@
     enable = true;
     polarity = "dark";
 
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/black-metal-dark-funeral.yaml";
-    # base16Scheme = ./sequoia-monochrome-dark.yaml;
+    base16Scheme = ./sequoia-monochrome-dark.yaml;
 
     fonts = {
       monospace = {
