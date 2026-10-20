@@ -1,8 +1,9 @@
-{ pkgs, ... }:
+{ pkgsUnstable, ... }:
 {
   programs.obs-studio = {
     enable = true;
-    plugins = with pkgs.obs-studio-plugins; [
+    package = pkgsUnstable.obs-studio;
+    plugins = with pkgsUnstable.obs-studio-plugins; [
       obs-pipewire-audio-capture
       obs-vaapi
       obs-vkcapture
