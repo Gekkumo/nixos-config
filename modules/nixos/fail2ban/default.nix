@@ -2,18 +2,23 @@
 {
   services.fail2ban = {
     enable = true;
+
     ignoreIP = [
       "127.0.0.1"
       "10.0.0.0/8"
       "172.16.0.0/12"
       "192.168.0.0/16"
     ];
-    bantime = "1h";
 
     jails.sshd.settings = {
-      findtime = 600;
+      enabled = true;
+      port = "62419";
+      backend = "systemd";
       maxretry = 5;
+      findtime = "600";
     };
+
+    bantime = "1h";
   };
 
   environment.shellAliases = {
