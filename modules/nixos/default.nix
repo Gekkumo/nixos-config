@@ -34,15 +34,15 @@
     ./fonts
     ./bluetooth
     ./audio
-    ./wine
     ./carla-yabridge
     ./logind
     ./zsh
 
     # Applications & Services
-    ./steam
     ./virt-manager
     ./docker
+    ./steam
+    ./wine
 
     # Scripts
     ./tg-ws-proxy
