@@ -8,7 +8,8 @@
     wsdd
   ];
 
-  services.gnome.sushi.enable = true;
+  services.gnome.tracker.enable = false;
+  services.gnome.tracker-miners.enable = false;
 
   programs.nautilus-open-any-terminal = {
     enable = true;
