@@ -6,7 +6,7 @@
     ../../modules/disko/btrfs-layout.nix
   ];
 
-  # -- System modules
+  # == System modules
   # -- Enable system-level features here:
 
   my.system.audio = {
@@ -18,6 +18,6 @@
 
   my.system.logind.enable = true;
 
-  # -- User modules (Home Manager)
+  # == User modules (Home Manager)
   # -- Enable user-level features here:
 }
