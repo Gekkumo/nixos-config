@@ -18,7 +18,6 @@
     # Networking
     dnsutils
     openssh
-    rsync
     socat
     wget
     curl
