@@ -1,84 +1,86 @@
 { ... }:
 {
   imports = [
-    # System & Core
-    ./xwayland
-    ./xdg-dirs
-    ./xdg-mimes
+    # Backup
+    ./backup/restic
 
-    # WM & Desktop
-    ./niri
-    ./wlogout
-    ./waybar
-    ./fuzzel
-    ./mako
-    ./wl-clip-persist
-    ./hyprlock
-    ./hypridle
-    ./swaybg
-    ./tomat
-    ./gtk
-    ./qt
+    # Browser
+    ./browser/firefox
 
-    # Shell & Terminal
-    ./kitty
-    ./zsh
-    ./starship
-    ./tmux
-    ./zoxide
-    ./direnv
-    ./fzf
+    # CLI
+    ./cli/btop
+    ./cli/fastfetch
+    ./cli/neovim
+    ./cli/yazi
 
-    # CLI & TUI
-    ./fastfetch
-    ./btop
-    ./yazi
-    ./neovim
+    # Desktop
+    ./desktop/fuzzel
+    ./desktop/gtk
+    ./desktop/hypridle
+    ./desktop/hyprlock
+    ./desktop/mako
+    ./desktop/niri
+    ./desktop/qt
+    ./desktop/swaybg
+    ./desktop/tomat
+    ./desktop/waybar
+    ./desktop/wl-clip-persist
+    ./desktop/wlogout
+
+    # Device
+    ./device/ios
 
     # DevOps
-    ./git
-    ./lazygit
-    ./ansible
-    ./terraform
-    ./kubernetes
-    ./vscode
+    ./devops/ansible
+    ./devops/git
+    ./devops/kubernetes
+    ./devops/lazygit
+    ./devops/obsidian
+    ./devops/terraform
+    ./devops/vscode
 
-    # Security
-    ./keepassxc
-    ./gnupg
+    # Document
+    ./document/calculator
+    ./document/libreoffice
+    ./document/zathura
+
+    # Gaming
+    ./gaming/mangohud
+    ./gaming/mesa
+    ./gaming/obs
+    ./gaming/qbittorrent
 
     # Media
-    ./foliate
-    ./obs
-    ./mpv
-    ./mpd
-    ./rmpc
-    ./kid3
-    ./imv
+    ./media/foliate
+    ./media/imv
+    ./media/kid3
+    ./media/mpd
+    ./media/mpv
+    ./media/rmpc
 
-    # Documents
-    ./zathura
-    ./libreoffice
-    ./calculator
+    # Messenger
+    ./messenger/telegram
+    ./messenger/webcord
 
-    # Browsers & Communication
-    ./firefox
-    ./obsidian
-    ./webcord
-    ./telegram
+    # Security
+    ./security/gnupg
+    ./security/keepassxc
 
-    # Gaming & Torrents
-    ./qbittorrent
-    ./mangohud
-    ./mesa
+    # Shell
+    ./shell/direnv
+    ./shell/fzf
+    ./shell/kitty
+    ./shell/starship
+    ./shell/tmux
+    ./shell/zoxide
+    ./shell/zsh
 
-    # Backup
-    ./restic
+    # System
+    ./system/xdg-dirs
+    ./system/xdg-mimes
+    ./system/xwayland
 
-    # Devices
-    ./ios
-
-    # Windows Compatibility
-    ./wine
+    # Windows
+    ./windows/wine
   ];
 }
