@@ -3,6 +3,7 @@
   imports = [
     # Backup
     ./backup/restic
+    ./backup/rsync
 
     # Browser
     ./browser/firefox
