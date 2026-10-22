@@ -1,7 +1,10 @@
 { inputs }:
 hostName: username: disks:
-inputs.nixpkgs.lib.nixosSystem {
+let
   system = "x86_64-linux";
+in
+inputs.nixpkgs.lib.nixosSystem {
+  inherit system;
   specialArgs = {
     inherit
       inputs
@@ -9,12 +12,13 @@ inputs.nixpkgs.lib.nixosSystem {
       disks
       hostName
       ;
-    pkgsUnstable = import inputs.nixpkgs-unstable {
-      system = "x86_64-linux";
-      config.allowUnfree = true;
-    };
   };
   modules = [
+    {
+      nixpkgs.overlays = [
+        (import ../overlays/unstable.nix { inherit inputs; })
+      ];
+    }
     inputs.disko.nixosModules.disko
     inputs.home-manager.nixosModules.home-manager
     ../modules/nixos
