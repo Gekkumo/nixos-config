@@ -12,7 +12,9 @@
       pull.rebase = true;
       push.autoSetupRemote = true;
       rebase.autoStash = true;
-      merge.conflictstyle = "diff3";
+      merge.conflictstyle = "zdiff3";
+      core.pager = "delta";
+      interactive.diffFilter = "delta --color-only";
       url."git@github.com:".insteadOf = "https://github.com/";
     };
   };
