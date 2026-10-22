@@ -6,9 +6,17 @@
 
     settings = {
       add_newline = false;
-
       command_timeout = 300;
       scan_timeout = 300;
+
+      username = {
+        show_always = true;
+        format = "[$user]($style)@";
+      };
+      hostname = {
+        ssh_only = false;
+        format = "[$hostname]($style) ";
+      };
 
       python = {
         detect_files = [
@@ -33,6 +41,17 @@
           "go.work"
         ];
         detect_extensions = [ ];
+      };
+
+      kubernetes = {
+        detect_files = [
+          "kustomization.yaml"
+          "Chart.yaml"
+          "deployment.yaml"
+          "values.yaml"
+        ];
+        detect_folders = [ ".kube" ];
+        format = "☸ [$context( \($namespace\))]($style) ";
       };
       terraform = {
         detect_files = [
