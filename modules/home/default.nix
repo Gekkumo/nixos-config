@@ -33,7 +33,9 @@
 
     # DevOps
     ./devops/ansible
+    ./devops/gh
     ./devops/git
+    ./devops/glab
     ./devops/json-yaml
     ./devops/just
     ./devops/kubernetes
