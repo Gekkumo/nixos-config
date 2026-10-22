@@ -1,6 +1,3 @@
-# justfile
-# Run `just` to see available commands.
-
 # Default: list recipes
 default:
     @just --list
