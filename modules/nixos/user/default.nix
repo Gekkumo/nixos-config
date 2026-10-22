@@ -2,7 +2,6 @@
   pkgs,
   inputs,
   username,
-  pkgsUnstable,
   hostName,
   ...
 }:
@@ -30,7 +29,6 @@
       inherit
         inputs
         username
-        pkgsUnstable
         hostName
         ;
     };
