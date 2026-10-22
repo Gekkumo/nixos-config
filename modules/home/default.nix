@@ -36,13 +36,13 @@
     ./devops/git
     ./devops/kubernetes
     ./devops/lazygit
-    ./devops/obsidian
     ./devops/terraform
     ./devops/vscode
 
     # Document
     ./document/calculator
     ./document/libreoffice
+    ./document/obsidian
     ./document/zathura
 
     # Gaming
