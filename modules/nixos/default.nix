@@ -23,7 +23,7 @@
 
     # Desktop
     ./desktop/codec
-    ./desktop/desktop
+    ./desktop/environment
     ./desktop/fonts
     ./desktop/getty
     ./desktop/niri
@@ -33,7 +33,8 @@
     # Hardware
     ./hardware/audio
     ./hardware/bluetooth
-    ./hardware/hardware
+    ./hardware/cpu
+    ./hardware/gpu
     ./hardware/logind
     ./hardware/power
 
