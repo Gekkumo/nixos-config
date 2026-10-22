@@ -1,51 +1,57 @@
 { ... }:
 {
   imports = [
-    # Base
-    ./boot
-    ./kernel
-    ./locale
-    ./swap
-    ./oomd
-    ./nix
+    # App
+    ./app/carla-yabridge
+    ./app/docker
+    ./app/nautilus
+    ./app/steam
+    ./app/virt-manager
+    ./app/wine
 
-    # Network & Security
-    ./network
-    ./sops
-    ./ssh
-    ./fail2ban
-    ./zapret
-
-    # User & Hardware
-    ./user
-    ./hardware
-    ./power
-    ./packages
-    ./codecs
+    # Core
+    ./core/boot
+    ./core/chattr-nocow
+    ./core/kernel
+    ./core/locale
+    ./core/nix
+    ./core/oomd
+    ./core/package
+    ./core/swap
+    ./core/tmpfiles
+    ./core/zsh
 
     # Desktop
-    ./desktop
-    ./stylix
-    ./getty
-    ./uwsm
-    ./niri
-    ./nautilus
-    ./hyprlock-pam
-    ./fonts
-    ./bluetooth
-    ./audio
-    ./carla-yabridge
-    ./logind
-    ./zsh
+    ./desktop/codec
+    ./desktop/desktop
+    ./desktop/fonts
+    ./desktop/getty
+    ./desktop/niri
+    ./desktop/stylix
+    ./desktop/uwsm
 
-    # Applications & Services
-    ./virt-manager
-    ./docker
-    ./steam
-    ./wine
+    # Hardware
+    ./hardware/audio
+    ./hardware/bluetooth
+    ./hardware/hardware
+    ./hardware/logind
+    ./hardware/power
 
-    # Scripts
-    ./tg-ws-proxy
-    ./wireplumber-disable-hdmi-dp
+    # Network
+    ./network/fail2ban
+    ./network/network
+    ./network/ssh
+    ./network/zapret
+
+    # Security
+    ./security/hyprlock-pam
+    ./security/sops
+
+    # Service
+    ./service/tg-ws-proxy
+    ./service/wireplumber-disable-hdmi-dp
+
+    # User
+    ./user
   ];
 }
