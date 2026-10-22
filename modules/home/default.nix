@@ -34,9 +34,15 @@
     # DevOps
     ./devops/ansible
     ./devops/git
+    ./devops/json-yaml
+    ./devops/just
     ./devops/kubernetes
+    ./devops/lazydocker
     ./devops/lazygit
+    ./devops/lint
+    ./devops/mosh
     ./devops/terraform
+    ./devops/trivy
     ./devops/vscode
 
     # Document
