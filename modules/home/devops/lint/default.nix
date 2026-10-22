@@ -4,5 +4,7 @@
     yamllint
     shellcheck
     shfmt
+    hadolint
+    actionlint
   ];
 }
