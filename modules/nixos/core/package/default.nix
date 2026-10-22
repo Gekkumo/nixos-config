@@ -29,11 +29,6 @@
     eza
     fd
 
-    # NixOs
-    nix-output-monitor
-    nixfmt
-    nixd
-
     # Audio & Media managment
     playerctl
     wiremix
@@ -49,6 +44,10 @@
     ddcutil
     nftables
     e2fsprogs
+    tldr
+    ncdu
+    lsof
+    strace
 
     # Grafics & Notifications
     libnotify
