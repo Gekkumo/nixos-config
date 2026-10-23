@@ -37,6 +37,7 @@
     ./devops/gh
     ./devops/git
     ./devops/glab
+    ./devops/go
     ./devops/json-yaml
     ./devops/just
     ./devops/kubernetes
@@ -44,6 +45,7 @@
     ./devops/lazygit
     ./devops/lint
     ./devops/mosh
+    ./devops/python
     ./devops/terraform
     ./devops/trivy
     ./devops/vscode

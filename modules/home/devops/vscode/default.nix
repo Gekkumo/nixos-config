@@ -2,7 +2,22 @@
 {
   programs.vscode = {
     enable = true;
-    package = pkgs.vscode;
+
+    package = pkgs.vscode.fhsWithPackages (ps: with ps; [
+      kubectl
+      kubernetes-helm
+      docker
+      terraform
+      terraform-ls
+      tflint
+      ansible
+      ansible-lint
+      python3
+      go
+      gopls
+      nixfmt
+      nixd
+    ]);
 
     profiles.default = {
       extensions = with pkgs.vscode-extensions; [
@@ -19,6 +34,7 @@
         redhat.ansible
         redhat.vscode-yaml
         timonwong.shellcheck
+        ms-vscode-remote.remote-ssh
         cweijan.dbclient-jdbc
         cweijan.vscode-database-client2
       ];
