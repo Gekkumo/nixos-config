@@ -2,23 +2,7 @@
 {
   programs.vscode = {
     enable = true;
-
-    package = pkgs.vscode.fhsWithPackages (ps: with ps; [
-      kubectl
-      kubernetes-helm
-      docker
-      terraform
-      terraform-ls
-      tflint
-      ansible
-      ansible-lint
-      python3
-      go
-      gopls
-      just
-      nixfmt
-      nixd
-    ]);
+    package = pkgs.vscode;
 
     profiles.default = {
       extensions = with pkgs.vscode-extensions; [
