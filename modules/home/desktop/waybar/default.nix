@@ -119,7 +119,7 @@
         };
 
         "temperature#gpu" = {
-          "hwmon-path-abs" = "/sys/class/hwmon/hwmon2";
+          "hwmon-name" = "amdgpu";
           "input-filename" = "temp1_input";
           "format" = "{temperatureC}°C";
           "interval" = 2;
@@ -127,7 +127,7 @@
         };
 
         "temperature#cpu" = {
-          "hwmon-path-abs" = "/sys/class/hwmon/hwmon3";
+          "hwmon-name" = "coretemp";
           "input-filename" = "temp1_input";
           "format" = "{temperatureC}°C ";
           "interval" = 2;

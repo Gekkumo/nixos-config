@@ -1,16 +1,14 @@
 #!/usr/bin/env bash
-WPCTL="/run/current-system/sw/bin/wpctl"
+set -euo pipefail
 
-SINKS=($($WPCTL status | sed -n '/Sinks:/,/Sources:/p' | grep -oP '^\s*│\s+\d+' | grep -oP '\d+' | while read id; do
-    name=$($WPCTL inspect "$id" 2>/dev/null | grep 'node.name' | head -1)
-    if [[ "$name" != *".monitor"* ]]; then
-        echo "$id"
-    fi
-done))
+mapfile -t SINKS < <(pactl list short sinks | grep -v "monitor" | awk '{print $2}')
 
-[ "${#SINKS[@]}" -le 1 ] && exit 0
+if [ "${#SINKS[@]}" -le 1 ]; then
+    echo "Less than 2 sinks found, exiting."
+    exit 0
+fi
 
-CURRENT=$($WPCTL status | grep '\*' | grep -oP '^\s*│\s+\K\d+')
+CURRENT=$(pactl get-default-sink)
 
 NEXT=""
 for i in "${!SINKS[@]}"; do
@@ -20,4 +18,10 @@ for i in "${!SINKS[@]}"; do
     fi
 done
 
-[ -n "$NEXT" ] && $WPCTL set-default "$NEXT"
+if [ -n "$NEXT" ]; then
+    pactl set-default-sink "$NEXT"
+    echo "Switched to: $NEXT"
+
+    wpctl set-volume @DEFAULT_AUDIO_SINK@ 1%+
+    wpctl set-volume @DEFAULT_AUDIO_SINK@ 1%-
+fi
