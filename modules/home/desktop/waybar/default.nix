@@ -11,9 +11,10 @@
 
     settings = {
       mainBar = {
+        output = "HDMI-A-1";
         layer = "top";
         position = "top";
-        height = 30;
+        height = 35;
         spacing = 2;
 
         modules-left = [
@@ -26,11 +27,11 @@
           "tray"
           "custom/tomat"
           "niri/language"
-          "power-profiles-daemon"
           "temperature#gpu"
           "temperature#cpu"
           "wireplumber#source"
           "wireplumber#sink"
+          "power-profiles-daemon"
           "idle_inhibitor"
         ];
 
@@ -118,15 +119,15 @@
         };
 
         "temperature#gpu" = {
-          "hwmon-name" = "amdgpu";
+          "hwmon-path-abs" = "/sys/class/hwmon/hwmon2";
           "input-filename" = "temp1_input";
           "format" = "{temperatureC}°C";
           "interval" = 2;
-          "on-click" = "kitty -e lact";
+          "on-click" = "lact";
         };
 
         "temperature#cpu" = {
-          "hwmon-name" = "coretemp";
+          "hwmon-path-abs" = "/sys/class/hwmon/hwmon3";
           "input-filename" = "temp1_input";
           "format" = "{temperatureC}°C ";
           "interval" = 2;
