@@ -4,5 +4,6 @@
     terraform
     tflint
     terraform-docs
+    terraform-ls
   ];
 }
