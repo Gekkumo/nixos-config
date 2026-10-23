@@ -10,6 +10,7 @@
 
     # CLI
     ./cli/btop
+    ./cli/diskwatch
     ./cli/fastfetch
     ./cli/neovim
     ./cli/yazi
