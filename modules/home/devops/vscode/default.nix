@@ -15,6 +15,7 @@
       python3
       go
       gopls
+      just
       nixfmt
       nixd
     ]);
@@ -34,6 +35,7 @@
         redhat.ansible
         redhat.vscode-yaml
         timonwong.shellcheck
+        skellock.just
         ms-vscode-remote.remote-ssh
         cweijan.dbclient-jdbc
         cweijan.vscode-database-client2
