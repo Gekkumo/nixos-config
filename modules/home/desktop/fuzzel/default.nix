@@ -6,7 +6,7 @@
     settings = {
       main = {
         lines = 15;
-        width = 25;
+        width = 45;
         prompt = "$";
         terminal = "kitty -e";
         icons-enabled = false;

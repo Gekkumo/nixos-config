@@ -23,9 +23,6 @@ input {
         tap
         natural-scroll
     }
-
-    mouse { }
-    trackpoint { }
 }
 
 prefer-no-csd
