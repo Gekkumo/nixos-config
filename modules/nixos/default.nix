@@ -42,6 +42,7 @@
     ./network/fail2ban
     ./network/network
     ./network/ssh
+    ./network/tailscale
     ./network/zapret
 
     # Security
@@ -49,6 +50,7 @@
     ./security/sops
 
     # Service
+    ./service/sunshine
     ./service/tg-ws-proxy
     ./service/wireplumber-disable-hdmi-dp
 
