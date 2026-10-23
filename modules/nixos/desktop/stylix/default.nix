@@ -27,6 +27,9 @@
         package = pkgs.noto-fonts-color-emoji;
         name = "Noto Color Emoji";
       };
+      sizes = {
+        popups = 14;
+      };
     };
 
     opacity = {
