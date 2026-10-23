@@ -17,6 +17,10 @@
     "amdgpu.gpu_recovery=1" # reset GPU after a hang instead of requiring reboot.
   ];
 
+  boot.initrd.kernelModules = [ "amdgpu" ];
+
+  boot.kernelModules = [ "coretemp" ];
+
   my.system.audio = {
     enable = true;
     quantum = 256;
