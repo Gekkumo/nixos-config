@@ -1,12 +1,12 @@
 output "HDMI-A-1" {
-    mode "2560x1440@120"
+    mode "2560x1440@119.998"
     scale 1.0
     position x=0 y=0
     focus-at-startup
 }
 
 output "DP-2" {
-    mode "1920x1080@60"
+    mode "1920x1080@60.000"
     scale 1.0
     position x=-1920 y=180
 }
@@ -14,6 +14,6 @@ output "DP-2" {
 input {
     mouse {
         accel-profile "flat"
-        accel-speed -0.6
+        accel-speed -0.2
     }
 }
