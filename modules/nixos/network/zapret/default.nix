@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
   services.zapret = {
-    enable = false;
+    enable = true;
     package = pkgs.zapret;
 
     whitelist = [
