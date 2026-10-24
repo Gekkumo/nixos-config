@@ -50,6 +50,7 @@
     ./security/sops
 
     # Service
+    ./service/polkit-agent
     ./service/sunshine
     ./service/tg-ws-proxy
     ./service/wireplumber-disable-hdmi-dp
