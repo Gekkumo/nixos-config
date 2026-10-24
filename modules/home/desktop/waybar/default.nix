@@ -148,7 +148,7 @@
           "scroll-step" = 2.0;
         };
 
-        "custom-inhibit" = {
+        "custom/inhibit" = {
           exec = "${config.home.homeDirectory}/.config/waybar/scripts/toggle-inhibit.sh --status";
           signal = 8;
           format = "{}";
@@ -227,7 +227,7 @@
         color: #c98b8b;
       }
 
-      #custom/inhibit {
+      #custom-inhibit {
         margin-right: 2px;
       }
     '';
