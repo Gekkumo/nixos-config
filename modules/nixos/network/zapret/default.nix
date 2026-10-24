@@ -20,23 +20,35 @@
     ];
 
     params = [
-      # Fake + multisplit
+      # YouTube QUIC / UDP 443
+      "--filter-udp=443"
+      "--dpi-desync=fake"
+      "--dpi-desync-repeats=11"
+      "--new"
+
+      # Discord UDP
+      "--filter-udp=19294-19344,50000-50100"
+      "--filter-l7=discord,stun"
+      "--dpi-desync=fake"
+      "--dpi-desync-repeats=6"
+      "--new"
+
+      # Google TCP 443 - multisplit
+      "--filter-tcp=443"
+      "--ip-id=zero"
       "--dpi-desync=fake,multisplit"
       "--dpi-desync-split-pos=1"
       "--dpi-desync-fooling=ts"
       "--dpi-desync-repeats=8"
-      # Google
+      "--new"
+
+      # TCP 80,443 - hostfakesplit
+      "--filter-tcp=80,443"
       "--dpi-desync=hostfakesplit"
-      "--dpi-desync-hostfakesplit-mod=host=www.google.com"
-      # UDP for Discord/STUN
-      "--filter-udp=19294-19344,50000-50100"
-      "--filter-l7=discord,stun"
-      "--dpi-desync=fake"
-      "--dpi-desync-repeats=3"
-      # UDP QUIC for YouTube
-      "--filter-udp=443"
-      "--dpi-desync=fake"
-      "--dpi-desync-repeats=11"
+      "--dpi-desync-repeats=4"
+      "--dpi-desync-fooling=ts,md5sig"
+      "--dpi-desync-hostfakesplit-mod=host=ozon.ru"
+      "--new"
     ];
   };
 }
