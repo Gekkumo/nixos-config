@@ -15,11 +15,13 @@ button {
     border-radius: 0;
     margin: 10px;
     transition: all 0.2s ease-in-out;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 button label {
-    font-size: 140px;
-    padding: 0px 0px 50px 0px;
+    font-size: 200px;
 }
 
 button:hover {
