@@ -44,6 +44,7 @@
 
       # TCP 80,443 - hostfakesplit
       "--filter-tcp=80,443"
+      "--ip-id=zero"
       "--dpi-desync=hostfakesplit"
       "--dpi-desync-repeats=4"
       "--dpi-desync-fooling=ts,md5sig"
