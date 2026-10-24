@@ -11,5 +11,7 @@ fi
 if pgrep -f "systemd-inhibit.*my-inhibitor" > /dev/null; then
     pkill -f "systemd-inhibit.*my-inhibitor"
 else
-    systemd-inhibit --what=idle:sleep --who="my-inhibitor" --why="User toggled" --mode=block sleep infinity > /dev/null 2>&1 &
+    systemd-inhibit --what=idle:sleep --who="my-inhibitor" --why="User toggled" --mode=block sleep 1800 > /dev/null 2>&1 &
 fi
+
+pkill -SIGRTMIN+8 waybar

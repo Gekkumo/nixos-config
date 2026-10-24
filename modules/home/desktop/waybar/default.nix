@@ -150,7 +150,7 @@
 
         "custom/inhibit" = {
           exec = "~/.config/waybar/scripts/toggle-inhibit.sh --status";
-          interval = 1;
+          signal = 8;
           format = "{}";
           on-click = "~/.config/waybar/scripts/toggle-inhibit.sh";
           return-type = "json";
