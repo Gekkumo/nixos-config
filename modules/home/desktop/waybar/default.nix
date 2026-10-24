@@ -214,12 +214,14 @@
         margin-right: 5px;
       }
 
-      #temperature\#gpu {
-        color: #c98b8b;
+      #temperature.cpu,
+      #temperature#cpu {
+        color: #8ba3c9;
       }
 
-      #temperature\#cpu {
-        color: #8ba3c9;
+      #temperature.gpu,
+      #temperature#gpu {
+        color: #c98b8b;
       }
 
       #idle_inhibitor {
