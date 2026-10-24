@@ -148,7 +148,7 @@
           "scroll-step" = 2.0;
         };
 
-        "custom/inhibit" = {
+        "custom-inhibit" = {
           exec = "${config.home.homeDirectory}/.config/waybar/scripts/toggle-inhibit.sh --status";
           signal = 8;
           format = "{}";
