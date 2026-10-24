@@ -227,7 +227,7 @@
         color: #c98b8b;
       }
 
-      #idle_inhibitor {
+      #custom/inhibit {
         margin-right: 2px;
       }
     '';
