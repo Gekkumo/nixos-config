@@ -27,8 +27,8 @@
           "tray"
           "custom/tomat"
           "niri/language"
-          "temperature#gpu"
           "temperature#cpu"
+          "temperature#gpu"
           "wireplumber#source"
           "wireplumber#sink"
           "idle_inhibitor"
@@ -107,19 +107,19 @@
           tooltip = false;
         };
 
+        "temperature#cpu" = {
+          "hwmon-path" = "/sys/devices/platform/coretemp.0/hwmon/hwmon3/temp1_input";
+          "format" = "{temperatureC}°C";
+          "interval" = 2;
+          "on-click" = "kitty -e btop";
+        };
+
         "temperature#gpu" = {
           "hwmon-path" =
             "/sys/devices/pci0000:00/0000:00:01.0/0000:01:00.0/0000:02:00.0/0000:03:00.0/hwmon/hwmon2/temp1_input";
           "format" = "{temperatureC}°C";
           "interval" = 2;
           "on-click" = "lact";
-        };
-
-        "temperature#cpu" = {
-          "hwmon-path" = "/sys/devices/platform/coretemp.0/hwmon/hwmon3/temp1_input";
-          "format" = "{temperatureC}°C ";
-          "interval" = 2;
-          "on-click" = "kitty -e btop";
         };
 
         "wireplumber#source" = {
@@ -212,6 +212,14 @@
 
       #tray {
         margin-right: 5px;
+      }
+
+      #temperature\#gpu {
+        color: #c98b8b;
+      }
+
+      #temperature\#cpu {
+        color: #8ba3c9;
       }
 
       #idle_inhibitor {
