@@ -52,6 +52,10 @@
     # Grafics & Notifications
     libnotify
 
+    # Thumbnails
+    ffmpegthumbnailer
+    ffmpeg-headless
+
     # Cryptography, Secrets & Recovery
     gnupg
   ];
