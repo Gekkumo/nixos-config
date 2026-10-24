@@ -15,9 +15,8 @@
     # "amdgpu.no_vpe_idle_pg=1"
     # "amdgpu.runpm=0"
     "amdgpu.gpu_recovery=1" # reset GPU after a hang instead of requiring reboot.
-    "amdgpu.ppfeaturemask=0xfff7ffff"
     "video=HDMI-A-1:2560x1440@120"
-    "video=DP-2:1920x1080@60"
+    "video=DP-2:1920x1080"
   ];
 
   boot.initrd.kernelModules = [ "amdgpu" ];
