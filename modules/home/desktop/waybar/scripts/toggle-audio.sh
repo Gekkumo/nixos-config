@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+
 set -euo pipefail
 
 CURRENT_ID=$(wpctl inspect @DEFAULT_AUDIO_SINK@ | grep -oP '^id \K\d+')

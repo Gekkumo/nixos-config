@@ -149,10 +149,10 @@
         };
 
         "custom/inhibit" = {
-          exec = "~/.config/waybar/scripts/toggle-inhibit.sh --status";
+          exec = "${config.home.homeDirectory}/.config/waybar/scripts/toggle-inhibit.sh --status";
           signal = 8;
           format = "{}";
-          on-click = "~/.config/waybar/scripts/toggle-inhibit.sh";
+          on-click = "${config.home.homeDirectory}/.config/waybar/scripts/toggle-inhibit.sh";
           return-type = "json";
           tooltip-format = "Idle Inhibitor";
         };
