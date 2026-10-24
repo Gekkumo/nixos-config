@@ -31,7 +31,6 @@
           "temperature#cpu"
           "wireplumber#source"
           "wireplumber#sink"
-          "power-profiles-daemon"
           "idle_inhibitor"
         ];
 
@@ -108,27 +107,16 @@
           tooltip = false;
         };
 
-        "power-profiles-daemon" = {
-          format = "{icon}";
-          tooltip-format = "Profile: {profile}\nDriver: {driver}";
-          format-icons = {
-            "performance" = "";
-            "balanced" = "";
-            "power-saver" = "";
-          };
-        };
-
         "temperature#gpu" = {
-          "hwmon-name" = "amdgpu";
-          "input-filename" = "temp1_input";
+          "hwmon-path" =
+            "/sys/devices/pci0000:00/0000:00:01.0/0000:01:00.0/0000:02:00.0/0000:03:00.0/hwmon/hwmon2/temp1_input";
           "format" = "{temperatureC}°C";
           "interval" = 2;
           "on-click" = "lact";
         };
 
         "temperature#cpu" = {
-          "hwmon-name" = "coretemp";
-          "input-filename" = "temp1_input";
+          "hwmon-path" = "/sys/devices/platform/coretemp.0/hwmon/hwmon3/temp1_input";
           "format" = "{temperatureC}°C ";
           "interval" = 2;
           "on-click" = "kitty -e btop";
