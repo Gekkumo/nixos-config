@@ -102,6 +102,11 @@ window-rule {
 }
 
 window-rule {
+    match app-id=r#"webcord"#
+    open-maximized true
+}
+
+window-rule {
     match app-id=r#"obsidian"#
     open-maximized true
 }

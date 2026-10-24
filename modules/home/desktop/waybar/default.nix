@@ -5,6 +5,11 @@
     executable = true;
   };
 
+  xdg.configFile."waybar/scripts/toggle-inhibit.sh" = {
+    source = ./scripts/toggle-inhibit.sh;
+    executable = true;
+  };
+
   programs.waybar = {
     enable = true;
     systemd.enable = true;
@@ -31,7 +36,7 @@
           "temperature#gpu"
           "wireplumber#source"
           "wireplumber#sink"
-          "idle_inhibitor"
+          "custom/inhibit"
         ];
 
         "custom/power" = {
@@ -143,15 +148,13 @@
           "scroll-step" = 2.0;
         };
 
-        "idle_inhibitor" = {
-          format = "{icon}";
-          format-icons = {
-            activated = "ON";
-            deactivated = "OFF";
-          };
-          timeout = 30;
-          tooltip-format-activated = "Idle inhibitor: ON (30 min)";
-          tooltip-format-deactivated = "Idle inhibitor: OFF";
+        "custom/inhibit" = {
+          exec = "~/.config/waybar/scripts/toggle-inhibit.sh --status";
+          interval = 1;
+          format = "{}";
+          on-click = "~/.config/waybar/scripts/toggle-inhibit.sh";
+          return-type = "json";
+          tooltip-format = "Idle Inhibitor";
         };
       };
     };
