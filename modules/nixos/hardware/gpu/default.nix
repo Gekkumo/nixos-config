@@ -6,7 +6,7 @@
   };
 
   hardware.enableRedistributableFirmware = true;
-  hardware.amdgpu.overdrive.enable = true;
+  # hardware.amdgpu.overdrive.enable = true;
 
   environment.systemPackages = with pkgs; [
     lact
