@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
+PIDFILE="$XDG_RUNTIME_DIR/idle-inhibit.pid"
+
 if [ "$1" = "--status" ]; then
-    if pgrep -x "my-inhibit" > /dev/null; then
+    if [ -f "$PIDFILE" ] && kill -0 "$(cat "$PIDFILE")" 2>/dev/null; then
         echo '{"text": "ON", "class": "activated"}'
     else
         echo '{"text": "OFF", "class": "deactivated"}'
@@ -9,10 +11,12 @@ if [ "$1" = "--status" ]; then
     exit 0
 fi
 
-if pgrep -x "my-inhibit" > /dev/null; then
-    pkill -x "my-inhibit"
+if [ -f "$PIDFILE" ] && kill -0 "$(cat "$PIDFILE")" 2>/dev/null; then
+    kill "$(cat "$PIDFILE")"
+    rm -f "$PIDFILE"
 else
-    (systemd-inhibit --what=idle:sleep --who="my-inhibitor" --why="User toggled" --mode=block bash -c 'exec -a my-inhibit sleep 1800' > /dev/null 2>&1; pkill -SIGRTMIN+8 waybar) &
+    systemd-inhibit --what=idle:sleep --who="my-inhibitor" --why="User toggled" --mode=block sleep 1800 > /dev/null 2>&1 &
+    echo $! > "$PIDFILE"
 fi
 
 pkill -SIGRTMIN+8 waybar
