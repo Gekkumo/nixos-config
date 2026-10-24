@@ -16,6 +16,7 @@
     unzip
 
     # Networking
+    wireguard-tools
     dnsutils
     openssh
     socat
