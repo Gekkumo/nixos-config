@@ -43,6 +43,9 @@
         "nix.formatterPath" = "nixfmt";
         "nix.serverPath" = "nixd";
         "nix.enableLanguageServer" = true;
+        "terminal.integrated.env.linux" = {
+          NIX_SSL_CERT_FILE = "/etc/ssl/certs/ca-bundle.crt";
+        };
       };
     };
   };
