@@ -7,7 +7,7 @@
   services.restic.backups = {
     obsidian = {
       initialize = true;
-      repository = "/mnt/DATA/Backup/Obsidian";
+      repository = "/mnt/DATA/Backup/IDDQD";
       passwordFile = "${config.home.homeDirectory}/.config/restic/password";
 
       paths = [
@@ -29,11 +29,11 @@
 
     keepass = {
       initialize = true;
-      repository = "/mnt/DATA/Backup/KeePass";
+      repository = "/mnt/DATA/Backup/IDKFA";
       passwordFile = "${config.home.homeDirectory}/.config/restic/password";
 
       paths = [
-        "${config.home.homeDirectory}/Documents/KeePass"
+        "${config.home.homeDirectory}/Documents/IDKFA"
       ];
 
       timerConfig = {
