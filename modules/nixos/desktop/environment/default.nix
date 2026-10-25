@@ -51,6 +51,9 @@
     NIXOS_OZONE_WL = "1";
     ELECTRON_OZONE_PLATFORM_HINT = "auto";
     MOZ_ENABLE_WAYLAND = "1";
+
+    # GTK rendering (fixes Nautilus startup delay)
+    GSK_RENDERER = "gl";
   };
 
   # Disable unnecessary services
