@@ -1,6 +1,6 @@
-{ pkgs, config, ... }:
+{ pkgs, username, ... }:
 {
-  home.packages = with pkgs; [
+  environment.systemPackages = with pkgs; [
     restic
   ];
 
@@ -8,16 +8,16 @@
     obsidian = {
       initialize = true;
       repository = "/mnt/DATA/Backup/IDDQD";
-      passwordFile = "${config.home.homeDirectory}/.config/restic/password";
+      passwordFile = "/home/${username}/.config/restic/password";
 
       paths = [
-        "${config.home.homeDirectory}/Documents/IDDQD"
+        "/home/${username}/Documents/IDDQD"
       ];
 
       exclude = [
-        "${config.home.homeDirectory}/Documents/IDDQD/.git"
-        "${config.home.homeDirectory}/Documents/IDDQD/.gitignore"
-        "${config.home.homeDirectory}/Documents/IDDQD/.trash"
+        "/home/${username}/Documents/IDDQD/.git"
+        "/home/${username}/Documents/IDDQD/.gitignore"
+        "/home/${username}/Documents/IDDQD/.trash"
       ];
 
       timerConfig = {
@@ -30,14 +30,14 @@
     keepass = {
       initialize = true;
       repository = "/mnt/DATA/Backup/IDKFA";
-      passwordFile = "${config.home.homeDirectory}/.config/restic/password";
+      passwordFile = "/home/${username}/.config/restic/password";
 
       paths = [
-        "${config.home.homeDirectory}/Documents/IDKFA"
+        "/home/${username}/Documents/IDKFA"
       ];
 
       timerConfig = {
-        OnCalendar = "Sun *-*-* 12:00:00";
+        OnCalendar = "*-*-1,15 12:00:00";
         Persistent = true;
         RandomizedDelaySec = "5m";
       };

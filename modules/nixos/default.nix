@@ -51,6 +51,7 @@
 
     # Service
     ./service/polkit-agent
+    ./service/restic
     ./service/sunshine
     ./service/tg-ws-proxy
     ./service/wireplumber-disable-hdmi-dp
