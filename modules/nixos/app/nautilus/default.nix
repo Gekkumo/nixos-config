@@ -8,6 +8,8 @@
     wsdd
   ];
 
+  services.gnome.sushi.enable = true;
+
   services.gnome.tinysparql.enable = false;
   services.gnome.localsearch.enable = false;
   systemd.user.services.tracker-miner-fs-3.enable = false;
