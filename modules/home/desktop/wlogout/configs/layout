@@ -5,7 +5,7 @@
     "keybind": "s"
 }
 {
-    "label": "decor1",
+    "label": "decor_left",
     "action": "true",
     "text": "",
     "keybind": ""
@@ -29,7 +29,7 @@
     "keybind": "u"
 }
 {
-    "label": "decor2",
+    "label": "decor_right",
     "action": "true",
     "text": "",
     "keybind": ""
