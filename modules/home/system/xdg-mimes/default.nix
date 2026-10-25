@@ -12,14 +12,14 @@
       "x-scheme-handler/unknown" = [ "firefox.desktop" ];
 
       # Images
-      "image/png" = [ "imv.desktop" ];
-      "image/jpeg" = [ "imv.desktop" ];
-      "image/jpg" = [ "imv.desktop" ];
-      "image/gif" = [ "imv.desktop" ];
-      "image/webp" = [ "imv.desktop" ];
-      "image/svg+xml" = [ "imv.desktop" ];
-      "image/tiff" = [ "imv.desktop" ];
-      "image/bmp" = [ "imv.desktop" ];
+      "image/png" = [ "imv-dir.desktop" ];
+      "image/jpeg" = [ "imv-dir.desktop" ];
+      "image/jpg" = [ "imv-dir.desktop" ];
+      "image/gif" = [ "imv-dir.desktop" ];
+      "image/webp" = [ "imv-dir.desktop" ];
+      "image/svg+xml" = [ "imv-dir.desktop" ];
+      "image/tiff" = [ "imv-dir.desktop" ];
+      "image/bmp" = [ "imv-dir.desktop" ];
 
       # Video
       "video/mp4" = [ "mpv.desktop" ];
