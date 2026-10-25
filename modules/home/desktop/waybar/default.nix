@@ -58,6 +58,7 @@
           "player-order" = [
             "mpd"
             "firefox"
+            "mpv"
           ];
           "format" = "{player_icon} {dynamic}";
           "format-paused" = "{status_icon} {dynamic}";
@@ -65,6 +66,7 @@
             "default" = "󰀘";
             "mpd" = "";
             "firefox" = "󰈹";
+            "mpv" = "";
           };
           "status-icons" = {
             "paused" = "";
@@ -78,9 +80,9 @@
           "on-click-right" = "playerctl next";
           "on-scroll-up" = "playerctl -a pause; playerctl -p mpd play";
           "on-scroll-down" = "playerctl -a pause; playerctl -p firefox play";
-          "artist-len" = 25;
-          "title-len" = 25;
-          "dynamic-len" = 50;
+          "artist-len" = 40;
+          "title-len" = 50;
+          "dynamic-len" = 90;
         };
 
         "clock" = {

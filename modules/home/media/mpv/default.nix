@@ -1,7 +1,9 @@
-{ ... }:
+{ pkgs, ... }:
 {
   programs.mpv = {
     enable = true;
+
+    scripts = [ pkgs.mpvScripts.mpris ];
 
     config = {
       hwdec = "vaapi";
