@@ -12,7 +12,8 @@ if [ "$1" = "--status" ]; then
 fi
 
 if [ -f "$PIDFILE" ] && kill -0 "$(cat "$PIDFILE")" 2>/dev/null; then
-    kill "$(cat "$PIDFILE")"
+    pkill -f "sleep 1800"
+    kill "$(cat "$PIDFILE")" 2>/dev/null
     rm -f "$PIDFILE"
     pkill -SIGRTMIN+8 waybar
 else
