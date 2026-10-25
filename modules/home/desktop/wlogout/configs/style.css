@@ -30,8 +30,8 @@ button:focus {
     outline: none;
 }
 
-#decor1 {
-    background-image: url("assets/image1.png");
+#decor_left {
+    background-image: url("assets/decor_left.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -39,8 +39,8 @@ button:focus {
     padding: 0;
 }
 
-#decor2 {
-    background-image: url("assets/image2.png");
+#decor_right {
+    background-image: url("assets/decor_right.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
