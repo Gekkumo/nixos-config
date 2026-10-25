@@ -14,9 +14,13 @@ fi
 if [ -f "$PIDFILE" ] && kill -0 "$(cat "$PIDFILE")" 2>/dev/null; then
     kill "$(cat "$PIDFILE")"
     rm -f "$PIDFILE"
+    pkill -SIGRTMIN+8 waybar
 else
-    systemd-inhibit --what=idle:sleep --who="my-inhibitor" --why="User toggled" --mode=block sleep 1800 > /dev/null 2>&1 &
+    (
+        systemd-inhibit --what=idle:sleep --who="my-inhibitor" --why="User toggled" --mode=block sleep 1800 > /dev/null 2>&1
+        rm -f "$PIDFILE"
+        pkill -SIGRTMIN+8 waybar
+    ) &
     echo $! > "$PIDFILE"
+    pkill -SIGRTMIN+8 waybar
 fi
-
-pkill -SIGRTMIN+8 waybar
