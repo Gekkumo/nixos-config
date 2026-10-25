@@ -7,8 +7,7 @@
 {
     "label": "decor_left",
     "action": "true",
-    "text": "",
-    "keybind": ""
+    "text": ""
 }
 {
     "label": "reboot",
@@ -31,6 +30,5 @@
 {
     "label": "decor_right",
     "action": "true",
-    "text": "",
-    "keybind": ""
+    "text": ""
 }
