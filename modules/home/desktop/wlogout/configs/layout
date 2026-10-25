@@ -1,8 +1,8 @@
 {
     "label": "shutdown",
     "action": "systemctl poweroff",
-    "text": "󰐥",
-    "keybind": "s"
+    "text": "",
+    "keybind": "z"
 }
 {
     "label": "decor_left",
@@ -13,20 +13,20 @@
 {
     "label": "reboot",
     "action": "systemctl reboot",
-    "text": "󰜉",
-    "keybind": "r"
+    "text": "",
+    "keybind": "x"
 }
 {
     "label": "lock",
     "action": "hyprlock",
-    "text": "󰌾",
-    "keybind": "l"
+    "text": "",
+    "keybind": "c"
 }
 {
     "label": "suspend",
     "action": "systemctl suspend",
-    "text": "󰒲",
-    "keybind": "u"
+    "text": "",
+    "keybind": "v"
 }
 {
     "label": "decor_right",
