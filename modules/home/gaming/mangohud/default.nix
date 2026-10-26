@@ -1,4 +1,4 @@
-{ ... }:
+{ lib, ... }:
 {
   programs.mangohud = {
     enable = true;
@@ -30,6 +30,10 @@
       vulkan_driver = true;
       wine = true;
       winesync = true;
+
+      font_size = lib.mkForce 24;
+      font_size_text = lib.mkForce 24;
+      font_scale = lib.mkForce 1.0;
     };
   };
 }
