@@ -107,13 +107,13 @@ window-rule {
 }
 
 window-rule {
-    match app-id=r#"obsidian"#
+    match app-id=r#"discord"#
     open-maximized true
 }
 
 window-rule {
-    match app-id=r#"org\.telegram\.desktop"#
-    default-column-width { proportion 0.66667; }
+    match app-id=r#"obsidian"#
+    open-maximized true
 }
 
 spawn-sh-at-startup "dbus-update-activation-environment --all --systemd DISPLAY WAYLAND_DISPLAY XDG_CURRENT_DESKTOP XDG_SESSION_ID"
