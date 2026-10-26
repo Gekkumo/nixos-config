@@ -52,10 +52,8 @@
     ELECTRON_OZONE_PLATFORM_HINT = "auto";
     MOZ_ENABLE_WAYLAND = "1";
 
-    # QT
+    # Telegram
     TDESKTOP_USE_GTK_FILE_DIALOG = 1;
-    GTK_USE_PORTAL = 1;
-    GDK_DEBUG = "portals";
   };
 
   # Disable unnecessary services
