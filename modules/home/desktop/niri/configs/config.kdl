@@ -107,11 +107,6 @@ window-rule {
 }
 
 window-rule {
-    match app-id=r#"discord"#
-    open-maximized true
-}
-
-window-rule {
     match app-id=r#"obsidian"#
     open-maximized true
 }

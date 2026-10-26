@@ -62,6 +62,7 @@
     ./gaming/qbittorrent
 
     # Media
+    ./media/coppwr
     ./media/foliate
     ./media/imv
     ./media/kid3
@@ -70,7 +71,6 @@
     ./media/rmpc
 
     # Messenger
-    ./messenger/discord
     ./messenger/telegram
     ./messenger/webcord
 
