@@ -51,6 +51,12 @@
     NIXOS_OZONE_WL = "1";
     ELECTRON_OZONE_PLATFORM_HINT = "auto";
     MOZ_ENABLE_WAYLAND = "1";
+
+    # QT
+    QT_QPA_PLATFORMTHEME = "xdgdesktopportal";
+    TDESKTOP_USE_GTK_FILE_DIALOG = 1;
+    GTK_USE_PORTAL = 1;
+    GDK_DEBUG = "portals";
   };
 
   # Disable unnecessary services
