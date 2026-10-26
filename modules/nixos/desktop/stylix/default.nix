@@ -50,6 +50,8 @@
       size = 24;
     };
 
+    targets.qt.standardDialogs = "xdgdesktopportal";
+
     homeManagerIntegration.autoImport = true;
     homeManagerIntegration.followSystem = true;
   };
