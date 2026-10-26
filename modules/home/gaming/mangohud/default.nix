@@ -4,36 +4,47 @@
     enable = true;
 
     settings = {
-      fps_limit = "60,120,144,200,0";
-      fps_limit_method = "late";
-
-      arch = true;
-      cpu_mhz = true;
-      cpu_power = true;
-      cpu_temp = true;
-      display_server = true;
-      engine_version = true;
-      fps_metrics = true;
-      gamemode = true;
-      gpu_core_clock = true;
-      gpu_fan = true;
-      gpu_junction_temp = true;
-      gpu_mem_clock = true;
-      gpu_mem_temp = true;
-      gpu_power = true;
-      gpu_temp = true;
-      gpu_voltage = true;
-      ram = true;
-      resolution = true;
-      show_fps_limit = true;
-      vram = true;
-      vulkan_driver = true;
-      wine = true;
-      winesync = true;
-
       font_size = lib.mkForce 24;
       font_size_text = lib.mkForce 24;
       font_scale = lib.mkForce 1.0;
+
+      preset = "0,1";
     };
   };
+
+  xdg.configFile."MangoHud/presets.conf".text = ''
+    [preset 0]
+    fps
+    cpu_temp
+    gpu_temp
+    background_alpha=0.5
+
+    [preset 1]
+    fps_limit=60,120,144,200,0
+    fps_limit_method=late
+    arch
+    cpu_mhz
+    cpu_power
+    cpu_temp
+    display_server
+    engine_version
+    fps_metrics
+    gamemode
+    gpu_core_clock
+    gpu_fan
+    gpu_junction_temp
+    gpu_mem_clock
+    gpu_mem_temp
+    gpu_power
+    gpu_temp
+    gpu_voltage
+    ram
+    resolution
+    show_fps_limit
+    vram
+    vulkan_driver
+    wine
+    winesync
+    background_alpha=0.5
+  '';
 }
