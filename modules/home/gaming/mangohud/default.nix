@@ -17,6 +17,10 @@
     fps
     cpu_temp
     gpu_temp
+    ram
+    fps_limit=60,120,144,200,0
+    fps_limit_method=late
+    show_fps_limit
     background_alpha=0.5
 
     [preset 1]
