@@ -5,6 +5,7 @@
     ./app/carla-yabridge
     ./app/docker
     ./app/nautilus
+    ./app/spectral
     ./app/steam
     ./app/virt-manager
     ./app/wine
