@@ -4,7 +4,7 @@
     enable = true;
 
     musicDirectory = "${config.home.homeDirectory}/Music";
-    playlistDirectory = "${config.home.homeDirectory}/Music/playlists";
+    playlistDirectory = "${config.home.homeDirectory}/Music/Playlist";
 
     extraConfig = ''
       audio_output {
@@ -17,7 +17,7 @@
   };
 
   systemd.user.tmpfiles.rules = [
-    "d ${config.home.homeDirectory}/Music/playlists 0755 - - -"
+    "d ${config.home.homeDirectory}/Music/Playlist 0755 - - -"
   ];
 
   services.mpdris2-rs = {
