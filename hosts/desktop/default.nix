@@ -27,7 +27,7 @@
     enable = true;
     quantum = 256;
     minQuantum = 64;
-    maxQuantum = 512;
+    maxQuantum = 1024;
   };
 
   my.system.carla-yabridge = {

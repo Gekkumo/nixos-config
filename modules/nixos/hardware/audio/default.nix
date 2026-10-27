@@ -21,7 +21,7 @@ in
 
     maxQuantum = mkOption {
       type = types.int;
-      default = 512;
+      default = 1024;
       description = "Maximum PipeWire quantum";
     };
   };
