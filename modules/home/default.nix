@@ -71,6 +71,7 @@
     ./media/rmpc
 
     # Messenger
+    ./messenger/discord
     ./messenger/telegram
     ./messenger/webcord
 
