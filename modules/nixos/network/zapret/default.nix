@@ -41,15 +41,6 @@
       "--dpi-desync-fooling=ts"
       "--dpi-desync-repeats=8"
       "--new"
-
-      # TCP 80,443 - hostfakesplit
-      "--filter-tcp=80,443"
-      "--ip-id=zero"
-      "--dpi-desync=hostfakesplit"
-      "--dpi-desync-repeats=4"
-      "--dpi-desync-fooling=ts,md5sig"
-      "--dpi-desync-hostfakesplit-mod=host=ozon.ru"
-      "--new"
     ];
   };
 }
