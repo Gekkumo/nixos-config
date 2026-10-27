@@ -49,6 +49,7 @@
     ncdu
     lsof
     strace
+    nvtopPackages.amd
 
     # Grafics & Notifications
     libnotify
