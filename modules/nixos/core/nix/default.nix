@@ -58,7 +58,7 @@
     gc = {
       automatic = !config.programs.nh.clean.enable;
       dates = "Sun 03:00";
-      options = "--delete-older-than 30d";
+      options = "--delete-older-than 14d";
     };
 
     optimise = {
@@ -71,7 +71,7 @@
     enable = true;
     clean = {
       enable = true;
-      extraArgs = "--keep-since 14d --keep 3";
+      extraArgs = "--keep 3";
     };
     flake = toString inputs.self;
   };
