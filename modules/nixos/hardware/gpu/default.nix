@@ -3,8 +3,6 @@
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
-    package = pkgs.unstable.mesa;
-    package32 = pkgs.unstable.driversi686Linux.mesa;
   };
 
   hardware.enableRedistributableFirmware = true;
