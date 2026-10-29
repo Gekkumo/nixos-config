@@ -39,7 +39,7 @@
     {
       nixosConfigurations = {
         desktop = mkHost "desktop" "kennsa" { main = "/dev/nvme1n1"; }; # (lsblk)
-        laptop = mkHost "laptop" "kennsa" { main = "/dev/nvme1n1"; }; # (lsblk)
+        laptop = mkHost "laptop" "kuruma" { main = "/dev/nvme1n1"; }; # (lsblk)
       };
       formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixfmt;
     };
