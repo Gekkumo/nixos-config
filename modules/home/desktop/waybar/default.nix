@@ -204,14 +204,6 @@
         color: @base0D;
       }
 
-      #workspaces button.active {
-        color: @base05;
-      }
-
-      #workspaces button:hover {
-        color: @base0D;
-      }
-
       #mpris {
         margin-left: 2px;
       }
