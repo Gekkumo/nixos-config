@@ -34,7 +34,6 @@
           "niri/language"
           "temperature#cpu"
           "temperature#gpu"
-          "network"
           "wireplumber#source"
           "wireplumber#sink"
           "custom/inhibit"
@@ -82,14 +81,14 @@
             "artist"
             "title"
           ];
-          "dynamic-separator" = " - ";
-          "on-click" = "playerctl play-pause";
-          "on-click-right" = "playerctl next";
+          "on-click" = "kitty -e rmpc";
+          "on-click-right" = "playerctl play-pause";
           "on-scroll-up" = "playerctl -a pause; playerctl -p mpd play";
           "on-scroll-down" = "playerctl -a pause; playerctl -p firefox play";
+          "dynamic-separator" = " - ";
           "artist-len" = 40;
-          "title-len" = 50;
-          "dynamic-len" = 90;
+          "title-len" = 60;
+          "dynamic-len" = 100;
         };
 
         "clock" = {
@@ -135,14 +134,6 @@
           "interval" = 2;
           "on-click" = "kitty -e nvtop";
           "on-click-right" = "lact";
-        };
-
-        "network" = {
-          format = "󰖟 {bandwidthDownBytes:>2} 󰕒 {bandwidthUpBytes:>2}";
-          format-wifi = "󰖟 {bandwidthDownBytes:>2} 󰕒 {bandwidthUpBytes:>2}";
-          format-ethernet = "󰈀 {bandwidthDownBytes:>2} 󰕒 {bandwidthUpBytes:>2}";
-          tooltip-format = "{ifname} via {gwaddr}\nDown: {bandwidthDownBytes}\nUp: {bandwidthUpBytes}";
-          interval = 2;
         };
 
         "wireplumber#source" = {
