@@ -34,6 +34,7 @@
           "niri/language"
           "temperature#cpu"
           "temperature#gpu"
+          "network"
           "wireplumber#source"
           "wireplumber#sink"
           "custom/inhibit"
@@ -132,15 +133,24 @@
             "/sys/devices/pci0000:00/0000:00:01.0/0000:01:00.0/0000:02:00.0/0000:03:00.0/hwmon/hwmon2/temp1_input";
           "format" = "{temperatureC}°C";
           "interval" = 2;
-          "on-click" = "lact";
+          "on-click" = "kitty -e nvtop";
+          "on-click-right" = "lact";
+        };
+
+        "network" = {
+          format = "󰖟 {bandwidthDownBytes:>2} 󰕒 {bandwidthUpBytes:>2}";
+          format-wifi = "󰖟 {bandwidthDownBytes:>2} 󰕒 {bandwidthUpBytes:>2}";
+          format-ethernet = "󰈀 {bandwidthDownBytes:>2} 󰕒 {bandwidthUpBytes:>2}";
+          tooltip-format = "{ifname} via {gwaddr}\nDown: {bandwidthDownBytes}\nUp: {bandwidthUpBytes}";
+          interval = 2;
         };
 
         "wireplumber#source" = {
           "node-type" = "Audio/Source";
           format = "{volume}%";
           "format-muted" = " {volume}%";
-          "on-click" = "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle";
-          "on-click-middle" = "kitty -e wiremix";
+          "on-click" = "kitty -e wiremix";
+          "on-click-right" = "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle";
           "on-scroll-up" = "wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SOURCE@ 2%+";
           "on-scroll-down" = "wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SOURCE@ 2%-";
           "scroll-step" = 2.0;
@@ -150,7 +160,7 @@
           format = "{volume}%";
           "format-muted" = "xx%";
           "on-click" = "${config.home.homeDirectory}/.config/waybar/scripts/toggle-audio.sh";
-          "on-click-middle" = "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
+          "on-click-right" = "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
           "on-scroll-up" = "wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 2%+";
           "on-scroll-down" = "wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 2%-";
           "scroll-step" = 2.0;
