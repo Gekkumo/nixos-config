@@ -87,61 +87,61 @@ workspace "social"
 workspace "game"
 
 window-rule {
-    match app-id=r#"^qalculate-gtk$"#
+    match app-id=r#"qalculate-gtk"#
     open-floating true
 }
 
 // WORK
 window-rule {
-    match app-id=r#"^firefox"# title="^Picture-in-Picture$"
+    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
     open-floating true
     open-on-workspace "work"
 }
 
 window-rule {
-    match app-id=r#"^firefox"#
+    match app-id=r#"firefox"#
     exclude title="^Picture-in-Picture$"
     open-maximized true
 }
 
 window-rule {
-    match app-id=r#"^code$"#
+    match app-id=r#"code"#
     open-maximized true
     open-on-workspace "work"
 }
 
 window-rule {
-    match app-id=r#"^obsidian$"#
+    match app-id=r#"obsidian"#
     open-maximized true
     open-on-workspace "work"
 }
 
 // MUSIC
 window-rule {
-    match app-id=r#"^carla$"#
+    match app-id=r#"carla"#
     open-on-workspace "music"
 }
 
 // SOCIAL
 window-rule {
-    match app-id=r#"^webcord$"#
+    match app-id=r#"webcord"#
     open-maximized true
     open-on-workspace "social"
 }
 
 window-rule {
-    match app-id=r#"^org\.telegram\.desktop$"#
+    match app-id=r#"org\.telegram\.desktop"#
     open-on-workspace "social"
 }
 
 // GAME
 window-rule {
-    match app-id=r#"^steam$"#
+    match app-id=r#"steam"#
     open-on-workspace "game"
 }
 
 window-rule {
-    match app-id=r#"^com\.obsproject\.Studio$"#
+    match app-id=r#"com\.obsproject\.Studio"#
     open-on-workspace "game"
 }
 
