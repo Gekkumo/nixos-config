@@ -81,21 +81,19 @@ animations {
     }
 }
 
-workspace "work"
-workspace "music"
-workspace "social"
-workspace "game"
-
 window-rule {
     match app-id=r#"qalculate-gtk"#
     open-floating true
 }
 
-// WORK
+window-rule {
+    match app-id=r#"org\.gnome\.Nautilus"#
+    open-floating true
+}
+
 window-rule {
     match app-id=r#"firefox$"# title="^Picture-in-Picture$"
     open-floating true
-    open-on-workspace "work"
 }
 
 window-rule {
@@ -107,49 +105,21 @@ window-rule {
 window-rule {
     match app-id=r#"code"#
     open-maximized true
-    open-on-workspace "work"
 }
 
 window-rule {
     match app-id=r#"obsidian"#
     open-maximized true
-    open-on-workspace "work"
 }
 
-// MUSIC
-window-rule {
-    match app-id=r#"carla"#
-    open-on-workspace "music"
-}
-
-// SOCIAL
 window-rule {
     match app-id=r#"webcord"#
     open-maximized true
-    open-on-workspace "social"
-}
-
-window-rule {
-    match app-id=r#"org\.telegram\.desktop"#
-    open-on-workspace "social"
-}
-
-// GAME
-window-rule {
-    match app-id=r#"steam"#
-    open-on-workspace "game"
-}
-
-window-rule {
-    match app-id=r#"com\.obsproject\.Studio"#
-    open-on-workspace "game"
 }
 
 spawn-sh-at-startup "dbus-update-activation-environment --all --systemd DISPLAY WAYLAND_DISPLAY XDG_CURRENT_DESKTOP XDG_SESSION_ID"
 spawn-sh-at-startup "systemctl --user import-environment DISPLAY WAYLAND_DISPLAY XDG_CURRENT_DESKTOP XDG_SESSION_ID"
 spawn-sh-at-startup "uwsm finalize"
-
-spawn-sh-at-startup "sleep 1 && niri msg action focus-workspace work"
 
 binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
@@ -253,14 +223,24 @@ binds {
     Mod+Ctrl+Shift+WheelScrollDown { move-column-right; }
     Mod+Ctrl+Shift+WheelScrollUp   { move-column-left; }
 
-    Mod+1 { focus-workspace "work"; }
-    Mod+2 { focus-workspace "music"; }
-    Mod+3 { focus-workspace "social"; }
-    Mod+4 { focus-workspace "game"; }
-    Mod+Shift+1 { move-window-to-workspace "work"; }
-    Mod+Shift+2 { move-window-to-workspace "music"; }
-    Mod+Shift+3 { move-window-to-workspace "social"; }
-    Mod+Shift+4 { move-window-to-workspace "game"; }
+    Mod+1 { focus-workspace 1; }
+    Mod+2 { focus-workspace 2; }
+    Mod+3 { focus-workspace 3; }
+    Mod+4 { focus-workspace 4; }
+    Mod+5 { focus-workspace 5; }
+    Mod+6 { focus-workspace 6; }
+    Mod+7 { focus-workspace 7; }
+    Mod+8 { focus-workspace 8; }
+    Mod+9 { focus-workspace 9; }
+    Mod+Ctrl+1 { move-column-to-workspace 1; }
+    Mod+Ctrl+2 { move-column-to-workspace 2; }
+    Mod+Ctrl+3 { move-column-to-workspace 3; }
+    Mod+Ctrl+4 { move-column-to-workspace 4; }
+    Mod+Ctrl+5 { move-column-to-workspace 5; }
+    Mod+Ctrl+6 { move-column-to-workspace 6; }
+    Mod+Ctrl+7 { move-column-to-workspace 7; }
+    Mod+Ctrl+8 { move-column-to-workspace 8; }
+    Mod+Ctrl+9 { move-column-to-workspace 9; }
 
     Mod+BracketLeft  { consume-or-expel-window-left; }
     Mod+BracketRight { consume-or-expel-window-right; }

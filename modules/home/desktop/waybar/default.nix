@@ -48,13 +48,9 @@
         "niri/workspaces" = {
           disable-scroll = true;
           all-outputs = true;
-          format = "{icon}";
+          format = "●";
           format-icons = {
-            "work" = "󰈙";
-            "music" = "󰝚";
-            "social" = "󰭹";
-            "game" = "󰊗";
-            "default" = "●";
+            active = "●";
           };
         };
 
