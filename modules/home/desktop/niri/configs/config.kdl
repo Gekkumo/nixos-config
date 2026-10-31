@@ -26,12 +26,8 @@ input {
 }
 
 prefer-no-csd
-layout {
-    workspace "work"
-    workspace "music"
-    workspace "social"
-    workspace "game"
 
+layout {
     gaps 5
     center-focused-column "never"
 
@@ -84,6 +80,11 @@ animations {
         spring damping-ratio=1.0 stiffness=600 epsilon=0.0001
     }
 }
+
+workspace "work"
+workspace "music"
+workspace "social"
+workspace "game"
 
 window-rule {
     match app-id=r#"^qalculate-gtk$"#
