@@ -10,6 +10,11 @@
     executable = true;
   };
 
+  xdg.configFile."waybar/scripts/toggle-vpn.sh" = {
+    source = ./scripts/toggle-vpn.sh;
+    executable = true;
+  };
+
   programs.waybar = {
     enable = true;
     systemd.enable = true;
