@@ -237,6 +237,10 @@
         color: #c98b8b;
       }
 
+      #custom-vpn {
+        margin-right: 5px;
+      }
+
       #custom-inhibit {
         margin-right: 5px;
       }
