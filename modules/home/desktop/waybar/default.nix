@@ -238,7 +238,7 @@
       }
 
       #custom-vpn {
-        margin-left: 2px;
+        margin-left: 4px;
         margin-right: 5px;
       }
 
