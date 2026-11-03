@@ -76,6 +76,8 @@
     flake = toString inputs.self;
   };
 
+  programs.nix-ld.enable = true;
+
   environment.systemPackages = with pkgs; [
     nix-tree
   ];
