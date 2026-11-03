@@ -163,7 +163,7 @@
           format = "{}";
           on-click = "${config.home.homeDirectory}/.config/waybar/scripts/toggle-vpn.sh";
           return-type = "json";
-          tooltip-format = "VPN Toggle";
+          tooltip-format = "VPN";
         };
 
         "custom/inhibit" = {
@@ -172,7 +172,7 @@
           format = "{}";
           on-click = "${config.home.homeDirectory}/.config/waybar/scripts/toggle-inhibit.sh";
           return-type = "json";
-          tooltip-format = "Idle Inhibitor";
+          tooltip-format = "Inhibitor";
         };
       };
     };
@@ -238,6 +238,7 @@
       }
 
       #custom-vpn {
+        margin-left: 2px;
         margin-right: 5px;
       }
 
