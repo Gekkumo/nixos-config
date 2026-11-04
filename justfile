@@ -1,4 +1,4 @@
-# Mapping
+# Mapping (change kennsa to kennju)
 host_detected := if env_var("USER") == "kennsa" { "desktop" } else { "laptop" }
 
 # Default: list recipes
