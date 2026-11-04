@@ -20,6 +20,8 @@
         "/home/${username}/Documents/IDDQD/.trash"
       ];
 
+      checkOpts = [ "--read-data-subset=20%" ];
+
       timerConfig = {
         OnCalendar = "Sun *-*-* 12:00:00";
         Persistent = true;
@@ -35,6 +37,8 @@
       paths = [
         "/home/${username}/Documents/IDKFA"
       ];
+
+      checkOpts = [ "--read-data" ];
 
       timerConfig = {
         OnCalendar = "*-*-1,15 12:00:00";
