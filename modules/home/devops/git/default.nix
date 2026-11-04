@@ -1,13 +1,9 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 {
   programs.git = {
     enable = true;
 
     settings = {
-      user = {
-        name = "Gekkumo";
-        email = "Gekkumo@users.noreply.github.com";
-      };
       init.defaultBranch = "main";
       pull.rebase = true;
       push.autoSetupRemote = true;
@@ -15,9 +11,35 @@
       merge.conflictstyle = "zdiff3";
       core.pager = "delta";
       interactive.diffFilter = "delta --color-only";
+
       url."git@github.com:".insteadOf = "https://github.com/";
+      url."git@gitlab.com:".insteadOf = "https://gitlab.com/";
+
+      "includeIf\"gitdir:${config.home.homeDirectory}/Dev/GitHub/\"" = {
+        path = "${config.home.homeDirectory}/.config/git/github-config";
+      };
+      "includeIf\"gitdir:${config.home.homeDirectory}/Dev/GitLab/\"" = {
+        path = "${config.home.homeDirectory}/.config/git/gitlab-config";
+      };
     };
   };
+
+  home.file.".config/git/github-config".text = ''
+    [user]
+        name = "Kenn'Ju"
+        email = "223960892+kennju-gh@users.noreply.github.com"
+  '';
+
+  home.file.".config/git/gitlab-config".text = ''
+    [user]
+        name = "Kenn'Ju"
+        email = "44094151-kennju-gl@users.noreply.gitlab.com"
+  '';
+
+  systemd.user.tmpfiles.rules = [
+    "d ${config.home.homeDirectory}/Dev/GitHub 0755 - - -"
+    "d ${config.home.homeDirectory}/Dev/GitLab 0755 - - -"
+  ];
 
   programs.delta = {
     enable = true;
@@ -30,5 +52,6 @@
   home.packages = with pkgs; [
     pre-commit
     difftastic
+    git-filter-repo
   ];
 }
