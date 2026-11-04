@@ -3,6 +3,17 @@
   programs.git = {
     enable = true;
 
+    includes = [
+      {
+        condition = "gitdir:${config.home.homeDirectory}/Dev/GitHub/";
+        path = "${config.home.homeDirectory}/.config/git/github-config";
+      }
+      {
+        condition = "gitdir:${config.home.homeDirectory}/Dev/GitLab/";
+        path = "${config.home.homeDirectory}/.config/git/gitlab-config";
+      }
+    ];
+
     settings = {
       init.defaultBranch = "main";
       pull.rebase = true;
@@ -14,13 +25,6 @@
 
       url."git@github.com:".insteadOf = "https://github.com/";
       url."git@gitlab.com:".insteadOf = "https://gitlab.com/";
-
-      "includeIf\"gitdir:${config.home.homeDirectory}/Dev/GitHub/\"" = {
-        path = "${config.home.homeDirectory}/.config/git/github-config";
-      };
-      "includeIf\"gitdir:${config.home.homeDirectory}/Dev/GitLab/\"" = {
-        path = "${config.home.homeDirectory}/.config/git/gitlab-config";
-      };
     };
   };
 
