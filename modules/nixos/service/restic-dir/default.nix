@@ -1,7 +1,7 @@
 { ... }:
 {
   systemd.services.create-restic-dir = {
-    requiresMountsFor = [ "/mnt/DATA" ];
+    unitConfig.RequiresMountsFor = [ "/mnt/DATA" ];
     after = [ "mnt-DATA.mount" ];
     wantedBy = [ "multi-user.target" ];
     serviceConfig = {
