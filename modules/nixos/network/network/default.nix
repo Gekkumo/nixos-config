@@ -48,4 +48,6 @@
   environment.shellAliases = {
     sshtest = "ssh -o ConnectTimeout=5 -o BatchMode=yes";
   };
+
+  environment.etc."ssl/cert.pem".source = "/etc/ssl/certs/ca-bundle.crt";
 }
